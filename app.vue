@@ -8,10 +8,6 @@ useHead({
     ],
     link: [{ rel: "icon", type: "image/ico", href: "/favicon.ico" }],
 });
-
-function openLink(url: string, newTab: boolean = true) {
-    window.open(url, newTab ? "_blank" : "_self");
-}
 </script>
 <template>
     <NuxtRouteAnnouncer />
@@ -24,7 +20,9 @@ function openLink(url: string, newTab: boolean = true) {
                     later, though!
                 </p>
                 <p class="pb-7">In the meantime, you can check out my profiles on other platforms:</p>
-                <button class="btn btn-primary" @click="openLink('https://github.com/Chris1320', true)">GitHub</button>
+                <NuxtLink to="https://github.com/Chris1320" target="_blank">
+                    <button class="btn btn-primary">GitHub</button>
+                </NuxtLink>
             </div>
         </div>
     </div>
