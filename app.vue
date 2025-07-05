@@ -20,10 +20,33 @@ useHead({
                     later, though!
                 </p>
                 <p class="pb-7">In the meantime, you can check out my profiles on other platforms:</p>
-                <NuxtLink to="https://github.com/Chris1320" target="_blank">
-                    <button class="btn btn-primary">GitHub</button>
-                </NuxtLink>
+                <div>
+                    <NuxtLink to="https://github.com/Chris1320" target="_blank" class="m-4">
+                        <button class="btn btn-primary">GitHub</button>
+                    </NuxtLink>
+                    <NuxtLink to="https://www.credly.com/users/cfn" target="_blank" class="m-4">
+                        <button class="btn btn-secondary">Credly</button>
+                    </NuxtLink>
+                </div>
             </div>
         </div>
     </div>
+    <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+        <aside>
+            <p>&copy; 2025 Chris1320</p>
+            <p>Made with 💖 using Nuxt and Tailwind CSS</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Contact Me</h6>
+            <NuxtLink to="mailto:me@chrisfromnowhere.me" target="_blank" class="link link-hover"
+                >Email (Personal)</NuxtLink
+            >
+            <NuxtLink to="mailto:work@chrisfromnowhere.me" target="_blank" class="link link-hover"
+                >Email (Work)</NuxtLink
+            >
+            <NuxtLink to="https://matrix.to/#/@chris1320:matrix.org" target="_blank" class="link link-hover"
+                >Matrix</NuxtLink
+            >
+        </nav>
+    </footer>
 </template>

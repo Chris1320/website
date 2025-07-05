@@ -1,75 +1,30 @@
-# Nuxt Minimal Starter
+# Chris1320's Personal Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This the source code of my personal website, built with [Nuxt 3](https://nuxt.com/)
+and [Tailwind CSS](https://tailwindcss.com/). This is deployed on
+[Cloudflare Workers](https://workers.cloudflare.com/), using
+[Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
+for deployment.
 
-## Setup
+Visit the live site at [chrisfromnowhere.me](https://chrisfromnowhere.me).
 
-Make sure to install dependencies:
+## Development
 
-```bash
-# npm
-npm install
+1. Clone the repository:
 
-# pnpm
-pnpm install
+    ```bash
+    git clone https://github.com/Chris1320/website.git
+    cd website
+    ```
 
-# yarn
-yarn install
+2. Install dependencies:
 
-# bun
-bun install
-```
+    ```bash
+    bun install
+    ```
 
-## Development Server
+3. Start the development server:
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+    ```bash
+    bun run dev
+    ```
