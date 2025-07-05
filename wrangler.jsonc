@@ -1,4 +1,5 @@
 {
     "name": "personal-website",
-    "main": ".output/public/index.html"
+    "main": ".output/server/index.mjs",
+    "compatibility_date": "2025-07-05"
 }
