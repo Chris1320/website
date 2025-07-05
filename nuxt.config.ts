@@ -13,7 +13,18 @@ export default defineNuxtConfig({
     nitro: {
         preset: "cloudflare_module",
         cloudflare: {
-            wrangler: { name: "personal-website" },
+            wrangler: {
+                name: "personal-website",
+                routes: [
+                    {
+                        pattern: "chrisfromnowhere.me",
+                        custom_domain: true,
+                    },
+                ],
+                placement: { mode: "smart" },
+                workers_dev: false,
+                preview_urls: false,
+            },
             deployConfig: true,
             nodeCompat: true,
         },
