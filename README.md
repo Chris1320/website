@@ -1,6 +1,6 @@
 # Chris1320's Personal Website
 
-This the source code of my personal website, built with [Nuxt 3](https://nuxt.com/)
+This is the source code of my personal website, built with [Nuxt 3](https://nuxt.com/)
 and [Tailwind CSS](https://tailwindcss.com/). This is deployed on
 [Cloudflare Workers](https://workers.cloudflare.com/), using
 [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
