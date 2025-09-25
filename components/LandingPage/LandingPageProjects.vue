@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import type { Project } from "~/models/project";
+import type { Project } from "~/utils/models/project";
 
 const projects = ref<Project[]>([]);
 
