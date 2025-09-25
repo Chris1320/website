@@ -1,8 +1,22 @@
+<script setup lang="ts">
+import { motion } from "motion-v";
+</script>
+
 <template>
     <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
         <aside>
             <p>&copy; 2025 Chris1320</p>
-            <p>Made with 💖 using Nuxt and Tailwind CSS</p>
+            <p>
+                Made with
+                <motion.span
+                    :drag="true"
+                    :drag-elastic="{ top: 0.25, left: 0.25, right: 0.25, bottom: 0.25 }"
+                    :drag-constraints="{ top: 0, left: 0, right: 0, bottom: 0 }"
+                    class="inline-block"
+                    >💖</motion.span
+                >
+                using Nuxt and Tailwind CSS
+            </p>
         </aside>
         <nav>
             <h6 class="footer-title">Contact Me</h6>
