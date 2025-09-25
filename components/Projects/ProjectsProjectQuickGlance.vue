@@ -39,10 +39,13 @@ function formatDate(dateString: string): string {
                             : props.project.dateEnd || "Present"
                     }}
                 </p>
-                <div v-show="props.project.status === 'stable'" class="badge badge-soft badge-success">Stable</div>
-                <div v-show="props.project.status === 'wip'" class="badge badge-soft badge-warning">In Progress</div>
-                <div v-show="props.project.status === 'archived'" class="badge badge-soft badge-info">Archived</div>
-                <div v-show="props.project.status === 'abandoned'" class="badge badge-soft badge-error">Abandoned</div>
+                <div v-if="props.project.status === 'stable'" class="badge badge-soft badge-success">Stable</div>
+                <div v-else-if="props.project.status === 'wip'" class="badge badge-soft badge-warning">In Progress</div>
+                <div v-else-if="props.project.status === 'archived'" class="badge badge-soft badge-info">Archived</div>
+                <div v-else-if="props.project.status === 'abandoned'" class="badge badge-soft badge-error">
+                    Abandoned
+                </div>
+                <div v-else class="badge badge-soft badge-neutral">Unknown</div>
             </div>
             <p class="py-6">
                 {{ props.project.description }}
@@ -85,15 +88,13 @@ function formatDate(dateString: string): string {
             <!-- TODO: This could be better. -->
             <ProjectsMockupDesktop v-if="props.project.mockups.type == 'desktop'" :data="props.project.mockups.data" />
             <ProjectsMockupBrowser
-                v-if="props.project.mockups.type == 'web' && 'url' in props.project.mockups.data"
+                v-else-if="props.project.mockups.type == 'web' && 'url' in props.project.mockups.data"
                 :data="props.project.mockups.data"
             />
-            <div class="flex justify-center">
-                <ProjectsMockupMobile
-                    v-if="props.project.mockups.type == 'mobile'"
-                    :data="props.project.mockups.data"
-                />
-            </div>
+            <ProjectsMockupMobile
+                v-else-if="props.project.mockups.type == 'mobile'"
+                :data="props.project.mockups.data"
+            />
         </div>
     </div>
 </template>

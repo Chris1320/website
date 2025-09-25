@@ -44,8 +44,11 @@ function nextImage() {
                 </div>
             </div>
         </div>
-        <div v-if="data.images.length === 0" class="grid place-content-center text-gray-500 h-80">
-            No image provided
+        <div v-else class="grid place-content-center h-80">
+            <div class="flex flex-col items-center">
+                <Icon name="mdi:image-off" size="48" class="text-gray-400 mb-4" />
+                <p class="text-gray-500">No image provided</p>
+            </div>
         </div>
     </div>
 </template>
