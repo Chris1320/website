@@ -1,4 +1,4 @@
-import type { WebMockup } from "~/models/mockup";
+import type { WebMockup, DesktopMockup, MobileMockup } from "~/models/mockup";
 
 export interface ProjectResources {
     images: { description: string; url: string }[];
@@ -9,13 +9,13 @@ export interface Project {
     name: string;
     dateStart: string;
     dateEnd?: string;
-    status: "wip" | "stable" | "abandoned";
+    status: "wip" | "stable" | "abandoned" | "archived";
     description: string;
     links: { name: string; url: string }[];
     technologies: { name: string; icon: string }[];
     mockups: {
         type: "web" | "mobile" | "desktop";
-        data: WebMockup;
+        data: WebMockup | DesktopMockup | MobileMockup;
     };
     resources: ProjectResources;
 }

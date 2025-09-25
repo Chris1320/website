@@ -21,7 +21,7 @@ function formatDate(dateString: string): string {
 </script>
 
 <template>
-    <div class="flex flex-col md:flex-row gap-8">
+    <div class="flex flex-col md:flex-row gap-8 pt-10">
         <div class="flex-1">
             <h2 class="text-2xl font-bold">{{ props.project.name }}</h2>
             <div class="flex items-center justify-between">
@@ -41,6 +41,7 @@ function formatDate(dateString: string): string {
                 </p>
                 <div v-show="props.project.status === 'stable'" class="badge badge-soft badge-success">Stable</div>
                 <div v-show="props.project.status === 'wip'" class="badge badge-soft badge-warning">In Progress</div>
+                <div v-show="props.project.status === 'archived'" class="badge badge-soft badge-info">Archived</div>
                 <div v-show="props.project.status === 'abandoned'" class="badge badge-soft badge-error">Abandoned</div>
             </div>
             <p class="py-6">
@@ -59,7 +60,9 @@ function formatDate(dateString: string): string {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        {{ link.name }}
+                        <button class="btn btn-sm btn-outline btn-accent mr-2 mb-2">
+                            {{ link.name }}
+                        </button>
                     </NuxtLink>
                 </div>
                 <div>
@@ -79,7 +82,18 @@ function formatDate(dateString: string): string {
             </div>
         </div>
         <div class="flex-1">
-            <ProjectsMockupBrowser v-if="props.project.mockups.type == 'web'" :data="props.project.mockups.data" />
+            <!-- TODO: This could be better. -->
+            <ProjectsMockupDesktop v-if="props.project.mockups.type == 'desktop'" :data="props.project.mockups.data" />
+            <ProjectsMockupBrowser
+                v-if="props.project.mockups.type == 'web' && 'url' in props.project.mockups.data"
+                :data="props.project.mockups.data"
+            />
+            <div class="flex justify-center">
+                <ProjectsMockupMobile
+                    v-if="props.project.mockups.type == 'mobile'"
+                    :data="props.project.mockups.data"
+                />
+            </div>
         </div>
     </div>
 </template>

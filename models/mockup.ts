@@ -5,3 +5,6 @@ interface Mockup {
 export interface WebMockup extends Mockup {
     url: string;
 }
+
+export type DesktopMockup = Mockup;
+export type MobileMockup = Mockup;

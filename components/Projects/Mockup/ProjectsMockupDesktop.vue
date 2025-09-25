@@ -2,7 +2,6 @@
 const carouselImageIndex = ref(0);
 const props = defineProps<{
     data: {
-        url: string;
         images: { description: string; url: string }[];
     };
 }>();
@@ -17,10 +16,7 @@ function nextImage() {
 </script>
 
 <template>
-    <div class="mockup-browser bg-base-100 border-base-300 border w-full h-90">
-        <div class="mockup-browser-toolbar">
-            <div class="input">{{ props.data.url }}</div>
-        </div>
+    <div class="mockup-window bg-base-100 border-base-300 border w-full h-90">
         <div v-if="data.images.length > 0" class="carousel w-full overflow-hidden">
             <div
                 v-for="(image, index) in props.data.images"
