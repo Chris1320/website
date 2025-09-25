@@ -2,19 +2,38 @@
     <div class="hero bg-base-200 min-h-screen">
         <div class="hero-content text-center">
             <div class="max-w-md">
-                <h1 class="text-5xl font-bold">Hi! 👋</h1>
+                <h1 class="text-5xl font-bold">Hi! 👋 I am Chris</h1>
                 <p class="pt-8">
-                    I&apos;m currently building this site. There&apos;s nothing to see here yet. You should check back
-                    later, though!
+                    I am currently a BS Computer Science student, aiming to be a full-stack developer. I like doing
+                    random things that are related to computers and technology.
                 </p>
-                <p class="pb-7">In the meantime, you can check out my profiles on other platforms:</p>
-                <div>
-                    <NuxtLink to="https://github.com/Chris1320" target="_blank" class="m-4">
-                        <button class="btn btn-primary">GitHub</button>
-                    </NuxtLink>
-                    <NuxtLink to="https://www.credly.com/users/cfn" target="_blank" class="m-4">
-                        <button class="btn btn-secondary">Credly</button>
-                    </NuxtLink>
+                <p class="pt-10">You can contact me in the following platforms:</p>
+                <div class="flex flex-row justify-center items-center gap-10 py-4">
+                    <div class="tooltip tooltip-bottom" data-tip="Personal Email">
+                        <NuxtLink to="mailto:me@chrisfromnowhere.me" target="_blank" class="m-0">
+                            <div class="flex flex-col justify-center items-center">
+                                <Icon name="mdi:email-outline" size="75" />
+                            </div>
+                        </NuxtLink>
+                    </div>
+                    <div class="tooltip tooltip-bottom" data-tip="Matrix">
+                        <NuxtLink to="https://matrix.to/#/@chris1320:matrix.org" target="_blank" class="m-0">
+                            <div class="flex flex-col justify-center items-center">
+                                <Icon name="tabler:brand-matrix" size="75" />
+                            </div>
+                        </NuxtLink>
+                    </div>
+                    <div class="tooltip tooltip-bottom" data-tip="LinkedIn">
+                        <NuxtLink
+                            to="https://www.linkedin.com/in/christopher-andrei-tayao-60a870373/"
+                            target="_blank"
+                            class="m-0"
+                        >
+                            <div class="flex flex-col justify-center items-center">
+                                <Icon name="tabler:brand-linkedin" size="75" />
+                            </div>
+                        </NuxtLink>
+                    </div>
                 </div>
             </div>
         </div>

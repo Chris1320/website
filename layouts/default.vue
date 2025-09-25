@@ -12,6 +12,7 @@ useHead({
 <template>
     <div>
         <NuxtRouteAnnouncer />
+        <AppMenu />
         <slot />
         <AppFooter />
     </div>
