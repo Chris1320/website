@@ -29,4 +29,7 @@ export default defineNuxtConfig({
             nodeCompat: true,
         },
     },
+    app: {
+        pageTransition: { name: "page", mode: "out-in" },
+    },
 });
