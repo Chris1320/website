@@ -1,24 +1,22 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 const carouselImageIndex = ref(0);
 const props = defineProps<{
-    data: {
-        images: { description: string; url: string }[];
-    };
+    images: { description: string; url: string }[];
 }>();
 
 function prevImage() {
-    carouselImageIndex.value = (carouselImageIndex.value + (props.data.images.length - 1)) % props.data.images.length;
+    carouselImageIndex.value = (carouselImageIndex.value + (props.images.length - 1)) % props.images.length;
 }
 
 function nextImage() {
-    carouselImageIndex.value = (carouselImageIndex.value + 1) % props.data.images.length;
+    carouselImageIndex.value = (carouselImageIndex.value + 1) % props.images.length;
 }
 </script>
 
 <template>
-    <div v-if="data.images.length > 0" class="carousel w-full overflow-hidden">
+    <div v-if="images.length > 0" class="carousel w-full overflow-hidden">
         <div
-            v-for="(image, index) in props.data.images"
+            v-for="(image, index) in props.images"
             v-show="carouselImageIndex === index"
             :id="`slide${index + 1}`"
             :key="index"
@@ -27,7 +25,7 @@ function nextImage() {
             <img :src="image.url" class="w-full" :alt="image.description" />
             <!-- FIXME: Buttons readjust when images are longer than usual. -->
             <div
-                v-show="data.images.length > 1"
+                v-show="images.length > 1"
                 class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
             >
                 <button class="btn btn-circle" @click="prevImage()">
@@ -46,5 +44,3 @@ function nextImage() {
         </div>
     </div>
 </template>
-
-<style></style>

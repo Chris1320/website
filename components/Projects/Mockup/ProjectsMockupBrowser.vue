@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import ProjectsMockupContent from "~/components/Projects/Mockup/ProjectsMockupContent.vue";
-
 const props = defineProps<{
     data: {
         url: string;
@@ -14,6 +12,6 @@ const props = defineProps<{
         <div class="mockup-browser-toolbar">
             <div class="input">{{ props.data.url }}</div>
         </div>
-        <ProjectsMockupContent :data="{ images: props.data.images }" />
+        <ProjectsMockupContent :images="props.data.images" />
     </div>
 </template>
