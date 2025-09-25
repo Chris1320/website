@@ -4,6 +4,7 @@
         "name": "BENTO (Baliuag Enhanced Network for Tracking Canteen Operations)",
         "dateStart": "2024-10-01",
         "dateEnd": null,
+        "status": "stable",
         "description": "BENTO is a School Canteen Automated Reporting System for the Department of Education (DepEd) Schools Division Office (SDO) of the City of Baliwag in the Philippines. It is designed to streamline and enhance the efficiency of canteen finance reporting and monitoring processes within the schools.",
         "links": [{ "name": "GitHub", "url": "https://github.com/Bento-Project-SCARS/BENTO" }],
         "technologies": [

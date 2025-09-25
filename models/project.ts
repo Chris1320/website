@@ -9,6 +9,7 @@ export interface Project {
     name: string;
     dateStart: string;
     dateEnd?: string;
+    status: "wip" | "stable" | "abandoned";
     description: string;
     links: { name: string; url: string }[];
     technologies: { name: string; icon: string }[];

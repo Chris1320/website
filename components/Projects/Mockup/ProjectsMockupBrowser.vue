@@ -17,7 +17,9 @@ function nextImage() {
 </script>
 <template>
     <div class="mockup-browser border-base-300 border w-full h-90">
-        <div class="mockup-browser-toolbar" />
+        <div class="mockup-browser-toolbar">
+            <div class="input">{{ props.data.url }}</div>
+        </div>
         <div class="carousel w-full overflow-hidden">
             <div
                 v-for="(image, index) in props.data.images"
