@@ -22,5 +22,16 @@
             <NuxtLink to="/blog" class="link link-hover">Blog</NuxtLink>
             <NuxtLink to="/about" class="link link-hover">About Me</NuxtLink>
         </nav>
+        <nav>
+            <h6 class="footer-title">External Links</h6>
+            <NuxtLink to="https://github.com/Chris1320" target="_blank" class="link link-hover">GitHub </NuxtLink>
+            <NuxtLink
+                to="https://www.linkedin.com/in/christopher-andrei-tayao-60a870373/"
+                target="_blank"
+                class="link link-hover"
+                >LinkedIn
+            </NuxtLink>
+            <NuxtLink to="https://www.credly.com/users/cfn" target="_blank" class="link link-hover">Credly</NuxtLink>
+        </nav>
     </footer>
 </template>
