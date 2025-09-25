@@ -24,7 +24,7 @@
         </nav>
         <nav>
             <h6 class="footer-title">External Links</h6>
-            <NuxtLink to="https://github.com/Chris1320" target="_blank" class="link link-hover">GitHub </NuxtLink>
+            <NuxtLink to="https://github.com/Chris1320" target="_blank" class="link link-hover">GitHub</NuxtLink>
             <NuxtLink
                 to="https://www.linkedin.com/in/christopher-andrei-tayao-60a870373/"
                 target="_blank"

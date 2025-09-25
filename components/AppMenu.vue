@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
     <ul class="menu bg-base-200 rounded-box fixed top-4 left-4 z-50">
         <li>
