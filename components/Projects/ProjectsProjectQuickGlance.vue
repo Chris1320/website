@@ -7,11 +7,9 @@ const props = defineProps<{
 }>();
 
 const animationInitial = { opacity: 0, x: -25 };
-const animationWhileInView = { opacity: 1, x: 0 };
-const animationTransition = { duration: 0.5 };
+const animationWhileInView = { opacity: 1, x: 0, transition: { duration: 0.5 } };
 const animationMockupInitial = { opacity: 0, x: 25 };
-const animationMockupWhileInView = { opacity: 1, x: 0 };
-const animationMockupTransition = { duration: 0.5 };
+const animationMockupWhileInView = { opacity: 1, x: 0, transition: { duration: 0.5 } };
 
 function isValidDate(dateString: string | undefined): boolean {
     if (!dateString) return false;
@@ -31,12 +29,7 @@ function formatDate(dateString: string): string {
 <template>
     <div class="flex flex-col md:flex-row gap-8 pt-10">
         <div class="flex-1">
-            <motion.h2
-                :initial="animationInitial"
-                :while-in-view="animationWhileInView"
-                :transition="animationTransition"
-                class="text-2xl font-bold"
-            >
+            <motion.h2 :initial="animationInitial" :while-in-view="animationWhileInView" class="text-2xl font-bold">
                 {{ props.project.name }}
             </motion.h2>
             <div class="flex items-center justify-between">
@@ -44,7 +37,6 @@ function formatDate(dateString: string): string {
                 <motion.p
                     :initial="animationInitial"
                     :while-in-view="animationWhileInView"
-                    :transition="animationTransition"
                     class="text-sm text-gray-500 mb-2"
                 >
                     {{
@@ -63,7 +55,6 @@ function formatDate(dateString: string): string {
                     v-if="props.project.status === 'stable'"
                     :initial="animationInitial"
                     :while-in-view="animationWhileInView"
-                    :transition="animationTransition"
                     class="badge badge-soft badge-success"
                 >
                     Stable
@@ -72,7 +63,6 @@ function formatDate(dateString: string): string {
                     v-else-if="props.project.status === 'wip'"
                     :initial="animationInitial"
                     :while-in-view="animationWhileInView"
-                    :transition="animationTransition"
                     class="badge badge-soft badge-warning"
                 >
                     In Progress
@@ -81,7 +71,6 @@ function formatDate(dateString: string): string {
                     v-else-if="props.project.status === 'archived'"
                     :initial="animationInitial"
                     :while-in-view="animationWhileInView"
-                    :transition="animationTransition"
                     class="badge badge-soft badge-info"
                 >
                     Archived
@@ -90,7 +79,6 @@ function formatDate(dateString: string): string {
                     v-else-if="props.project.status === 'abandoned'"
                     :initial="animationInitial"
                     :while-in-view="animationWhileInView"
-                    :transition="animationTransition"
                     class="badge badge-soft badge-error"
                 >
                     Abandoned
@@ -99,18 +87,12 @@ function formatDate(dateString: string): string {
                     v-else
                     :initial="animationInitial"
                     :while-in-view="animationWhileInView"
-                    :transition="animationTransition"
                     class="badge badge-soft badge-neutral"
                 >
                     Unknown
                 </motion.div>
             </div>
-            <motion.p
-                :initial="animationInitial"
-                :while-in-view="animationWhileInView"
-                :transition="animationTransition"
-                class="py-6"
-            >
+            <motion.p :initial="animationInitial" :while-in-view="animationWhileInView" class="py-6">
                 {{ props.project.description }}
             </motion.p>
             <div class="mt-4 flex flex-col md:flex-row justify-between">
@@ -119,7 +101,6 @@ function formatDate(dateString: string): string {
                         v-if="props.project.links?.length === 0"
                         :initial="animationInitial"
                         :while-in-view="animationWhileInView"
-                        :transition="animationTransition"
                         class="text-xs text-gray-500 mb-2"
                     >
                         No Links Available
@@ -135,7 +116,6 @@ function formatDate(dateString: string): string {
                         <motion.button
                             :initial="animationInitial"
                             :while-in-view="animationWhileInView"
-                            :transition="animationTransition"
                             class="btn btn-sm btn-outline btn-accent mr-2 mb-2"
                         >
                             {{ link.name }}
@@ -147,7 +127,6 @@ function formatDate(dateString: string): string {
                         v-if="props.project.technologies?.length === 0"
                         :initial="animationInitial"
                         :while-in-view="animationWhileInView"
-                        :transition="animationTransition"
                         class="text-xs text-gray-500 mb-2"
                     >
                         No Technologies Listed
@@ -157,7 +136,6 @@ function formatDate(dateString: string): string {
                         :key="tech.name"
                         :initial="animationInitial"
                         :while-in-view="animationWhileInView"
-                        :transition="animationTransition"
                         class="inline-flex items-center mr-2"
                     >
                         <div class="tooltip" :data-tip="tech.name">
@@ -167,12 +145,7 @@ function formatDate(dateString: string): string {
                 </div>
             </div>
         </div>
-        <motion.div
-            :initial="animationMockupInitial"
-            :while-in-view="animationMockupWhileInView"
-            :transition="animationMockupTransition"
-            class="flex-1"
-        >
+        <motion.div :initial="animationMockupInitial" :while-in-view="animationMockupWhileInView" class="flex-1">
             <!-- TODO: This could be better. -->
             <ProjectsMockupDesktop v-if="props.project.mockups.type == 'desktop'" :data="props.project.mockups.data" />
             <ProjectsMockupBrowser
