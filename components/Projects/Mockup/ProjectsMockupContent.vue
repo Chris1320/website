@@ -18,7 +18,7 @@ function nextImage() {
         <div
             v-for="(image, index) in props.images"
             v-show="carouselImageIndex === index"
-            :id="`slide${index + 1}`"
+            :id="image.description"
             :key="index"
             class="carousel-item relative w-full"
         >
