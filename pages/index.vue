@@ -1,3 +1,6 @@
 <template>
-    <LandingPageHeroSection />
+    <div>
+        <LandingPageHeroSection />
+        <LandingPageProjects />
+    </div>
 </template>

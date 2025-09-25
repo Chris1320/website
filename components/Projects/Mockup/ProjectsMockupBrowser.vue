@@ -1,0 +1,41 @@
+<script setup lang="ts">
+const carouselImageIndex = ref(0);
+const props = defineProps<{
+    data: {
+        url: string;
+        images: { description: string; url: string }[];
+    };
+}>();
+
+function prevImage() {
+    carouselImageIndex.value = (carouselImageIndex.value + (props.data.images.length - 1)) % props.data.images.length;
+}
+
+function nextImage() {
+    carouselImageIndex.value = (carouselImageIndex.value + 1) % props.data.images.length;
+}
+</script>
+<template>
+    <div class="mockup-browser border-base-300 border w-full h-90">
+        <div class="mockup-browser-toolbar" />
+        <div class="carousel w-full overflow-hidden">
+            <div
+                v-for="(image, index) in props.data.images"
+                v-show="carouselImageIndex === index"
+                :id="`slide${index + 1}`"
+                :key="index"
+                class="carousel-item relative w-full"
+            >
+                <img :src="image.url" class="w-full" :alt="image.description" />
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <button class="btn btn-circle" @click="prevImage()">
+                        <Icon name="mdi:chevron-left" size="24" />
+                    </button>
+                    <button class="btn btn-circle" @click="nextImage()">
+                        <Icon name="mdi:chevron-right" size="24" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

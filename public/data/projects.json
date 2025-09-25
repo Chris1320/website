@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "name": "BENTO (Baliuag Enhanced Network for Tracking Canteen Operations)",
+        "dateStart": "2024-10-01",
+        "dateEnd": null,
+        "description": "BENTO is a School Canteen Automated Reporting System for the Department of Education (DepEd) Schools Division Office (SDO) of the City of Baliwag in the Philippines. It is designed to streamline and enhance the efficiency of canteen finance reporting and monitoring processes within the schools.",
+        "links": [{ "name": "GitHub", "url": "https://github.com/Bento-Project-SCARS/BENTO" }],
+        "technologies": [
+            {
+                "name": "MySQL",
+                "icon": "lineicons:mysql"
+            },
+            {
+                "name": "Python",
+                "icon": "lineicons:python"
+            },
+            {
+                "name": "Docker",
+                "icon": "lineicons:docker"
+            },
+            {
+                "name": "Typescript",
+                "icon": "lineicons:typescript"
+            },
+            {
+                "name": "SQLite",
+                "icon": "file-icons:sqlite"
+            },
+            {
+                "name": "NextJS",
+                "icon": "lineicons:nextjs"
+            },
+            {
+                "name": "PostgreSQL",
+                "icon": "lineicons:postgresql"
+            },
+            {
+                "name": "MinIO",
+                "icon": "simple-icons:minio"
+            },
+            {
+                "name": "FastAPI",
+                "icon": "simple-icons:fastapi"
+            },
+            {
+                "name": "SQLModel",
+                "icon": "mdi:sql-query"
+            }
+        ],
+        "mockups": {
+            "type": "web",
+            "data": {
+                "url": "https://bento-sdo.page",
+                "images": [
+                    {
+                        "description": "Login Page",
+                        "url": "https://safe-files.chrisfromnowhere.me/YUqLTH5xQLyqPmWw.png"
+                    },
+                    {
+                        "description": "Dashboard Overview",
+                        "url": "https://safe-files.chrisfromnowhere.me/Jwc8bkpyV13w5zls.png"
+                    },
+                    {
+                        "description": "School Statistics Page",
+                        "url": "https://safe-files.chrisfromnowhere.me/i8SQ074Mvx9O69kl.png"
+                    },
+                    {
+                        "description": "Report Summary Modal",
+                        "url": "https://safe-files.chrisfromnowhere.me/MhjQnXrJ6u45sf8t.png"
+                    }
+                ]
+            }
+        },
+        "resources": {
+            "images": [
+                { "description": "Login Page", "url": "https://safe-files.chrisfromnowhere.me/YUqLTH5xQLyqPmWw.png" },
+                {
+                    "description": "Dashboard Overview",
+                    "url": "https://safe-files.chrisfromnowhere.me/Jwc8bkpyV13w5zls.png"
+                },
+                {
+                    "description": "School Statistics Page",
+                    "url": "https://safe-files.chrisfromnowhere.me/i8SQ074Mvx9O69kl.png"
+                },
+                {
+                    "description": "Report Summary Modal",
+                    "url": "https://safe-files.chrisfromnowhere.me/MhjQnXrJ6u45sf8t.png"
+                }
+            ]
+        }
+    }
+]
