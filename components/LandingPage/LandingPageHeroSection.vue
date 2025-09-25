@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { motion } from "motion-v";
+</script>
+
 <template>
     <div class="hero bg-base-200 min-h-screen">
         <div class="hero-content text-center">
@@ -11,16 +15,24 @@
                 <div class="flex flex-row justify-center items-center gap-10 py-4">
                     <div class="tooltip tooltip-bottom" data-tip="Personal Email">
                         <NuxtLink to="mailto:me@chrisfromnowhere.me" target="_blank" class="m-0">
-                            <div class="flex flex-col justify-center items-center">
+                            <motion.div
+                                :while-hover="{ scale: 1.1 }"
+                                :while-press="{ scale: 0.95 }"
+                                class="flex flex-col justify-center items-center"
+                            >
                                 <Icon name="mdi:email-outline" size="75" />
-                            </div>
+                            </motion.div>
                         </NuxtLink>
                     </div>
                     <div class="tooltip tooltip-bottom" data-tip="Matrix">
                         <NuxtLink to="https://matrix.to/#/@chris1320:matrix.org" target="_blank" class="m-0">
-                            <div class="flex flex-col justify-center items-center">
+                            <motion.div
+                                :while-hover="{ scale: 1.1 }"
+                                :while-press="{ scale: 0.95 }"
+                                class="flex flex-col justify-center items-center"
+                            >
                                 <Icon name="tabler:brand-matrix" size="75" />
-                            </div>
+                            </motion.div>
                         </NuxtLink>
                     </div>
                     <div class="tooltip tooltip-bottom" data-tip="LinkedIn">
@@ -29,9 +41,13 @@
                             target="_blank"
                             class="m-0"
                         >
-                            <div class="flex flex-col justify-center items-center">
+                            <motion.div
+                                :while-hover="{ scale: 1.1 }"
+                                :while-press="{ scale: 0.95 }"
+                                class="flex flex-col justify-center items-center"
+                            >
                                 <Icon name="tabler:brand-linkedin" size="75" />
-                            </div>
+                            </motion.div>
                         </NuxtLink>
                     </div>
                 </div>
