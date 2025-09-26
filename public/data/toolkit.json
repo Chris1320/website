@@ -1,0 +1,279 @@
+[
+    {
+        "name": "Backend Technologies",
+        "description": "These are the programming languages and frameworks I use to build the server-side of applications.",
+        "tools": [
+            {
+                "name": "Python",
+                "icon": "skill-icons:python-dark",
+                "description": "Python is a versatile and powerful programming language known for its simplicity and readability. It is widely used in web development, data analysis, artificial intelligence, scientific computing, and automation. Python's extensive libraries and frameworks, such as Django and Flask, make it a popular choice for building robust applications quickly and efficiently."
+            },
+            {
+                "name": "Lua",
+                "icon": "skill-icons:lua-dark",
+                "description": "Lua is a lightweight, high-level programming language designed for embedded use in applications. It is known for its simplicity, efficiency, and ease of integration with other languages. Lua is often used in game development, scripting, and as a configuration language due to its fast execution and small memory footprint."
+            },
+            {
+                "name": "C#",
+                "icon": "skill-icons:cs",
+                "description": "C# (C-Sharp) is a modern, object-oriented programming language developed by Microsoft. It is widely used for building Windows applications, web services, and games using the .NET framework. C# offers strong type safety, rich libraries, and support for asynchronous programming, making it a popular choice for enterprise-level applications."
+            },
+            {
+                "name": "C",
+                "icon": "skill-icons:c",
+                "description": "C is a powerful, low-level programming language that provides direct access to memory and system resources. It is widely used for system programming, embedded systems, and performance-critical applications. C's efficiency and portability make it a foundational language for many operating systems and software development projects."
+            },
+            {
+                "name": "Bash",
+                "icon": "skill-icons:bash-dark",
+                "description": "Bash (Bourne Again SHell) is a Unix shell and command language used for scripting and automating tasks in Unix-like operating systems. It provides a powerful environment for managing files, processes, and system configurations through command-line interfaces and shell scripts."
+            },
+            {
+                "name": "Go",
+                "icon": "skill-icons:golang",
+                "description": "Go (Golang) is a statically typed, compiled programming language developed by Google. It is designed for simplicity, efficiency, and scalability, making it ideal for building high-performance applications, web servers, and distributed systems. Go's concurrency model and strong standard library contribute to its popularity in modern software development."
+            },
+            {
+                "name": "Kotlin",
+                "icon": "skill-icons:kotlin-dark",
+                "description": "Kotlin is a modern, statically typed programming language that runs on the Java Virtual Machine (JVM). It is fully interoperable with Java and offers concise syntax, null safety, and functional programming features. Kotlin is widely used for Android app development and server-side applications."
+            },
+            {
+                "name": "Bun",
+                "icon": "skill-icons:bun-dark",
+                "description": "Bun is a modern JavaScript runtime like Node or Deno. It is built from the ground up to focus on three main things: speed, native compatibility, and a great developer experience. Bun includes a bundler, transpiler, package manager, and more, all designed to work seamlessly together."
+            },
+            {
+                "name": "FastAPI",
+                "icon": "skill-icons:fastapi",
+                "description": "FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints. It is designed to be easy to use and learn, while also being highly performant, making it a popular choice for developing RESTful APIs and web applications."
+            },
+            {
+                "name": "Flask",
+                "icon": "skill-icons:flask-dark",
+                "description": "Flask is a lightweight and flexible web framework for Python that allows developers to build web applications quickly and easily. It is designed to be simple and unopinionated, providing the core tools needed for web development while allowing developers to choose their own libraries and tools for additional functionality."
+            }
+        ]
+    },
+    {
+        "name": "Frontend Technologies",
+        "description": "These are the technologies I use to create the visual and interactive parts of websites and web applications.",
+        "tools": [
+            {
+                "name": "HTML",
+                "icon": "skill-icons:html",
+                "description": "HTML (HyperText Markup Language) is the standard markup language used to create and structure content on the web. It provides the basic building blocks for web pages, allowing developers to define elements such as headings, paragraphs, links, images, and multimedia. HTML is essential for creating the structure and layout of websites."
+            },
+            {
+                "name": "CSS",
+                "icon": "skill-icons:css",
+                "description": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation and layout of web pages. It allows developers to control the visual appearance of HTML elements, including colors, fonts, spacing, and positioning. CSS enables responsive design, ensuring that websites look good on various devices and screen sizes."
+            },
+            {
+                "name": "JavaScript",
+                "icon": "skill-icons:javascript",
+                "description": "JavaScript is a versatile, high-level programming language that enables interactive and dynamic content on web pages. It is widely used for client-side development, allowing developers to create features such as animations, form validation, and asynchronous data loading. JavaScript is an essential technology for modern web development."
+            },
+            {
+                "name": "TypeScript",
+                "icon": "skill-icons:typescript",
+                "description": "TypeScript is a statically typed superset of JavaScript that adds optional type annotations and other features to the language. It is designed to improve code quality and maintainability, making it easier to catch errors during development. TypeScript is widely used in large-scale web applications and frameworks like Angular and React."
+            },
+            {
+                "name": "Nuxt.js",
+                "icon": "skill-icons:nuxtjs-dark",
+                "description": "Nuxt.js is a powerful framework built on top of Vue.js that simplifies the development of server-side rendered (SSR) and static web applications. It provides a structured architecture, automatic routing, and a rich ecosystem of modules and plugins, making it easier for developers to create performant and SEO-friendly web applications."
+            },
+            {
+                "name": "Next.js",
+                "icon": "skill-icons:nextjs-dark",
+                "description": "Next.js is a popular React framework that enables server-side rendering (SSR) and static site generation (SSG) for building fast and scalable web applications. It provides features such as automatic code splitting, optimized performance, and a simple API for routing and data fetching, making it a preferred choice for modern web development."
+            },
+            {
+                "name": "Vue.js",
+                "icon": "skill-icons:vuejs-dark",
+                "description": "Vue.js is a progressive JavaScript framework used for building user interfaces and single-page applications. It is designed to be incrementally adoptable, allowing developers to use as much or as little of the framework as needed. Vue.js features a reactive data binding system, a component-based architecture, and a rich ecosystem of tools and libraries."
+            },
+            {
+                "name": "React",
+                "icon": "skill-icons:react-dark",
+                "description": "React is a popular JavaScript library for building user interfaces, particularly single-page applications. It uses a component-based architecture, allowing developers to create reusable UI components that manage their own state. React's virtual DOM improves performance by minimizing direct manipulation of the actual DOM, making it a preferred choice for modern web development."
+            },
+            {
+                "name": "Tailwind CSS",
+                "icon": "skill-icons:tailwindcss-dark",
+                "description": "Tailwind CSS is a utility-first CSS framework that provides a set of pre-defined classes for building custom user interfaces quickly and efficiently. It allows developers to style their applications directly in the HTML markup, promoting a more streamlined and maintainable approach to styling. Tailwind CSS is highly customizable and supports responsive design out of the box."
+            }
+        ]
+    },
+    {
+        "name": "Database Technologies",
+        "description": "These are the database management systems I use to store, organize, and manage data for various applications.",
+        "tools": [
+            {
+                "name": "MySQL",
+                "icon": "skill-icons:mysql-dark",
+                "description": "MySQL is a widely used open-source relational database management system (RDBMS) known for its reliability, performance, and ease of use. It supports structured query language (SQL) for managing and manipulating data, making it a popular choice for web applications, data warehousing, and e-commerce platforms."
+            },
+            {
+                "name": "PostgreSQL",
+                "icon": "skill-icons:postgresql-dark",
+                "description": "PostgreSQL is a powerful, open-source object-relational database system that emphasizes extensibility and standards compliance. It supports advanced data types, full-text search, and complex queries, making it suitable for a wide range of applications, from small projects to large-scale enterprise systems."
+            },
+            {
+                "name": "SQLite",
+                "icon": "skill-icons:sqlite",
+                "description": "SQLite is a lightweight, self-contained relational database engine that is widely used in embedded systems and mobile applications. It is serverless and requires minimal configuration, making it easy to set up and use. SQLite is ideal for applications that need a simple, efficient database solution without the overhead of a full-fledged database server."
+            }
+        ]
+    },
+    {
+        "name": "DevOps/Cloud Technologies",
+        "description": "I use these services and platforms to make development, deployment, and management of applications more efficient and scalable.",
+        "tools": [
+            {
+                "name": "AWS",
+                "icon": "skill-icons:aws-dark",
+                "description": "Amazon Web Services (AWS) is a comprehensive cloud computing platform that offers a wide range of services, including computing power, storage, and databases. It provides scalable and flexible infrastructure solutions for businesses of all sizes, enabling them to deploy and manage applications in the cloud with ease."
+            },
+            {
+                "name": "Cloudflare",
+                "icon": "skill-icons:cloudflare-dark",
+                "description": "Cloudflare is a global network and security company that provides content delivery network (CDN) services, DDoS protection, and web application firewall (WAF) solutions. It helps improve website performance, security, and reliability by distributing content closer to users and protecting against cyber threats."
+            },
+            {
+                "name": "Docker",
+                "icon": "skill-icons:docker",
+                "description": "Docker is an open-source platform that enables developers to automate the deployment of applications inside lightweight, portable containers. Containers package an application and its dependencies together, ensuring consistency across different environments. Docker simplifies application deployment, scaling, and management, making it a popular choice for modern DevOps practices."
+            },
+            {
+                "name": "Firebase",
+                "icon": "devicon:firebase",
+                "description": "Firebase is a comprehensive app development platform provided by Google that offers a suite of tools and services for building high-quality mobile and web applications. It includes features such as real-time databases, authentication, cloud storage, hosting, and analytics, enabling developers to create scalable and feature-rich applications quickly."
+            },
+            {
+                "name": "Google Cloud Platform (GCP)",
+                "icon": "skill-icons:gcp-dark",
+                "description": "Google Cloud Platform (GCP) is a suite of cloud computing services offered by Google that provides infrastructure, platform, and software solutions for businesses. GCP offers a wide range of services, including computing power, storage, machine learning, and data analytics, enabling organizations to build and scale applications in the cloud with ease."
+            },
+            {
+                "name": "Git",
+                "icon": "skill-icons:git",
+                "description": "Git is a distributed version control system that allows developers to track changes in source code during software development. It enables collaboration among multiple developers by providing features such as branching, merging, and history tracking. Git is widely used in the software industry for managing code repositories and facilitating teamwork."
+            },
+            {
+                "name": "GitHub",
+                "icon": "skill-icons:github-dark",
+                "description": "GitHub is a web-based platform that provides hosting for Git repositories and offers collaboration features for software development projects. It allows developers to share code, track issues, and manage project workflows using tools such as pull requests and code reviews. GitHub is widely used in the open-source community and by organizations for version control and project management."
+            },
+            {
+                "name": "GitHub Actions",
+                "icon": "skill-icons:githubactions-dark",
+                "description": "GitHub Actions is a continuous integration and continuous deployment (CI/CD) platform that allows developers to automate workflows directly within their GitHub repositories. It enables the creation of custom workflows for building, testing, and deploying code, making it easier to streamline development processes and improve collaboration among team members."
+            }
+        ]
+    },
+    {
+        "name": "Media Editing",
+        "description": "These tools are what I use to create and edit visual and audio content for various projects.",
+        "tools": [
+            {
+                "name": "Adobe After Effects",
+                "icon": "skill-icons:aftereffects",
+                "description": "Adobe After Effects is a powerful digital visual effects, motion graphics, and compositing software used in the post-production process of filmmaking, video production, and television production. It allows users to create stunning animations, special effects, and cinematic visual effects for various media projects."
+            },
+            {
+                "name": "Adobe Audition",
+                "icon": "skill-icons:audition",
+                "description": "Adobe Audition is a professional audio editing software that provides a comprehensive set of tools for recording, mixing, and restoring audio. It is widely used by musicians, podcasters, and sound designers to create high-quality audio content with features such as multitrack editing, noise reduction, and audio effects."
+            },
+            {
+                "name": "Figma",
+                "icon": "skill-icons:figma-dark",
+                "description": "Figma is a cloud-based design and prototyping tool that enables teams to collaborate on user interface (UI) and user experience (UX) design projects in real-time. It offers features such as vector editing, prototyping, and design systems, making it a popular choice for designers and developers working on web and mobile applications."
+            },
+            {
+                "name": "Adobe Premiere Pro",
+                "icon": "skill-icons:premiere",
+                "description": "Adobe Premiere Pro is a professional video editing software used by filmmakers, video editors, and content creators to edit and produce high-quality videos. It offers a wide range of features, including multi-camera editing, color correction, audio editing, and support for various video formats, making it a versatile tool for video production."
+            },
+            {
+                "name": "Adobe Photoshop",
+                "icon": "skill-icons:photoshop",
+                "description": "Adobe Photoshop is a widely used graphic design and photo editing software that provides powerful tools for creating and manipulating images. It is popular among photographers, designers, and artists for tasks such as photo retouching, digital painting, graphic design, and web design. Photoshop's extensive features and capabilities make it a standard in the creative industry."
+            }
+        ]
+    },
+    {
+        "name": "IDEs/Editors",
+        "description": "I use these software applications to write all my projects.",
+        "tools": [
+            {
+                "name": "Neovim",
+                "icon": "skill-icons:neovim-dark",
+                "description": "Neovim is a highly customizable and extensible text editor that is an improved version of the classic Vim editor. It offers enhanced features such as asynchronous plugins, better integration with modern development tools, and a more user-friendly configuration system. Neovim is popular among developers who prefer a keyboard-centric workflow and value efficiency in their coding environment."
+            },
+            {
+                "name": "Visual Studio Code",
+                "icon": "skill-icons:vscode-dark",
+                "description": "Visual Studio Code (VS Code) is a lightweight, open-source code editor developed by Microsoft. It supports a wide range of programming languages and offers features such as syntax highlighting, code completion, debugging, and integrated Git support. VS Code's extensive library of extensions allows developers to customize their coding environment to suit their specific needs."
+            },
+            {
+                "name": "Rider",
+                "icon": "skill-icons:rider-dark",
+                "description": "Rider is a cross-platform integrated development environment (IDE) developed by JetBrains, specifically designed for .NET development. It provides a rich set of features, including intelligent code analysis, refactoring tools, debugging capabilities, and support for various frameworks such as ASP.NET, Xamarin, and Unity. Rider is known for its performance and productivity-enhancing features."
+            },
+            {
+                "name": "CLion",
+                "icon": "skill-icons:clion-dark",
+                "description": "CLion is a powerful cross-platform IDE developed by JetBrains, tailored for C and C++ development. It offers advanced code analysis, refactoring tools, and integrated debugging capabilities. CLion supports various build systems like CMake and Gradle, making it a popular choice among C/C++ developers for creating high-performance applications."
+            },
+            {
+                "name": "IntelliJ IDEA",
+                "icon": "skill-icons:idea-dark",
+                "description": "IntelliJ IDEA is a feature-rich integrated development environment (IDE) developed by JetBrains, primarily focused on Java development but also supporting a wide range of other programming languages. It offers intelligent code completion, powerful refactoring tools, built-in version control integration, and support for various frameworks and technologies. IntelliJ IDEA is known for its productivity-enhancing features and user-friendly interface."
+            },
+            {
+                "name": "Visual Studio",
+                "icon": "skill-icons:visualstudio-dark",
+                "description": "Visual Studio is a comprehensive integrated development environment (IDE) developed by Microsoft, widely used for building applications across various platforms, including Windows, web, mobile, and cloud. It supports multiple programming languages such as C#, C++, Python, and JavaScript. Visual Studio offers a rich set of features, including code editing, debugging, testing, and collaboration tools, making it a popular choice among developers for creating high-quality software."
+            },
+            {
+                "name": "Obsidian",
+                "icon": "skill-icons:obsidian-dark",
+                "description": "Obsidian is a powerful knowledge management and note-taking application that uses plain text Markdown files to store information. It offers a unique graph view that visualizes the connections between notes, making it easy to organize and navigate complex information. Obsidian supports plugins and themes, allowing users to customize their experience and enhance productivity."
+            }
+        ]
+    },
+    {
+        "name": "Operating Systems",
+        "description": "I usually use these operating systems for my daily tasks and development work.",
+        "tools": [
+            {
+                "name": "Windows",
+                "icon": "skill-icons:windows-dark",
+                "description": "Windows is a widely used operating system developed by Microsoft, known for its user-friendly interface and extensive software compatibility. It is commonly used in personal computers, business environments, and gaming systems. Windows offers a range of features, including multitasking, security enhancements, and support for various hardware configurations."
+            },
+            {
+                "name": "Arch Linux",
+                "icon": "skill-icons:arch-dark",
+                "description": "Arch Linux is a lightweight and flexible Linux distribution that follows a rolling release model. It is designed for users who prefer a minimalist approach and want to customize their system from the ground up. Arch Linux provides access to the Arch User Repository (AUR), which contains a vast collection of user-contributed packages."
+            },
+            {
+                "name": "Debian",
+                "icon": "skill-icons:debian-dark",
+                "description": "Debian is a stable and versatile Linux distribution known for its reliability and extensive software repository. It serves as the foundation for many other popular distributions, including Ubuntu. Debian emphasizes free software principles and provides a robust platform for servers, desktops, and embedded systems."
+            },
+            {
+                "name": "Kali Linux",
+                "icon": "skill-icons:kali-dark",
+                "description": "Kali Linux is a specialized Linux distribution designed for penetration testing, ethical hacking, and digital forensics. It comes pre-installed with a wide range of security tools and utilities, making it a popular choice among cybersecurity professionals and enthusiasts."
+            },
+            {
+                "name": "Linux Mint",
+                "icon": "skill-icons:mint-dark",
+                "description": "Linux Mint is a user-friendly Linux distribution based on Ubuntu and Debian. It aims to provide a comfortable and familiar desktop experience for users transitioning from other operating systems. Linux Mint offers various desktop environments, including Cinnamon, MATE, and Xfce, along with a focus on ease of use and multimedia support."
+            }
+        ]
+    }
+]
