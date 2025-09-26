@@ -85,7 +85,17 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                     <div v-for="(edu, index) in cvData!.education" :key="index" class="mb-4 text-left">
                         <!-- Line 1: Institution | Location -->
                         <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-bold">{{ edu.institution }}</h3>
+                            <h3 class="text-lg font-bold">
+                                {{ edu.institution }}
+                                <NuxtLink
+                                    v-if="fancyMode && edu.link"
+                                    :to="edu.link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
+                                </NuxtLink>
+                            </h3>
                             <p class="text-lg">
                                 {{ edu.location }}
                             </p>
@@ -133,7 +143,17 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                     <div v-for="(work, index) in cvData!.experience" :key="index" class="mb-4 text-left">
                         <!-- Line 1: Role | Location -->
                         <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-bold">{{ work.role }}</h3>
+                            <h3 class="text-lg font-bold">
+                                {{ work.role }}
+                                <NuxtLink
+                                    v-if="fancyMode && work.link"
+                                    :to="work.link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
+                                </NuxtLink>
+                            </h3>
                             <p class="text-lg">
                                 {{ work.location }}
                             </p>
@@ -192,9 +212,14 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                         <p class="italic">{{ cert.issuer }}</p>
                         <p v-if="cert.description" class="text-sm">{{ cert.description }}</p>
                         <p v-if="cert.link" class="text-xs">
-                            <NuxtLink :to="cert.link" target="_blank" rel="noopener noreferrer">{{
-                                cert.link
-                            }}</NuxtLink>
+                            <NuxtLink :to="cert.link.url" target="_blank" rel="noopener noreferrer">
+                                <div v-if="fancyMode" class="btn btn-outline badge-xs">
+                                    {{ cert.link.title }}
+                                </div>
+                                <a v-else>
+                                    {{ cert.link.url }}
+                                </a>
+                            </NuxtLink>
                         </p>
                     </div>
                 </section>

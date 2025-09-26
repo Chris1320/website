@@ -8,6 +8,7 @@ export interface EducationInformation {
     startDate: string | null; // ISO 8601 format (YYYY-MM)
     endDate: string | null; // ISO 8601 format (YYYY-MM) or "Present"
     relevantCoursework: string[]; // List of relevant coursework
+    link?: string | null; // URL to the institution or program details
 }
 
 export interface WorkExperience {
@@ -17,6 +18,12 @@ export interface WorkExperience {
     startDate: string; // ISO 8601 format (YYYY-MM)
     endDate: string; // ISO 8601 format (YYYY-MM) or "Present"
     responsibilities: string[]; // List of responsibilities and achievements
+    link?: string | null; // URL to the company or organization details
+}
+
+export interface Link {
+    title: string; // e.g., "LinkedIn", "GitHub"
+    url: string; // URL to the profile or page
 }
 
 export interface Certificate {
@@ -25,7 +32,7 @@ export interface Certificate {
     date: string; // ISO 8601 format (YYYY-MM)
     description: string | null; // Brief description of the certificate or award
     image: string; // URL to an image of the certificate or award
-    link: string | null; // URL to the certificate or award details
+    link: Link | null; // URL to the certificate or award details
 }
 
 export interface SkillOrInterest {

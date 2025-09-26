@@ -36,7 +36,8 @@
                 "Data Structures and Algorithms",
                 "Operating Systems",
                 "Computer Networks"
-            ]
+            ],
+            "link": "https://www.baliuagu.edu.ph"
         }
     ],
     "experience": [
@@ -51,11 +52,12 @@
                 "Created marketing materials including tarpaulins, event invitations, and posters.",
                 "Produced short-form video advertisements and social media reels for healthcare campaigns.",
                 "Delivered visually engaging content under tight deadlines while meeting client branding requirements."
-            ]
+            ],
+            "link": null
         },
         {
             "organization": "Shapes and Angles",
-            "role": "Part-time Photo & Video Editor",
+            "role": "Photo & Video Editor",
             "location": "Remote",
             "startDate": "2018-05",
             "endDate": "2024-10",
@@ -64,11 +66,12 @@
                 "Produced and edited videos for events, vlogs, tutorials, and marketing content using Adobe Premiere Pro.",
                 "Collaborated with clients to ensure brand consistency and visual appeal in final outputs.",
                 "Developed automation systems for ID card production, improving efficiency for schools and small businesses in Bulacan."
-            ]
+            ],
+            "link": null
         },
         {
             "organization": "Zero One Cyber Café",
-            "role": "Part-time Systems Administrator",
+            "role": "Systems Administrator",
             "location": "Remote",
             "startDate": "2018-06",
             "endDate": "2019-08",
@@ -78,7 +81,8 @@
                 "Installed, configured, and troubleshot Windows-based systems, applications, and peripherals.",
                 "Developed automation scripts to streamline recurring maintenance tasks and improve system efficiency.",
                 "Implemented basic cybersecurity protocols to safeguard systems from common threats and vulnerabilities."
-            ]
+            ],
+            "link": null
         }
     ],
     "awardsAndCertificates": [
@@ -88,7 +92,10 @@
             "date": "2023-10",
             "description": "A three-month course followed by a non-site hands-on examination held at Baliuag University.",
             "image": "https://safe-files.chrisfromnowhere.me/T38tHvgha04FC2Vq.png",
-            "link": "https://www.credly.com/badges/e75f6cd6-7af9-46e3-bc39-79de08072b00"
+            "link": {
+                "title": "Credly Badge",
+                "url": "https://www.credly.com/badges/e75f6cd6-7af9-46e3-bc39-79de08072b00"
+            }
         },
         {
             "title": "Microsoft Office Specialist: Excel 2019 Associate",
@@ -96,7 +103,10 @@
             "date": "2023-07",
             "description": "A three-month course followed by a non-site examination held at Baliuag University.",
             "image": "https://safe-files.chrisfromnowhere.me/FLAldgIntgsLTCy5.png",
-            "link": "https://www.credly.com/badges/5c304bae-ac22-43cd-8ca0-0e93efaf07fe"
+            "link": {
+                "title": "Credly Badge",
+                "url": "https://www.credly.com/badges/5c304bae-ac22-43cd-8ca0-0e93efaf07fe"
+            }
         },
         {
             "title": "Deploying Deep Learning Models on AWS",
@@ -104,7 +114,10 @@
             "date": "2022-10",
             "description": "A webinar hosted by Edukasyon.ph, co-presented by Amazon AWS and Siklab Foundation via Zoom.",
             "image": "https://safe-files.chrisfromnowhere.me/L7tQVYz0Lz9YkULx.png",
-            "link": "https://safe-files.chrisfromnowhere.me/L7tQVYz0Lz9YkULx.png"
+            "link": {
+                "title": "Certificate",
+                "url": "https://safe-files.chrisfromnowhere.me/L7tQVYz0Lz9YkULx.png"
+            }
         }
     ],
     "skillsAndInterests": [
