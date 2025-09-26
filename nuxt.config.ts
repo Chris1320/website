@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         timeline: { enabled: true },
     },
     css: ["~/assets/css/main.css"],
-    modules: ["@nuxt/eslint", "@nuxt/test-utils", "@nuxt/icon", "motion-v/nuxt"],
+    modules: ["@nuxt/eslint", "@nuxt/test-utils", "@nuxt/icon", "motion-v/nuxt", "@nuxt/fonts"],
     vite: { plugins: [tailwindcss()] },
     nitro: {
         preset: "cloudflare_module",
