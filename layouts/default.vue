@@ -13,7 +13,9 @@ useHead({
     <div>
         <NuxtRouteAnnouncer />
         <AppMenu />
-        <slot />
+        <main>
+            <slot />
+        </main>
         <AppFooter />
     </div>
 </template>

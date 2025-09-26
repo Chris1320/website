@@ -21,7 +21,7 @@ function viewCertificate(cert: Certificate) {
 
 <template>
     <!-- Set the max/min width to 1439px to keep the design -->
-    <main class="mx-auto max-w-[1439px] min-w-[1439px] min-h-screen">
+    <div class="mx-auto max-w-[1439px] min-w-[1439px] min-h-screen">
         <div v-if="pending" class="text-center p-4">
             <p>Loading CV data...</p>
         </div>
@@ -291,7 +291,7 @@ function viewCertificate(cert: Certificate) {
                 </div>
             </div>
         </dialog>
-    </main>
+    </div>
 </template>
 
 <style scoped>
