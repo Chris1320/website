@@ -10,9 +10,10 @@ const toggleMenu = () => {
 <template>
     <ul class="menu bg-base-200 rounded-box fixed top-4 left-4 z-50">
         <li>
-            <button class="tooltip tooltip-right" data-tip="Toggle Menu" @click="toggleMenu()">
+            <button @click="toggleMenu()">
                 <label class="swap swap-rotate">
                     <input v-model="isMenuCollapsed" type="checkbox" />
+                    <!-- onClick events are here as well because they don't work when the user clicks on the icons itself -->
                     <Icon class="swap-on" name="mdi:menu" size="20" @click="toggleMenu()" />
                     <Icon class="swap-off" name="mdi:close" size="20" @click="toggleMenu()" />
                 </label>
