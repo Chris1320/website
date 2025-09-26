@@ -2,7 +2,7 @@
 import type { Project } from "~/utils/models/project";
 
 const { data: projects, pending, error } = await useFetch<Project[]>("/data/projects.json", { server: false });
-console.log(`There are ${projects.value?.length} projects.`);
+console.log(`There are ${projects.value?.length || 0} projects.`);
 </script>
 
 <template>
