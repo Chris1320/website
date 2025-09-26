@@ -22,13 +22,10 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
             <div class="pt-15 pl-15 pr-15">
                 <div class="flex flex-row items-center text-center mb-4">
                     <!-- Header Left Side (optional) -->
-                    <div v-if="cvData!.imageUrl && props.showImage" class="mr-4">
-                        <!-- <Icon name="mdi:account" class="inline-block w-10 h-10 mb-2" size="128" /> -->
-                        <img
-                            :src="cvData!.imageUrl"
-                            alt="Profile Picture"
-                            class="w-40 h-40 rounded-2xl object-cover border-2 border-teal-900"
-                        />
+                    <div v-if="cvData!.imageUrl && props.showImage" class="avatar mr-4">
+                        <div class="w-40 rounded-2xl object-cover border-2 border-teal-900">
+                            <img :src="cvData!.imageUrl" alt="Image" />
+                        </div>
                     </div>
                     <!-- Header Right side -->
                     <div>
@@ -36,7 +33,6 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                         <NuxtLink to="/">
                             <h1 class="text-4xl font-bold pb-2">{{ cvData!.name }}</h1>
                         </NuxtLink>
-                        <!-- TODO: image -->
                         <!-- Overview -->
                         <div class="gap-4 pb-5 pl-2">
                             <NuxtLink
@@ -205,7 +201,7 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                 <!-- Skills & Interests Section -->
                 <section class="my-6 px-4">
                     <h2 class="text-2xl font-semibold mb-4">Skills & Interests</h2>
-                    <div v-for="(skill, index) in cvData!.skillsAndInterests" :key="index" class="mb-4 text-left">
+                    <div v-for="(skill, index) in cvData!.skillsAndInterests" :key="index" class="text-left">
                         <ul class="list-disc list-inside">
                             <li>
                                 <span class="font-bold">{{ skill.area }}</span
