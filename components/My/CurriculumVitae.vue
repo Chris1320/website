@@ -11,7 +11,7 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
 
 <template>
     <!-- Set the max/min width to 1439px to keep the design -->
-    <main class="bg-white text-black mx-auto max-w-[1439px] min-w-[1439px] min-h-screen">
+    <main class="mx-auto max-w-[1439px] min-w-[1439px] min-h-screen">
         <div v-if="pending" class="text-center p-4">
             <p>Loading CV data...</p>
         </div>

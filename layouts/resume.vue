@@ -11,7 +11,7 @@ useHead({
 </script>
 
 <template>
-    <div class="bg-white text-black min-h-screen min-w-screen p-0 m-0">
+    <div class="bg-[#EDECE6] text-[#1C1D1D] min-h-screen min-w-screen p-0 m-0">
         <slot />
     </div>
 </template>
