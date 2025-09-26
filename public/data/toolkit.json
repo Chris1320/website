@@ -170,6 +170,11 @@
                 "name": "GitHub Actions",
                 "icon": "skill-icons:githubactions-dark",
                 "description": "GitHub Actions is a continuous integration and continuous deployment (CI/CD) platform that allows developers to automate workflows directly within their GitHub repositories. It enables the creation of custom workflows for building, testing, and deploying code, making it easier to streamline development processes and improve collaboration among team members."
+            },
+            {
+                "name": "Podman",
+                "icon": "devicon:podman",
+                "description": "Podman is an open-source container management tool that allows users to create, manage, and run containers and container images. It is designed to be a drop-in replacement for Docker, providing similar functionality while emphasizing security and rootless operation. Podman is widely used for developing and deploying containerized applications in various environments."
             }
         ]
     },
