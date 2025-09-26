@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CurriculumVitae } from "~/utils/models/cv";
+import type { CurriculumVitae, Certificate } from "~/utils/models/cv";
 
 const props = defineProps<{
     showImage: boolean;
@@ -7,6 +7,16 @@ const props = defineProps<{
 }>();
 
 const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/cv.json", { server: false });
+
+const selectedCertificate = ref<Certificate | null>(null);
+
+function viewCertificate(cert: Certificate) {
+    selectedCertificate.value = cert;
+    const modal = document.getElementById("view_certificate_modal") as HTMLDialogElement;
+    if (modal) {
+        modal.showModal();
+    }
+}
 </script>
 
 <template>
@@ -88,7 +98,8 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                             <h3 class="text-lg font-bold">
                                 {{ edu.institution }}
                                 <NuxtLink
-                                    v-if="fancyMode && edu.link"
+                                    v-if="edu.link"
+                                    v-show="fancyMode"
                                     :to="edu.link"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -146,7 +157,8 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                             <h3 class="text-lg font-bold">
                                 {{ work.role }}
                                 <NuxtLink
-                                    v-if="fancyMode && work.link"
+                                    v-if="work.link"
+                                    v-show="fancyMode"
                                     :to="work.link"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -197,7 +209,17 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                     <div v-for="(cert, index) in cvData!.awardsAndCertificates" :key="index" class="mb-4 text-left">
                         <!-- Line 1: Title | Date -->
                         <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-bold">{{ cert.title }}</h3>
+                            <h3 class="text-lg font-bold">
+                                {{ cert.title }}
+                                <button
+                                    v-if="cert.image"
+                                    v-show="fancyMode"
+                                    class="btn btn-xs btn-outline ml-2"
+                                    @click="viewCertificate(cert)"
+                                >
+                                    <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
+                                </button>
+                            </h3>
                             <p class="text-lg">
                                 {{
                                     cert.date
@@ -213,10 +235,10 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                         <p v-if="cert.description" class="text-sm">{{ cert.description }}</p>
                         <p v-if="cert.link" class="text-xs">
                             <NuxtLink :to="cert.link.url" target="_blank" rel="noopener noreferrer">
-                                <div v-if="fancyMode" class="btn btn-outline badge-xs">
+                                <div v-show="fancyMode" class="btn btn-outline badge-xs">
                                     {{ cert.link.title }}
                                 </div>
-                                <a v-else>
+                                <a v-show="!fancyMode">
                                     {{ cert.link.url }}
                                 </a>
                             </NuxtLink>
@@ -237,11 +259,48 @@ const { data: cvData, pending, error } = await useFetch<CurriculumVitae>("/data/
                 </section>
             </div>
         </div>
+        <!-- View Certificate Modal -->
+        <dialog id="view_certificate_modal" class="modal">
+            <div class="modal-box modal-color-override">
+                <h3 class="text-lg font-bold">{{ selectedCertificate?.title }}</h3>
+                <h4 class="text-sm italic mb-2">
+                    {{ selectedCertificate?.issuer }},
+                    {{
+                        selectedCertificate?.date
+                            ? new Date(selectedCertificate.date).toLocaleDateString("en-US", {
+                                  year: "numeric",
+                                  month: "long",
+                              })
+                            : "N/A"
+                    }}
+                </h4>
+                <figure v-if="selectedCertificate?.image" class="my-4">
+                    <img
+                        :src="selectedCertificate?.image"
+                        :alt="`${selectedCertificate?.title} - ${selectedCertificate?.description}`"
+                        class="w-full h-auto"
+                    />
+                    <figcaption class="text-sm text-center mt-2">{{ selectedCertificate?.description }}</figcaption>
+                </figure>
+                <!-- <p class="py-4">Press ESC key or click the button below to close</p> -->
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
 </template>
 
 <style scoped>
 * {
     font-family: "Noto Sans", Calibri, sans-serif;
+}
+
+.modal-color-override {
+    background-color: #edece6;
+    color: #1c1d1d;
 }
 </style>
