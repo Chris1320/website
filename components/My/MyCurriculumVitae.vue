@@ -195,11 +195,7 @@ function viewCertificate(cert: Certificate) {
                                 </ul>
                             </div>
                             <div class="text-right w-1/4">
-                                <!-- Line 1: Location -->
-                                <p class="text-xl">
-                                    {{ work.location }}
-                                </p>
-                                <!-- Line 2: Start Date - End Date -->
+                                <!-- Line 1: Start Date - End Date -->
                                 <p class="text-lg">
                                     {{
                                         work.startDate

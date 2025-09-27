@@ -43,8 +43,7 @@
     "experience": [
         {
             "organization": "Freelance",
-            "role": "Freelance Photo & Video Editor",
-            "location": "Remote",
+            "role": "Photo & Video Editor",
             "startDate": "2021-08",
             "endDate": "2022-12",
             "responsibilities": [
@@ -58,7 +57,6 @@
         {
             "organization": "Shapes and Angles",
             "role": "Photo & Video Editor",
-            "location": "Plaridel, Bulacan",
             "startDate": "2018-05",
             "endDate": "2024-10",
             "responsibilities": [
@@ -72,7 +70,6 @@
         {
             "organization": "Zero One Cyber Café",
             "role": "Systems Administrator",
-            "location": "Pulilan, Bulacan",
             "startDate": "2018-06",
             "endDate": "2019-08",
             "responsibilities": [

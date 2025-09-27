@@ -14,7 +14,6 @@ export interface EducationInformation {
 export interface WorkExperience {
     organization: string; // Name of the company or organization
     role: string; // e.g., "Software Engineer"
-    location: string; // City, Country
     startDate: string; // ISO 8601 format (YYYY-MM)
     endDate: string; // ISO 8601 format (YYYY-MM) or "Present"
     responsibilities: string[]; // List of responsibilities and achievements
