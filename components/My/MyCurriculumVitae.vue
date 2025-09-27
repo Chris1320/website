@@ -89,6 +89,14 @@ function viewCertificate(cert: Certificate) {
                     </div>
                 </div>
                 <hr />
+                <!-- Profile Section -->
+                <section class="my-6 px-4">
+                    <div class="flex items-center mb-4">
+                        <Icon name="mdi:account" class="inline-block w-8 h-8 mr-2 icon-color-override" size="32" />
+                        <h2 class="text-3xl font-semibold">Profile</h2>
+                    </div>
+                    <p class="text-lg italic">{{ cvData!.profile }}</p>
+                </section>
                 <!-- Education Section -->
                 <section class="my-6 px-4">
                     <div class="flex items-center mb-4">

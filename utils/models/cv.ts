@@ -61,7 +61,7 @@ export interface CurriculumVitae {
             link: string;
         };
     };
-    summary: string; // Brief professional summary or objective
+    profile: string; // Brief professional summary or objective
     education: EducationInformation[];
     experience: WorkExperience[];
     awardsAndCertificates: Certificate[];
