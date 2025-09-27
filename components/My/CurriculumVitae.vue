@@ -21,7 +21,7 @@ function viewCertificate(cert: Certificate) {
 
 <template>
     <!-- Set the max/min width to 1439px to keep the design -->
-    <div class="mx-auto max-w-[1439px] min-w-[1439px] min-h-screen">
+    <div class="mx-auto max-w-[1439px] min-w-[1439px] min-h-screen bg-[#EDECE6] text-[#1C1D1D]">
         <div v-if="pending" class="text-center p-4">
             <p>Loading CV data...</p>
         </div>
@@ -93,89 +93,99 @@ function viewCertificate(cert: Certificate) {
                 <section class="my-6 px-4">
                     <h2 class="text-2xl font-semibold mb-4">Education</h2>
                     <div v-for="(edu, index) in cvData!.education" :key="index" class="mb-4 text-left">
-                        <!-- Line 1: Institution | Location -->
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-bold">
-                                {{ edu.institution }}
-                                <NuxtLink
-                                    v-if="edu.link"
-                                    v-show="fancyMode"
-                                    :to="edu.link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
-                                </NuxtLink>
-                            </h3>
-                            <p class="text-lg">
-                                {{ edu.location }}
-                            </p>
-                        </div>
-                        <!-- Line 2: Degree, Concentration, GWA | Start Date - End Date -->
-                        <div class="flex justify-between items-center">
-                            <p class="italic">
-                                {{ edu.degree }}, {{ edu.concentration }}.
-                                <span v-if="edu.GWA">GWA: {{ edu.GWA }}</span>
-                            </p>
-                            <p>
-                                {{
-                                    edu.startDate
-                                        ? new Date(edu.startDate).toLocaleDateString("en-US", {
-                                              year: "numeric",
-                                              month: "short",
-                                          })
-                                        : "N/A"
-                                }}
-                                <span v-if="edu.startDate && edu.endDate">-</span>
-                                {{
-                                    edu.endDate
-                                        ? edu.endDate === "Present"
-                                            ? "Present"
-                                            : new Date(edu.endDate).toLocaleDateString("en-US", {
+                        <div class="flex justify-between items-top">
+                            <div class="mr-4 w-3/4">
+                                <!-- Line 1: Institution -->
+                                <h3 class="text-lg font-bold">
+                                    {{ edu.institution }}
+                                    <NuxtLink
+                                        v-if="edu.link"
+                                        v-show="fancyMode"
+                                        :to="edu.link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
+                                    </NuxtLink>
+                                </h3>
+                                <!-- Line 2: Degree, Concentration, GWA -->
+                                <p class="italic">
+                                    {{ edu.degree }}, {{ edu.concentration }}.
+                                    <span v-if="edu.GWA">GWA: {{ edu.GWA }}</span>
+                                </p>
+                                <!-- List of relevant coursework -->
+                                <ul class="list-disc list-inside">
+                                    <li v-if="edu.thesisTitle">Thesis: {{ edu.thesisTitle }}</li>
+                                    <li v-if="edu.relevantCoursework.length">
+                                        Relevant Coursework: {{ edu.relevantCoursework.join(", ") }}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-right w-1/4">
+                                <!-- Line 1: Location -->
+                                <p class="text-lg">
+                                    {{ edu.location }}
+                                </p>
+                                <!-- Line 2: Start Date - End Date -->
+                                <p>
+                                    {{
+                                        edu.startDate
+                                            ? new Date(edu.startDate).toLocaleDateString("en-US", {
                                                   year: "numeric",
                                                   month: "short",
                                               })
-                                        : "N/A"
-                                }}
-                            </p>
+                                            : "N/A"
+                                    }}
+                                    <span v-if="edu.startDate && edu.endDate">-</span>
+                                    {{
+                                        edu.endDate
+                                            ? edu.endDate === "Present"
+                                                ? "Present"
+                                                : new Date(edu.endDate).toLocaleDateString("en-US", {
+                                                      year: "numeric",
+                                                      month: "short",
+                                                  })
+                                            : "N/A"
+                                    }}
+                                </p>
+                            </div>
                         </div>
-                        <!-- List of relevant coursework -->
-                        <ul class="list-disc list-inside">
-                            <li v-if="edu.thesisTitle">Thesis: {{ edu.thesisTitle }}</li>
-                            <li v-if="edu.relevantCoursework.length">
-                                Relevant Coursework: {{ edu.relevantCoursework.join(", ") }}
-                            </li>
-                        </ul>
                     </div>
                 </section>
                 <!-- Experience Section -->
                 <section class="my-6 px-4">
                     <h2 class="text-2xl font-semibold mb-4">Experience</h2>
                     <div v-for="(work, index) in cvData!.experience" :key="index" class="mb-4 text-left">
-                        <!-- Line 1: Role | Location -->
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-bold">
-                                {{ work.role }}
-                                <NuxtLink
-                                    v-if="work.link"
-                                    v-show="fancyMode"
-                                    :to="work.link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
-                                </NuxtLink>
-                            </h3>
-                            <p class="text-lg">
-                                {{ work.location }}
-                            </p>
-                        </div>
-                        <!-- Line 2: Organization | Start Date - End Date -->
-                        <div class="flex justify-between items-center">
-                            <p class="italic">
-                                {{ work.organization }}
-                            </p>
-                            <p>
+                        <div class="flex justify-between items-top">
+                            <div class="mr-4 w-3/4">
+                                <!-- Line 1: Role -->
+                                <h3 class="text-lg font-bold">
+                                    {{ work.role }}
+                                    <NuxtLink
+                                        v-if="work.link"
+                                        v-show="fancyMode"
+                                        :to="work.link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
+                                    </NuxtLink>
+                                </h3>
+                                <!-- Line 2: Organization -->
+                                <p class="italic">
+                                    {{ work.organization }}
+                                </p>
+                                <!-- List of responsibilities -->
+                                <ul class="list-disc list-inside">
+                                    <li v-for="(resp, rIndex) in work.responsibilities" :key="rIndex">{{ resp }}</li>
+                                </ul>
+                            </div>
+                            <div class="text-right w-1/4">
+                                <!-- Line 1: Location -->
+                                <p class="text-lg">
+                                    {{ work.location }}
+                                </p>
+                                <!-- Line 2: Start Date - End Date -->
                                 {{
                                     work.startDate
                                         ? new Date(work.startDate).toLocaleDateString("en-US", {
@@ -195,54 +205,55 @@ function viewCertificate(cert: Certificate) {
                                               })
                                         : "N/A"
                                 }}
-                            </p>
+                            </div>
                         </div>
-                        <!-- List of responsibilities -->
-                        <ul class="list-disc list-inside">
-                            <li v-for="(resp, rIndex) in work.responsibilities" :key="rIndex">{{ resp }}</li>
-                        </ul>
                     </div>
                 </section>
                 <!-- Awards & Certificates Section -->
                 <section class="my-6 px-4">
                     <h2 class="text-2xl font-semibold mb-4">Awards & Certificates</h2>
                     <div v-for="(cert, index) in cvData!.awardsAndCertificates" :key="index" class="mb-4 text-left">
-                        <!-- Line 1: Title | Date -->
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-bold">
-                                {{ cert.title }}
-                                <button
-                                    v-if="cert.image"
-                                    v-show="fancyMode"
-                                    class="btn btn-xs btn-outline ml-2"
-                                    @click="viewCertificate(cert)"
-                                >
-                                    <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
-                                </button>
-                            </h3>
-                            <p class="text-lg">
-                                {{
-                                    cert.date
-                                        ? new Date(cert.date).toLocaleDateString("en-US", {
-                                              year: "numeric",
-                                              month: "short",
-                                          })
-                                        : "N/A"
-                                }}
-                            </p>
+                        <div class="flex justify-between items-top">
+                            <div class="mr-4 w-3/4">
+                                <!-- Line 1: Title -->
+                                <h3 class="text-lg font-bold">
+                                    {{ cert.title }}
+                                    <button
+                                        v-if="cert.image"
+                                        v-show="fancyMode"
+                                        class="btn btn-xs btn-outline ml-2"
+                                        @click="viewCertificate(cert)"
+                                    >
+                                        <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
+                                    </button>
+                                </h3>
+                                <p class="italic">{{ cert.issuer }}</p>
+                                <p v-if="cert.description" class="text-sm">{{ cert.description }}</p>
+                                <p v-if="cert.link" class="text-xs">
+                                    <NuxtLink :to="cert.link.url" target="_blank" rel="noopener noreferrer">
+                                        <div v-show="fancyMode" class="btn btn-outline badge-xs">
+                                            {{ cert.link.title }}
+                                        </div>
+                                        <a v-show="!fancyMode">
+                                            {{ cert.link.url }}
+                                        </a>
+                                    </NuxtLink>
+                                </p>
+                            </div>
+                            <div class="text-right w-1/4">
+                                <!-- Line 1: Date -->
+                                <p class="text-lg">
+                                    {{
+                                        cert.date
+                                            ? new Date(cert.date).toLocaleDateString("en-US", {
+                                                  year: "numeric",
+                                                  month: "short",
+                                              })
+                                            : "N/A"
+                                    }}
+                                </p>
+                            </div>
                         </div>
-                        <p class="italic">{{ cert.issuer }}</p>
-                        <p v-if="cert.description" class="text-sm">{{ cert.description }}</p>
-                        <p v-if="cert.link" class="text-xs">
-                            <NuxtLink :to="cert.link.url" target="_blank" rel="noopener noreferrer">
-                                <div v-show="fancyMode" class="btn btn-outline badge-xs">
-                                    {{ cert.link.title }}
-                                </div>
-                                <a v-show="!fancyMode">
-                                    {{ cert.link.url }}
-                                </a>
-                            </NuxtLink>
-                        </p>
                     </div>
                 </section>
                 <!-- Skills & Interests Section -->
