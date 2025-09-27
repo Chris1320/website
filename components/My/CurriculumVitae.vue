@@ -51,7 +51,7 @@ function viewCertificate(cert: Certificate) {
                                 rel="noopener noreferrer"
                                 class="flex items-center text-lg"
                             >
-                                <Icon name="mdi:email" class="inline-block w-4 h-4 mr-1" />
+                                <Icon name="mdi:email" class="inline-block w-4 h-4 mr-1 icon-color-override" />
                                 <span class="pb-1">{{ cvData!.overview.email.display }}</span>
                             </NuxtLink>
                             <NuxtLink
@@ -60,7 +60,7 @@ function viewCertificate(cert: Certificate) {
                                 rel="noopener noreferrer"
                                 class="flex items-center text-lg"
                             >
-                                <Icon name="mdi:phone" class="inline-block w-4 h-4 mr-1" />
+                                <Icon name="mdi:phone" class="inline-block w-4 h-4 mr-1 icon-color-override" />
                                 <span class="pb-1">{{ cvData!.overview.phone.display }}</span>
                             </NuxtLink>
                             <NuxtLink
@@ -70,7 +70,7 @@ function viewCertificate(cert: Certificate) {
                                 class="flex items-center text-lg"
                             >
                                 <p>
-                                    <Icon name="mdi:web" class="inline-block w-4 h-4 mr-1" />
+                                    <Icon name="mdi:web" class="inline-block w-4 h-4 mr-1 icon-color-override" />
                                     <span class="pb-1">{{ cvData!.overview.website.display }}</span>
                                 </p>
                             </NuxtLink>
@@ -81,7 +81,7 @@ function viewCertificate(cert: Certificate) {
                                 class="flex items-center text-lg"
                             >
                                 <p>
-                                    <Icon name="mdi:map-marker" class="inline-block w-4 h-4 mr-1" />
+                                    <Icon name="mdi:map-marker" class="inline-block w-4 h-4 mr-1 icon-color-override" />
                                     <span class="pb-1">{{ cvData!.overview.location.display }}</span>
                                 </p>
                             </NuxtLink>
@@ -92,8 +92,8 @@ function viewCertificate(cert: Certificate) {
                 <!-- Education Section -->
                 <section class="my-6 px-4">
                     <div class="flex items-center mb-4">
-                        <Icon name="mdi:school" class="inline-block w-8 h-8 mr-2 mb-2" size="32" />
-                        <h2 class="text-3xl font-semibold mb-4">Education</h2>
+                        <Icon name="mdi:school" class="inline-block w-8 h-8 mr-2 icon-color-override" size="32" />
+                        <h2 class="text-3xl font-semibold">Education</h2>
                     </div>
                     <div v-for="(edu, index) in cvData!.education" :key="index" class="mb-4 text-left">
                         <div class="flex justify-between items-top">
@@ -108,7 +108,7 @@ function viewCertificate(cert: Certificate) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <Icon name="mdi:open-in-new" class="ml-1 text-md" />
+                                        <Icon name="mdi:open-in-new" class="ml-1 text-md icon-color-override" />
                                     </NuxtLink>
                                 </h3>
                                 <!-- Line 2: Degree, Concentration, GWA -->
@@ -158,8 +158,8 @@ function viewCertificate(cert: Certificate) {
                 <!-- Experience Section -->
                 <section class="my-6 px-4">
                     <div class="flex items-center mb-4">
-                        <Icon name="mdi:briefcase" class="inline-block w-8 h-8 mr-2 mb-2" size="32" />
-                        <h2 class="text-3xl font-semibold mb-4">Experience</h2>
+                        <Icon name="mdi:briefcase" class="inline-block w-8 h-8 mr-2 icon-color-override" size="32" />
+                        <h2 class="text-3xl font-semibold">Experience</h2>
                     </div>
                     <div v-for="(work, index) in cvData!.experience" :key="index" class="mb-4 text-left">
                         <div class="flex justify-between items-top">
@@ -174,7 +174,7 @@ function viewCertificate(cert: Certificate) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <Icon name="mdi:open-in-new" class="ml-1 text-md" />
+                                        <Icon name="mdi:open-in-new" class="ml-1 text-md icon-color-override" />
                                     </NuxtLink>
                                 </h3>
                                 <!-- Line 2: Organization -->
@@ -220,8 +220,8 @@ function viewCertificate(cert: Certificate) {
                 <!-- Awards & Certificates Section -->
                 <section class="my-6 px-4">
                     <div class="flex items-center mb-4">
-                        <Icon name="mdi:certificate" class="inline-block w-8 h-8 mr-2 mb-2" size="32" />
-                        <h2 class="text-3xl font-semibold mb-4">Awards & Certificates</h2>
+                        <Icon name="mdi:certificate" class="inline-block w-8 h-8 mr-2 icon-color-override" size="32" />
+                        <h2 class="text-3xl font-semibold">Awards & Certificates</h2>
                     </div>
                     <div v-for="(cert, index) in cvData!.awardsAndCertificates" :key="index" class="mb-4 text-left">
                         <div class="flex justify-between items-top">
@@ -232,10 +232,10 @@ function viewCertificate(cert: Certificate) {
                                     <button
                                         v-if="cert.image"
                                         v-show="fancyMode"
-                                        class="btn btn-xs btn-outline ml-2"
+                                        class="ml-2 cursor-pointer"
                                         @click="viewCertificate(cert)"
                                     >
-                                        <Icon name="mdi:open-in-new" class="ml-1 text-md" />
+                                        <Icon name="mdi:open-in-new" class="ml-1 text-md icon-color-override" />
                                     </button>
                                 </h3>
                                 <p class="italic text-lg">{{ cert.issuer }}</p>
@@ -270,8 +270,8 @@ function viewCertificate(cert: Certificate) {
                 <!-- Skills & Interests Section -->
                 <section class="my-6 px-4">
                     <div class="flex items-center mb-4">
-                        <Icon name="mdi:star-circle" class="inline-block w-8 h-8 mr-2 mb-2" size="32" />
-                        <h2 class="text-3xl font-semibold mb-4">Skills & Interests</h2>
+                        <Icon name="mdi:star-circle" class="inline-block w-8 h-8 mr-2 icon-color-override" size="32" />
+                        <h2 class="text-3xl font-semibold">Skills & Interests</h2>
                     </div>
                     <div v-for="(skill, index) in cvData!.skillsAndInterests" :key="index" class="text-left">
                         <ul class="list-disc list-inside text-lg">
@@ -327,5 +327,32 @@ function viewCertificate(cert: Certificate) {
 .modal-color-override {
     background-color: #edece6;
     color: #1c1d1d;
+}
+
+.icon-color-override {
+    color: #0d9488; /* Tailwind's teal-600 */
+}
+
+/* Print-specific styles for icons */
+@media print {
+    /* Force SVG icons to print */
+    svg,
+    .icon,
+    [class*="icon"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Ensure icons maintain their color */
+    .icon-color-override {
+        color: #0d9488 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Make sure icon containers don't get hidden */
+    .inline-block {
+        display: inline-block !important;
+    }
 }
 </style>
