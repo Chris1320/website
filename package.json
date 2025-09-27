@@ -24,6 +24,9 @@
         "wrangler": "^4.40.1"
     },
     "devDependencies": {
+        "@iconify-json/devicon": "^1.2.44",
+        "@iconify-json/mdi": "^1.2.3",
+        "@iconify-json/skill-icons": "^1.2.3",
         "daisyui": "^5.1.23"
     }
 }

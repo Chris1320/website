@@ -18,6 +18,9 @@
         "wrangler": "^4.40.1",
       },
       "devDependencies": {
+        "@iconify-json/devicon": "^1.2.44",
+        "@iconify-json/mdi": "^1.2.3",
+        "@iconify-json/skill-icons": "^1.2.3",
         "daisyui": "^5.1.23",
       },
     },
@@ -194,6 +197,12 @@
     "@humanwhocodes/module-importer": ["@humanwhocodes/module-importer@1.0.1", "", {}, "sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA=="],
 
     "@humanwhocodes/retry": ["@humanwhocodes/retry@0.4.3", "", {}, "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ=="],
+
+    "@iconify-json/devicon": ["@iconify-json/devicon@1.2.44", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-yBB0k108x3l/73+bpMnRbVsi4jRP8Y1/dnEwPDL5YWqPOZJM5IkrJmlgPZkjOb6oCaQovteNXiVpycs4z+aJFg=="],
+
+    "@iconify-json/mdi": ["@iconify-json/mdi@1.2.3", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg=="],
+
+    "@iconify-json/skill-icons": ["@iconify-json/skill-icons@1.2.3", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-wyoP8uwox80jEi1ABZ3Z+I+ETtIr2brAERPPDzpJ9iALk8hyeg4/kdoC7M8HduhNkSkyq5kwBF8xvbqjNldnBQ=="],
 
     "@iconify/collections": ["@iconify/collections@1.0.597", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-itoqOLcEmgoj+4I92R+PUAnSyhDWN7Ez1QjQvp08ww5EMVeAM5x3Zt3Snf1MS7R5SMM9rl3h7kPRY6+m6g4BwQ=="],
 
