@@ -33,7 +33,7 @@ function viewCertificate(cert: Certificate) {
                 <div class="flex flex-row items-center text-center mb-4">
                     <!-- Header Left Side (optional) -->
                     <div v-if="cvData!.imageUrl && props.showImage" class="avatar mr-4">
-                        <div class="w-40 rounded-2xl object-cover border-2 border-teal-900">
+                        <div class="w-64 rounded-2xl object-cover border-2 border-teal-900">
                             <img :src="cvData!.imageUrl" alt="Image" />
                         </div>
                     </div>
@@ -41,7 +41,7 @@ function viewCertificate(cert: Certificate) {
                     <div>
                         <!-- Full Name -->
                         <NuxtLink to="/">
-                            <h1 class="text-4xl font-bold pb-2">{{ cvData!.name }}</h1>
+                            <h1 class="text-5xl font-bold pb-2">{{ cvData!.name }}</h1>
                         </NuxtLink>
                         <!-- Overview -->
                         <div class="gap-4 pb-5 pl-2">
@@ -49,7 +49,7 @@ function viewCertificate(cert: Certificate) {
                                 :to="cvData!.overview.email.link"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="flex items-center"
+                                class="flex items-center text-lg"
                             >
                                 <Icon name="mdi:email" class="inline-block w-4 h-4 mr-1" />
                                 <span class="pb-1">{{ cvData!.overview.email.display }}</span>
@@ -58,7 +58,7 @@ function viewCertificate(cert: Certificate) {
                                 :to="cvData!.overview.phone.link"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="flex items-center"
+                                class="flex items-center text-lg"
                             >
                                 <Icon name="mdi:phone" class="inline-block w-4 h-4 mr-1" />
                                 <span class="pb-1">{{ cvData!.overview.phone.display }}</span>
@@ -67,7 +67,7 @@ function viewCertificate(cert: Certificate) {
                                 :to="cvData!.overview.website.link"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="flex items-center"
+                                class="flex items-center text-lg"
                             >
                                 <p>
                                     <Icon name="mdi:web" class="inline-block w-4 h-4 mr-1" />
@@ -78,7 +78,7 @@ function viewCertificate(cert: Certificate) {
                                 :to="cvData!.overview.location.link"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="flex items-center"
+                                class="flex items-center text-lg"
                             >
                                 <p>
                                     <Icon name="mdi:map-marker" class="inline-block w-4 h-4 mr-1" />
@@ -91,12 +91,15 @@ function viewCertificate(cert: Certificate) {
                 <hr />
                 <!-- Education Section -->
                 <section class="my-6 px-4">
-                    <h2 class="text-2xl font-semibold mb-4">Education</h2>
+                    <div class="flex items-center mb-4">
+                        <Icon name="mdi:school" class="inline-block w-8 h-8 mr-2 mb-2" size="32" />
+                        <h2 class="text-3xl font-semibold mb-4">Education</h2>
+                    </div>
                     <div v-for="(edu, index) in cvData!.education" :key="index" class="mb-4 text-left">
                         <div class="flex justify-between items-top">
                             <div class="mr-4 w-3/4">
                                 <!-- Line 1: Institution -->
-                                <h3 class="text-lg font-bold">
+                                <h3 class="text-xl font-bold">
                                     {{ edu.institution }}
                                     <NuxtLink
                                         v-if="edu.link"
@@ -105,16 +108,16 @@ function viewCertificate(cert: Certificate) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
+                                        <Icon name="mdi:open-in-new" class="ml-1 text-md" />
                                     </NuxtLink>
                                 </h3>
                                 <!-- Line 2: Degree, Concentration, GWA -->
-                                <p class="italic">
+                                <p class="italic text-lg">
                                     {{ edu.degree }}, {{ edu.concentration }}.
                                     <span v-if="edu.GWA">GWA: {{ edu.GWA }}</span>
                                 </p>
                                 <!-- List of relevant coursework -->
-                                <ul class="list-disc list-inside">
+                                <ul class="list-disc list-inside text-lg">
                                     <li v-if="edu.thesisTitle">Thesis: {{ edu.thesisTitle }}</li>
                                     <li v-if="edu.relevantCoursework.length">
                                         Relevant Coursework: {{ edu.relevantCoursework.join(", ") }}
@@ -123,11 +126,11 @@ function viewCertificate(cert: Certificate) {
                             </div>
                             <div class="text-right w-1/4">
                                 <!-- Line 1: Location -->
-                                <p class="text-lg">
+                                <p class="text-xl">
                                     {{ edu.location }}
                                 </p>
                                 <!-- Line 2: Start Date - End Date -->
-                                <p>
+                                <p class="text-lg">
                                     {{
                                         edu.startDate
                                             ? new Date(edu.startDate).toLocaleDateString("en-US", {
@@ -154,12 +157,15 @@ function viewCertificate(cert: Certificate) {
                 </section>
                 <!-- Experience Section -->
                 <section class="my-6 px-4">
-                    <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+                    <div class="flex items-center mb-4">
+                        <Icon name="mdi:briefcase" class="inline-block w-8 h-8 mr-2 mb-2" size="32" />
+                        <h2 class="text-3xl font-semibold mb-4">Experience</h2>
+                    </div>
                     <div v-for="(work, index) in cvData!.experience" :key="index" class="mb-4 text-left">
                         <div class="flex justify-between items-top">
                             <div class="mr-4 w-3/4">
                                 <!-- Line 1: Role -->
-                                <h3 class="text-lg font-bold">
+                                <h3 class="text-xl font-bold">
                                     {{ work.role }}
                                     <NuxtLink
                                         v-if="work.link"
@@ -168,55 +174,60 @@ function viewCertificate(cert: Certificate) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
+                                        <Icon name="mdi:open-in-new" class="ml-1 text-md" />
                                     </NuxtLink>
                                 </h3>
                                 <!-- Line 2: Organization -->
-                                <p class="italic">
+                                <p class="italic text-lg">
                                     {{ work.organization }}
                                 </p>
                                 <!-- List of responsibilities -->
-                                <ul class="list-disc list-inside">
+                                <ul class="list-disc list-inside text-lg">
                                     <li v-for="(resp, rIndex) in work.responsibilities" :key="rIndex">{{ resp }}</li>
                                 </ul>
                             </div>
                             <div class="text-right w-1/4">
                                 <!-- Line 1: Location -->
-                                <p class="text-lg">
+                                <p class="text-xl">
                                     {{ work.location }}
                                 </p>
                                 <!-- Line 2: Start Date - End Date -->
-                                {{
-                                    work.startDate
-                                        ? new Date(work.startDate).toLocaleDateString("en-US", {
-                                              year: "numeric",
-                                              month: "short",
-                                          })
-                                        : "N/A"
-                                }}
-                                <span v-if="work.startDate && work.endDate">-</span>
-                                {{
-                                    work.endDate
-                                        ? work.endDate === "Present"
-                                            ? "Present"
-                                            : new Date(work.endDate).toLocaleDateString("en-US", {
+                                <p class="text-lg">
+                                    {{
+                                        work.startDate
+                                            ? new Date(work.startDate).toLocaleDateString("en-US", {
                                                   year: "numeric",
                                                   month: "short",
                                               })
-                                        : "N/A"
-                                }}
+                                            : "N/A"
+                                    }}
+                                    <span v-if="work.startDate && work.endDate">-</span>
+                                    {{
+                                        work.endDate
+                                            ? work.endDate === "Present"
+                                                ? "Present"
+                                                : new Date(work.endDate).toLocaleDateString("en-US", {
+                                                      year: "numeric",
+                                                      month: "short",
+                                                  })
+                                            : "N/A"
+                                    }}
+                                </p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- Awards & Certificates Section -->
                 <section class="my-6 px-4">
-                    <h2 class="text-2xl font-semibold mb-4">Awards & Certificates</h2>
+                    <div class="flex items-center mb-4">
+                        <Icon name="mdi:certificate" class="inline-block w-8 h-8 mr-2 mb-2" size="32" />
+                        <h2 class="text-3xl font-semibold mb-4">Awards & Certificates</h2>
+                    </div>
                     <div v-for="(cert, index) in cvData!.awardsAndCertificates" :key="index" class="mb-4 text-left">
                         <div class="flex justify-between items-top">
                             <div class="mr-4 w-3/4">
                                 <!-- Line 1: Title -->
-                                <h3 class="text-lg font-bold">
+                                <h3 class="text-xl font-bold">
                                     {{ cert.title }}
                                     <button
                                         v-if="cert.image"
@@ -224,17 +235,17 @@ function viewCertificate(cert: Certificate) {
                                         class="btn btn-xs btn-outline ml-2"
                                         @click="viewCertificate(cert)"
                                     >
-                                        <Icon name="mdi:open-in-new" class="ml-1 text-sm" />
+                                        <Icon name="mdi:open-in-new" class="ml-1 text-md" />
                                     </button>
                                 </h3>
-                                <p class="italic">{{ cert.issuer }}</p>
-                                <p v-if="cert.description" class="text-sm">{{ cert.description }}</p>
-                                <p v-if="cert.link" class="text-xs">
+                                <p class="italic text-lg">{{ cert.issuer }}</p>
+                                <p v-if="cert.description" class="text-md">{{ cert.description }}</p>
+                                <p v-if="cert.link" class="text-sm">
                                     <NuxtLink :to="cert.link.url" target="_blank" rel="noopener noreferrer">
-                                        <div v-show="fancyMode" class="btn btn-outline badge-xs">
+                                        <div v-show="fancyMode" class="btn btn-outline badge-sm">
                                             {{ cert.link.title }}
                                         </div>
-                                        <a v-show="!fancyMode">
+                                        <a v-show="!fancyMode" class="text-gray-700">
                                             {{ cert.link.url }}
                                         </a>
                                     </NuxtLink>
@@ -242,7 +253,7 @@ function viewCertificate(cert: Certificate) {
                             </div>
                             <div class="text-right w-1/4">
                                 <!-- Line 1: Date -->
-                                <p class="text-lg">
+                                <p class="text-xl">
                                     {{
                                         cert.date
                                             ? new Date(cert.date).toLocaleDateString("en-US", {
@@ -258,9 +269,12 @@ function viewCertificate(cert: Certificate) {
                 </section>
                 <!-- Skills & Interests Section -->
                 <section class="my-6 px-4">
-                    <h2 class="text-2xl font-semibold mb-4">Skills & Interests</h2>
+                    <div class="flex items-center mb-4">
+                        <Icon name="mdi:star-circle" class="inline-block w-8 h-8 mr-2 mb-2" size="32" />
+                        <h2 class="text-3xl font-semibold mb-4">Skills & Interests</h2>
+                    </div>
                     <div v-for="(skill, index) in cvData!.skillsAndInterests" :key="index" class="text-left">
-                        <ul class="list-disc list-inside">
+                        <ul class="list-disc list-inside text-lg">
                             <li>
                                 <span class="font-bold">{{ skill.area }}</span
                                 >: {{ skill.details.join(", ") }}
@@ -273,8 +287,8 @@ function viewCertificate(cert: Certificate) {
         <!-- View Certificate Modal -->
         <dialog id="view_certificate_modal" class="modal">
             <div class="modal-box modal-color-override">
-                <h3 class="text-lg font-bold">{{ selectedCertificate?.title }}</h3>
-                <h4 class="text-sm italic mb-2">
+                <h3 class="text-xl font-bold">{{ selectedCertificate?.title }}</h3>
+                <h4 class="text-md italic mb-2">
                     {{ selectedCertificate?.issuer }},
                     {{
                         selectedCertificate?.date
@@ -291,7 +305,7 @@ function viewCertificate(cert: Certificate) {
                         :alt="`${selectedCertificate?.title} - ${selectedCertificate?.description}`"
                         class="w-full h-auto"
                     />
-                    <figcaption class="text-sm text-center mt-2">{{ selectedCertificate?.description }}</figcaption>
+                    <figcaption class="text-md text-center mt-2">{{ selectedCertificate?.description }}</figcaption>
                 </figure>
                 <!-- <p class="py-4">Press ESC key or click the button below to close</p> -->
                 <div class="modal-action">
