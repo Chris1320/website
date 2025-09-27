@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CurriculumVitae from "~/components/My/CurriculumVitae.vue";
+import MyCurriculumVitae from "~/components/My/MyCurriculumVitae.vue";
 
 const route = useRoute();
 const showImage = ref(route.query.image ? route.query.image === "true" : false);
@@ -49,7 +49,7 @@ async function exportPdf() {
 
 <template>
     <div>
-        <CurriculumVitae :show-image="showImage" :fancy-mode="fancyMode" />
+        <MyCurriculumVitae :show-image="showImage" :fancy-mode="fancyMode" />
         <div v-show="showFAB" class="fab">
             <button class="btn btn-lg btn-circle btn-accent" @click="exportPdf">
                 <span v-if="isExporting" class="loading loading-spinner loading-lg" />
