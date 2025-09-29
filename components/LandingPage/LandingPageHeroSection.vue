@@ -71,38 +71,8 @@ const animationButtonWhilePress = { scale: 0.95 };
                     You can contact me in the following platforms:
                 </motion.p>
                 <div class="flex flex-row justify-center items-center gap-10 py-4">
-                    <div class="tooltip tooltip-bottom" data-tip="Personal Email">
-                        <NuxtLink to="mailto:me@chrisfromnowhere.me" target="_blank" class="m-0">
-                            <motion.div
-                                :initial="animationInitial"
-                                :animate="animationAnimate"
-                                :while-hover="animationButtonWhileHover"
-                                :while-press="animationButtonWhilePress"
-                                class="flex flex-col justify-center items-center"
-                            >
-                                <Icon name="mdi:email-outline" size="75" />
-                            </motion.div>
-                        </NuxtLink>
-                    </div>
-                    <div class="tooltip tooltip-bottom" data-tip="Matrix">
-                        <NuxtLink to="https://matrix.to/#/@chris1320:matrix.org" target="_blank" class="m-0">
-                            <motion.div
-                                :initial="animationInitial"
-                                :animate="animationAnimate"
-                                :while-hover="animationButtonWhileHover"
-                                :while-press="animationButtonWhilePress"
-                                class="flex flex-col justify-center items-center"
-                            >
-                                <Icon name="tabler:brand-matrix" size="75" />
-                            </motion.div>
-                        </NuxtLink>
-                    </div>
                     <div class="tooltip tooltip-bottom" data-tip="LinkedIn">
-                        <NuxtLink
-                            to="https://www.linkedin.com/in/christopher-andrei-tayao-60a870373/"
-                            target="_blank"
-                            class="m-0"
-                        >
+                        <NuxtLink to="https://www.linkedin.com/in/christopherandreitayao" target="_blank" class="m-0">
                             <motion.div
                                 :initial="animationInitial"
                                 :animate="animationAnimate"
@@ -110,7 +80,33 @@ const animationButtonWhilePress = { scale: 0.95 };
                                 :while-press="animationButtonWhilePress"
                                 class="flex flex-col justify-center items-center"
                             >
-                                <Icon name="tabler:brand-linkedin" size="75" />
+                                <Icon name="mdi:linkedin" size="75" />
+                            </motion.div>
+                        </NuxtLink>
+                    </div>
+                    <div class="tooltip tooltip-bottom" data-tip="GitHub">
+                        <NuxtLink to="https://github.com/Chris1320" target="_blank" class="m-0">
+                            <motion.div
+                                :initial="animationInitial"
+                                :animate="animationAnimate"
+                                :while-hover="animationButtonWhileHover"
+                                :while-press="animationButtonWhilePress"
+                                class="flex flex-col justify-center items-center"
+                            >
+                                <Icon name="mdi:github-box" size="75" />
+                            </motion.div>
+                        </NuxtLink>
+                    </div>
+                    <div class="tooltip tooltip-bottom" data-tip="Projects">
+                        <NuxtLink to="/projects" class="m-0">
+                            <motion.div
+                                :initial="animationInitial"
+                                :animate="animationAnimate"
+                                :while-hover="animationButtonWhileHover"
+                                :while-press="animationButtonWhilePress"
+                                class="flex flex-col justify-center items-center"
+                            >
+                                <Icon name="material-symbols:deployed-code" size="75" />
                             </motion.div>
                         </NuxtLink>
                     </div>
