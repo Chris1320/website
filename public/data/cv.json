@@ -131,10 +131,6 @@
             "details": ["Cloudflare", "Docker", "Firebase", "Git", "GitHub", "Podman"]
         },
         {
-            "area": "Languages",
-            "details": ["English", "Filipino"]
-        },
-        {
             "area": "Interests",
             "details": ["Photography", "Videography", "Gaming", "Reading", "Traveling"]
         }
