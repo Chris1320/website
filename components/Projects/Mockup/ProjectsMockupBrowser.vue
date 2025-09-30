@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-    <div class="mockup-browser bg-base-100 border-base-300 border w-full h-full">
+    <div class="mockup-browser bg-base-100 border-base-300 border w-full h-auto">
         <div class="mockup-browser-toolbar">
             <div class="input">{{ props.data.url }}</div>
         </div>
