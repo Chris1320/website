@@ -27,17 +27,17 @@ const toggleMenu = () => {
             :exit="{ opacity: 0, y: -20, transition: { duration: 0.2 } }"
         >
             <li>
-                <NuxtLink class="tooltip tooltip-right" data-tip="Home" to="/">
+                <NuxtLink class="tooltip tooltip-right" data-tip="Home" to="/" @click="toggleMenu()">
                     <Icon name="mdi:home-outline" size="20" />
                 </NuxtLink>
             </li>
             <li>
-                <NuxtLink class="tooltip tooltip-right" data-tip="Projects" to="/projects">
+                <NuxtLink class="tooltip tooltip-right" data-tip="Projects" to="/projects" @click="toggleMenu()">
                     <Icon name="mdi:folder-outline" size="20" />
                 </NuxtLink>
             </li>
             <li>
-                <NuxtLink class="tooltip tooltip-right" data-tip="About Me" to="/about">
+                <NuxtLink class="tooltip tooltip-right" data-tip="About Me" to="/about" @click="toggleMenu()">
                     <Icon name="mdi:account-circle-outline" size="20" />
                 </NuxtLink>
             </li>

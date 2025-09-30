@@ -23,7 +23,7 @@ import { motion } from "motion-v";
             <NuxtLink to="mailto:me@chrisfromnowhere.me" target="_blank" class="link link-hover"
                 >Email (Personal)
             </NuxtLink>
-            <NuxtLink to="mailto:work@chrisfromnowhere.me" target="_blank" class="link link-hover"
+            <NuxtLink to="mailto:chris.tayao@chrisfromnowhere.me" target="_blank" class="link link-hover"
                 >Email (Work)
             </NuxtLink>
             <NuxtLink to="https://matrix.to/#/@chris1320:matrix.org" target="_blank" class="link link-hover"
@@ -39,10 +39,7 @@ import { motion } from "motion-v";
         <nav>
             <h6 class="footer-title">External Links</h6>
             <NuxtLink to="https://github.com/Chris1320" target="_blank" class="link link-hover">GitHub</NuxtLink>
-            <NuxtLink
-                to="https://www.linkedin.com/in/christopher-andrei-tayao-60a870373/"
-                target="_blank"
-                class="link link-hover"
+            <NuxtLink to="https://www.linkedin.com/in/christopherandreitayao" target="_blank" class="link link-hover"
                 >LinkedIn
             </NuxtLink>
             <NuxtLink to="https://www.credly.com/users/cfn" target="_blank" class="link link-hover">Credly</NuxtLink>
