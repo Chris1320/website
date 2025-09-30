@@ -128,8 +128,10 @@ onMounted(() => {
                                             :initial="{ opacity: 0, y: 20 }"
                                             :animate="{ opacity: 1, y: 0 }"
                                             :while-hover="{ scale: 1.5 }"
-                                            @hover-start="setHoveredTool(tool, toolkitCategory.name)"
-                                            @click="showHoveredToolInfo()"
+                                            @click="
+                                                setHoveredTool(tool, toolkitCategory.name);
+                                                showHoveredToolInfo()
+                                            "
                                         >
                                             <Icon :name="tool.icon" size="48" />
                                         </motion.div>
