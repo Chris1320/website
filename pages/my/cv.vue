@@ -20,7 +20,7 @@ useHead({
 </script>
 
 <template>
-    <div class="flex flex-col justify-center items-center w-full px-4 py-8">
+    <div class="flex flex-col justify-center items-center w-full max-h-lvh px-4 py-8">
         <!-- <MyCurriculumVitae :show-image="showImage" :fancy-mode="fancyMode" /> -->
         <iframe
             src="https://drive.google.com/file/d/1shlI5XUekq2Uq8spU2bOjYbeyyMMlPZ6/preview"
