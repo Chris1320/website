@@ -46,7 +46,14 @@ const animationButtonWhilePress = { scale: 0.95 };
                     >
                         Hi!
                     </motion.h1>
-                    <motion.div :initial="animationHandInitial" :animate="animationHandAnimate" class="inline-block">
+                    <motion.div
+                        class="inline-block"
+                        :initial="animationHandInitial"
+                        :animate="animationHandAnimate"
+                        :drag="true"
+                        :drag-elastic="{ top: 0.25, left: 0.25, right: 0.25, bottom: 0.25 }"
+                        :drag-constraints="{ top: 0, left: 0, right: 0, bottom: 0 }"
+                    >
                         <motion.span
                             :initial="animationWaveInitial"
                             :animate="animationWaveAnimate"
