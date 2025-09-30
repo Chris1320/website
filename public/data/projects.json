@@ -95,6 +95,66 @@
         }
     },
     {
+        "id": 5,
+        "name": "SetupGuides",
+        "dateStart": "2024-04-06",
+        "dateEnd": null,
+        "status": "stable",
+        "description": "This project contains guides on how I set up software I use on my machines.",
+        "links": [
+            { "name": "Repository", "url": "https://github.com/Chris1320/SetupGuides" },
+            { "name": "Website", "url": "https://chris1320.github.io/SetupGuides/" }
+        ],
+        "technologies": [
+            {
+                "name": "Markdown",
+                "icon": "simple-icons:markdown"
+            },
+            {
+                "name": "GitHub Pages",
+                "icon": "simple-icons:github"
+            }
+        ],
+        "mockups": {
+            "type": "web",
+            "data": {
+                "url": "https://chris1320.github.io/SetupGuides/",
+                "images": [
+                    {
+                        "description": "Banner",
+                        "url": "https://media.githubusercontent.com/media/Chris1320/SetupGuides/refs/heads/main/assets/images/banner/SetupGuides-banner.png"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": 6,
+        "name": "The Unus Annus Archive Downloader (TUAA Downloader)",
+        "dateStart": "2021-09-08",
+        "dateEnd": null,
+        "status": "stable",
+        "description": "A python script I made for downloading videos from the Unus Annus Archive.",
+        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/TUAA_Downloader" }],
+        "technologies": [
+            {
+                "name": "Python",
+                "icon": "lineicons:python"
+            }
+        ],
+        "mockups": {
+            "type": "desktop",
+            "data": {
+                "images": [
+                    {
+                        "description": "TUAA Downloader Help Menu",
+                        "url": "https://safe-files.chrisfromnowhere.me/J4nEp1ZinODapxTe.png"
+                    }
+                ]
+            }
+        }
+    },
+    {
         "id": 2,
         "name": "ReconnectED",
         "dateStart": "2025-03-26",
@@ -129,6 +189,65 @@
                         "url": "https://safe-files.chrisfromnowhere.me/uFfUk8CovpQkulF4.png"
                     }
                 ]
+            }
+        }
+    },
+    {
+        "id": 8,
+        "name": "copyt",
+        "dateStart": "2023-12-28",
+        "dateEnd": null,
+        "status": "wip",
+        "description": "Copy It! — Another clipboard manager for Wayland.",
+        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/copyt" }],
+        "technologies": [
+            {
+                "name": "Python",
+                "icon": "lineicons:python"
+            },
+            {
+                "name": "SQLite",
+                "icon": "file-icons:sqlite"
+            }
+        ],
+        "mockups": {
+            "type": "desktop",
+            "data": {
+                "images": []
+            }
+        }
+    },
+    {
+        "id": 10,
+        "name": "Genesis",
+        "dateStart": "2025-06-24",
+        "dateEnd": null,
+        "status": "wip",
+        "description": "A web application for journaling, habit tracking, and organizing your social interactions. Your journal, only yours.",
+        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/Genesis" }],
+        "technologies": [
+            {
+                "name": "VueJS",
+                "icon": "lineicons:vuejs"
+            },
+            {
+                "name": "DaisyUI",
+                "icon": "simple-icons:daisyui"
+            },
+            {
+                "name": "PostgreSQL",
+                "icon": "lineicons:postgresql"
+            },
+            {
+                "name": "Docker",
+                "icon": "lineicons:docker"
+            }
+        ],
+        "mockups": {
+            "type": "web",
+            "data": {
+                "url": "",
+                "images": []
             }
         }
     },
@@ -220,66 +339,6 @@
         }
     },
     {
-        "id": 5,
-        "name": "SetupGuides",
-        "dateStart": "2024-04-06",
-        "dateEnd": null,
-        "status": "stable",
-        "description": "This project contains guides on how I set up software I use on my machines.",
-        "links": [
-            { "name": "Repository", "url": "https://github.com/Chris1320/SetupGuides" },
-            { "name": "Website", "url": "https://chris1320.github.io/SetupGuides/" }
-        ],
-        "technologies": [
-            {
-                "name": "Markdown",
-                "icon": "simple-icons:markdown"
-            },
-            {
-                "name": "GitHub Pages",
-                "icon": "simple-icons:github"
-            }
-        ],
-        "mockups": {
-            "type": "web",
-            "data": {
-                "url": "https://chris1320.github.io/SetupGuides/",
-                "images": [
-                    {
-                        "description": "Banner",
-                        "url": "https://media.githubusercontent.com/media/Chris1320/SetupGuides/refs/heads/main/assets/images/banner/SetupGuides-banner.png"
-                    }
-                ]
-            }
-        }
-    },
-    {
-        "id": 6,
-        "name": "The Unus Annus Archive Downloader (TUAA Downloader)",
-        "dateStart": "2021-09-08",
-        "dateEnd": null,
-        "status": "stable",
-        "description": "A python script I made for downloading videos from the Unus Annus Archive.",
-        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/TUAA_Downloader" }],
-        "technologies": [
-            {
-                "name": "Python",
-                "icon": "lineicons:python"
-            }
-        ],
-        "mockups": {
-            "type": "desktop",
-            "data": {
-                "images": [
-                    {
-                        "description": "TUAA Downloader Help Menu",
-                        "url": "https://safe-files.chrisfromnowhere.me/J4nEp1ZinODapxTe.png"
-                    }
-                ]
-            }
-        }
-    },
-    {
         "id": 7,
         "name": "IPCalculatorWeb",
         "dateStart": "2023-06-02",
@@ -334,31 +393,6 @@
                         "url": "https://safe-files.chrisfromnowhere.me/Qt89dGpstbXZJ6k5.png"
                     }
                 ]
-            }
-        }
-    },
-    {
-        "id": 8,
-        "name": "copyt",
-        "dateStart": "2023-12-28",
-        "dateEnd": null,
-        "status": "wip",
-        "description": "Copy It! — Another clipboard manager for Wayland.",
-        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/copyt" }],
-        "technologies": [
-            {
-                "name": "Python",
-                "icon": "lineicons:python"
-            },
-            {
-                "name": "SQLite",
-                "icon": "file-icons:sqlite"
-            }
-        ],
-        "mockups": {
-            "type": "desktop",
-            "data": {
-                "images": []
             }
         }
     },
@@ -423,40 +457,6 @@
                         "url": "https://github.com/user-attachments/assets/b4de9cc0-e98c-491f-adca-b6a88aed68c1"
                     }
                 ]
-            }
-        }
-    },
-    {
-        "id": 10,
-        "name": "Genesis",
-        "dateStart": "2025-06-24",
-        "dateEnd": null,
-        "status": "wip",
-        "description": "A web application for journaling, habit tracking, and organizing your social interactions. Your journal, only yours.",
-        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/Genesis" }],
-        "technologies": [
-            {
-                "name": "VueJS",
-                "icon": "lineicons:vuejs"
-            },
-            {
-                "name": "DaisyUI",
-                "icon": "simple-icons:daisyui"
-            },
-            {
-                "name": "PostgreSQL",
-                "icon": "lineicons:postgresql"
-            },
-            {
-                "name": "Docker",
-                "icon": "lineicons:docker"
-            }
-        ],
-        "mockups": {
-            "type": "web",
-            "data": {
-                "url": "",
-                "images": []
             }
         }
     }
