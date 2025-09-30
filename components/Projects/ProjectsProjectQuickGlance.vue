@@ -77,14 +77,6 @@ function formatDate(dateString: string): string {
                     Archived
                 </motion.div>
                 <motion.div
-                    v-else-if="props.project.status === 'abandoned'"
-                    :initial="animationInitial"
-                    :while-in-view="animationWhileInView"
-                    class="badge badge-soft badge-error"
-                >
-                    Abandoned
-                </motion.div>
-                <motion.div
                     v-else
                     :initial="animationInitial"
                     :while-in-view="animationWhileInView"
@@ -223,14 +215,6 @@ function formatDate(dateString: string): string {
                     class="badge badge-soft badge-info"
                 >
                     Archived
-                </motion.div>
-                <motion.div
-                    v-else-if="props.project.status === 'abandoned'"
-                    :initial="animationInitial"
-                    :while-in-view="animationWhileInView"
-                    class="badge badge-soft badge-error"
-                >
-                    Abandoned
                 </motion.div>
                 <motion.div
                     v-else
