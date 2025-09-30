@@ -137,7 +137,7 @@
         "name": "Amplify",
         "dateStart": "2024-05-24",
         "dateEnd": "2024-11-14",
-        "status": "abandoned",
+        "status": "archived",
         "description": "Amplify is a note-taking application inspired by Obsidian and AnyType designed specifically for students. It integrates seamlessly with existing Google Workspace/Classroom features while offering an AI-powered enhancement layer powered by OpenAI.",
         "links": [{ "name": "Repository", "url": "https://github.com/CaffeineFueledProgrammers/Amplify" }],
         "technologies": [
@@ -284,7 +284,7 @@
         "name": "IPCalculatorWeb",
         "dateStart": "2023-06-02",
         "dateEnd": "2023-06-20",
-        "status": "abandoned",
+        "status": "archived",
         "description": "A CLI program to calculate IP addresses, subnet masks, and networks, converted into a web app.",
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/IPCalculatorWeb" },
