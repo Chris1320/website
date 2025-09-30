@@ -119,23 +119,21 @@ onMounted(() => {
                             <p class="text-sm opacity-70">{{ toolkitCategory.description }}</p>
                         </div>
                         <table class="table pt-10 max-w-sm">
-                            <tbody>
+                            <tbody v-if="isMounted">
                                 <tr>
-                                    <div v-if="isMounted">
-                                        <td class="grid grid-cols-5 gap-4">
-                                            <motion.div
-                                                v-for="tool in toolkitCategory.tools"
-                                                :key="tool.name"
-                                                :initial="{ opacity: 0, y: 20 }"
-                                                :animate="{ opacity: 1, y: 0 }"
-                                                :while-hover="{ scale: 1.5 }"
-                                                @hover-start="setHoveredTool(tool, toolkitCategory.name)"
-                                                @click="showHoveredToolInfo()"
-                                            >
-                                                <Icon :name="tool.icon" size="48" />
-                                            </motion.div>
-                                        </td>
-                                    </div>
+                                    <td class="grid grid-cols-5 gap-4">
+                                        <motion.div
+                                            v-for="tool in toolkitCategory.tools"
+                                            :key="tool.name"
+                                            :initial="{ opacity: 0, y: 20 }"
+                                            :animate="{ opacity: 1, y: 0 }"
+                                            :while-hover="{ scale: 1.5 }"
+                                            @hover-start="setHoveredTool(tool, toolkitCategory.name)"
+                                            @click="showHoveredToolInfo()"
+                                        >
+                                            <Icon :name="tool.icon" size="48" />
+                                        </motion.div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
