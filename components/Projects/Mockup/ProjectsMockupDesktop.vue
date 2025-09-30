@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-    <div class="mockup-window bg-base-100 border-base-300 border w-full h-90">
+    <div class="mockup-window bg-base-100 border-base-300 border w-full max-h-[90]">
         <ProjectsMockupContent :images="props.data.images" />
     </div>
 </template>
