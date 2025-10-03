@@ -76,9 +76,7 @@ const props = defineProps<{
                                 rel="noopener noreferrer"
                                 class="hover:underline mr-2"
                             >
-                                <button class="btn btn-sm btn-outline btn-accent mr-2 mb-2">
-                                    {{ link.name }}
-                                </button>
+                                {{ link.name }}
                             </NuxtLink>
                         </div>
                     </td>
