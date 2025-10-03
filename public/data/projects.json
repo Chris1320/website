@@ -95,7 +95,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 2,
         "name": "SetupGuides",
         "dateStart": "2024-04-06",
         "dateEnd": null,
@@ -129,7 +129,7 @@
         }
     },
     {
-        "id": 6,
+        "id": 3,
         "name": "The Unus Annus Archive Downloader (TUAA Downloader)",
         "dateStart": "2021-09-08",
         "dateEnd": null,
@@ -155,7 +155,7 @@
         }
     },
     {
-        "id": 2,
+        "id": 4,
         "name": "ReconnectED",
         "dateStart": "2025-03-26",
         "dateEnd": null,
@@ -193,66 +193,7 @@
         }
     },
     {
-        "id": 8,
-        "name": "copyt",
-        "dateStart": "2023-12-28",
-        "dateEnd": null,
-        "status": "wip",
-        "description": "Copy It! — Another clipboard manager for Wayland.",
-        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/copyt" }],
-        "technologies": [
-            {
-                "name": "Python",
-                "icon": "lineicons:python"
-            },
-            {
-                "name": "SQLite",
-                "icon": "file-icons:sqlite"
-            }
-        ],
-        "mockups": {
-            "type": "desktop",
-            "data": {
-                "images": []
-            }
-        }
-    },
-    {
-        "id": 10,
-        "name": "Genesis",
-        "dateStart": "2025-06-24",
-        "dateEnd": null,
-        "status": "wip",
-        "description": "A web application for journaling, habit tracking, and organizing your social interactions. Your journal, only yours.",
-        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/Genesis" }],
-        "technologies": [
-            {
-                "name": "VueJS",
-                "icon": "lineicons:vuejs"
-            },
-            {
-                "name": "DaisyUI",
-                "icon": "simple-icons:daisyui"
-            },
-            {
-                "name": "PostgreSQL",
-                "icon": "lineicons:postgresql"
-            },
-            {
-                "name": "Docker",
-                "icon": "lineicons:docker"
-            }
-        ],
-        "mockups": {
-            "type": "web",
-            "data": {
-                "url": "",
-                "images": []
-            }
-        }
-    },
-    {
-        "id": 3,
+        "id": 5,
         "name": "Amplify",
         "dateStart": "2024-05-24",
         "dateEnd": "2024-11-14",
@@ -315,118 +256,7 @@
         }
     },
     {
-        "id": 4,
-        "name": "InventorySystem-Java",
-        "dateStart": "2023-03-14",
-        "dateEnd": "2023-05-28",
-        "status": "archived",
-        "description": "This project is written in Java using the Swing GUI Framework. This project is initialized and accomplished as our final project in Computer Programming 2 (COMP3).",
-        "links": [
-            { "name": "Repository", "url": "https://github.com/Chris1320/InventorySystem-Java" },
-            { "name": "Wiki", "url": "https://github.com/Chris1320/InventorySystem-Java/wiki" }
-        ],
-        "technologies": [
-            {
-                "name": "Java",
-                "icon": "hugeicons:java"
-            }
-        ],
-        "mockups": {
-            "type": "desktop",
-            "data": {
-                "images": [
-                    {
-                        "description": "Login Panel",
-                        "url": "https://user-images.githubusercontent.com/74256376/225792401-fc3e2511-2aae-414c-898e-aba312c3d4be.png"
-                    },
-                    {
-                        "description": "Admin Dashboard",
-                        "url": "https://user-images.githubusercontent.com/74256376/225792465-c73c6af5-a68d-448f-893c-832a4ff51d44.png"
-                    },
-                    {
-                        "description": "Add Employee Panel",
-                        "url": "https://user-images.githubusercontent.com/74256376/225792494-c1545956-f83b-4ba5-9ea5-258d09431191.png"
-                    },
-                    {
-                        "description": "Update Employee Panel",
-                        "url": "https://user-images.githubusercontent.com/74256376/225792507-baca47d3-3fc9-4012-b9a8-a7b66cfcb828.png"
-                    },
-                    {
-                        "description": "Employee Dashboard",
-                        "url": "https://user-images.githubusercontent.com/74256376/225792568-10fff789-c1e3-40fb-8780-b38ecf00551c.png"
-                    },
-                    {
-                        "description": "Add Item Panel",
-                        "url": "https://user-images.githubusercontent.com/74256376/225792588-dd0ce58c-760b-4d93-a54f-2c84bffa40b2.png"
-                    },
-                    {
-                        "description": "Update Item Panel",
-                        "url": "https://user-images.githubusercontent.com/74256376/225792613-b0c98395-87fd-43aa-860f-b569c763967b.png"
-                    }
-                ]
-            }
-        }
-    },
-    {
-        "id": 7,
-        "name": "IPCalculatorWeb",
-        "dateStart": "2023-06-02",
-        "dateEnd": "2023-06-20",
-        "status": "archived",
-        "description": "A CLI program to calculate IP addresses, subnet masks, and networks, converted into a web app.",
-        "links": [
-            { "name": "Repository", "url": "https://github.com/Chris1320/IPCalculatorWeb" },
-            { "name": "Website", "url": "https://ipcalculatorweb.pythonanywhere.com/" }
-        ],
-        "technologies": [
-            {
-                "name": "Python",
-                "icon": "lineicons:python"
-            },
-            {
-                "name": "Flask",
-                "icon": "simple-icons:flask"
-            }
-        ],
-        "mockups": {
-            "type": "web",
-            "data": {
-                "url": "https://ipcalculatorweb.pythonanywhere.com/",
-                "images": [
-                    {
-                        "description": "Home Page",
-                        "url": "https://safe-files.chrisfromnowhere.me/Xmdqw1Rw2tXZNOk2.png"
-                    },
-                    {
-                        "description": "IP Address Conversion",
-                        "url": "https://safe-files.chrisfromnowhere.me/AevkV4ufNf2SssWV.png"
-                    },
-                    {
-                        "description": "Subnet Mask Conversion",
-                        "url": "https://safe-files.chrisfromnowhere.me/q9WcQHoYdL5iYoZ7.png"
-                    },
-                    {
-                        "description": "Get Subnet Mask from Usable Hosts",
-                        "url": "https://safe-files.chrisfromnowhere.me/OZJvsKZn1TaUgVKg.png"
-                    },
-                    {
-                        "description": "Get Network Info",
-                        "url": "https://safe-files.chrisfromnowhere.me/uVbPlLPthDvs8Q2m.png"
-                    },
-                    {
-                        "description": "Design a Network (Constant Subnet)",
-                        "url": "https://safe-files.chrisfromnowhere.me/g3aHDk7m5crsLg62.jpeg"
-                    },
-                    {
-                        "description": "Design a Network (VLSM)",
-                        "url": "https://safe-files.chrisfromnowhere.me/Qt89dGpstbXZJ6k5.png"
-                    }
-                ]
-            }
-        }
-    },
-    {
-        "id": 9,
+        "id": 6,
         "name": "Baliuag University Student Information System",
         "dateStart": "2024-09-28",
         "dateEnd": "2024-11-08",
@@ -484,6 +314,117 @@
                     {
                         "description": "Manage Users",
                         "url": "https://github.com/user-attachments/assets/b4de9cc0-e98c-491f-adca-b6a88aed68c1"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": 7,
+        "name": "InventorySystem-Java",
+        "dateStart": "2023-03-14",
+        "dateEnd": "2023-05-28",
+        "status": "archived",
+        "description": "This project is written in Java using the Swing GUI Framework. This project is initialized and accomplished as our final project in Computer Programming 2 (COMP3).",
+        "links": [
+            { "name": "Repository", "url": "https://github.com/Chris1320/InventorySystem-Java" },
+            { "name": "Wiki", "url": "https://github.com/Chris1320/InventorySystem-Java/wiki" }
+        ],
+        "technologies": [
+            {
+                "name": "Java",
+                "icon": "hugeicons:java"
+            }
+        ],
+        "mockups": {
+            "type": "desktop",
+            "data": {
+                "images": [
+                    {
+                        "description": "Login Panel",
+                        "url": "https://user-images.githubusercontent.com/74256376/225792401-fc3e2511-2aae-414c-898e-aba312c3d4be.png"
+                    },
+                    {
+                        "description": "Admin Dashboard",
+                        "url": "https://user-images.githubusercontent.com/74256376/225792465-c73c6af5-a68d-448f-893c-832a4ff51d44.png"
+                    },
+                    {
+                        "description": "Add Employee Panel",
+                        "url": "https://user-images.githubusercontent.com/74256376/225792494-c1545956-f83b-4ba5-9ea5-258d09431191.png"
+                    },
+                    {
+                        "description": "Update Employee Panel",
+                        "url": "https://user-images.githubusercontent.com/74256376/225792507-baca47d3-3fc9-4012-b9a8-a7b66cfcb828.png"
+                    },
+                    {
+                        "description": "Employee Dashboard",
+                        "url": "https://user-images.githubusercontent.com/74256376/225792568-10fff789-c1e3-40fb-8780-b38ecf00551c.png"
+                    },
+                    {
+                        "description": "Add Item Panel",
+                        "url": "https://user-images.githubusercontent.com/74256376/225792588-dd0ce58c-760b-4d93-a54f-2c84bffa40b2.png"
+                    },
+                    {
+                        "description": "Update Item Panel",
+                        "url": "https://user-images.githubusercontent.com/74256376/225792613-b0c98395-87fd-43aa-860f-b569c763967b.png"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": 8,
+        "name": "IPCalculatorWeb",
+        "dateStart": "2023-06-02",
+        "dateEnd": "2023-06-20",
+        "status": "archived",
+        "description": "A CLI program to calculate IP addresses, subnet masks, and networks, converted into a web app.",
+        "links": [
+            { "name": "Repository", "url": "https://github.com/Chris1320/IPCalculatorWeb" },
+            { "name": "Website", "url": "https://ipcalculatorweb.pythonanywhere.com/" }
+        ],
+        "technologies": [
+            {
+                "name": "Python",
+                "icon": "lineicons:python"
+            },
+            {
+                "name": "Flask",
+                "icon": "simple-icons:flask"
+            }
+        ],
+        "mockups": {
+            "type": "web",
+            "data": {
+                "url": "https://ipcalculatorweb.pythonanywhere.com/",
+                "images": [
+                    {
+                        "description": "Home Page",
+                        "url": "https://safe-files.chrisfromnowhere.me/Xmdqw1Rw2tXZNOk2.png"
+                    },
+                    {
+                        "description": "IP Address Conversion",
+                        "url": "https://safe-files.chrisfromnowhere.me/AevkV4ufNf2SssWV.png"
+                    },
+                    {
+                        "description": "Subnet Mask Conversion",
+                        "url": "https://safe-files.chrisfromnowhere.me/q9WcQHoYdL5iYoZ7.png"
+                    },
+                    {
+                        "description": "Get Subnet Mask from Usable Hosts",
+                        "url": "https://safe-files.chrisfromnowhere.me/OZJvsKZn1TaUgVKg.png"
+                    },
+                    {
+                        "description": "Get Network Info",
+                        "url": "https://safe-files.chrisfromnowhere.me/uVbPlLPthDvs8Q2m.png"
+                    },
+                    {
+                        "description": "Design a Network (Constant Subnet)",
+                        "url": "https://safe-files.chrisfromnowhere.me/g3aHDk7m5crsLg62.jpeg"
+                    },
+                    {
+                        "description": "Design a Network (VLSM)",
+                        "url": "https://safe-files.chrisfromnowhere.me/Qt89dGpstbXZJ6k5.png"
                     }
                 ]
             }
