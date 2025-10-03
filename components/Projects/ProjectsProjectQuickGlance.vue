@@ -158,9 +158,11 @@ const animationMockupWhileInView = { opacity: 1, x: 0, transition: { duration: 0
             />
         </motion.div>
         <div class="flex-1">
-            <motion.h2 :initial="animationInitial" :while-in-view="animationWhileInView" class="text-2xl font-bold">
-                {{ props.project.name }}
-            </motion.h2>
+            <NuxtLink :to="`/project/${props.project.id}`" class="hover:underline">
+                <motion.h2 :initial="animationInitial" :while-in-view="animationWhileInView" class="text-2xl font-bold">
+                    {{ props.project.name }}
+                </motion.h2>
+            </NuxtLink>
             <div class="flex items-center justify-between">
                 <!-- TODO: do not show range if start and end are within the same month -->
                 <motion.p
