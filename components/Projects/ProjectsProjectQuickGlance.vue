@@ -10,20 +10,6 @@ const animationInitial = { opacity: 0, x: -25 };
 const animationWhileInView = { opacity: 1, x: 0, transition: { duration: 0.5 } };
 const animationMockupInitial = { opacity: 0, x: 25 };
 const animationMockupWhileInView = { opacity: 1, x: 0, transition: { duration: 0.5 } };
-
-function isValidDate(dateString: string | undefined): boolean {
-    if (!dateString) return false;
-    const date = new Date(dateString);
-    return !isNaN(date.getTime());
-}
-
-function formatDate(dateString: string): string {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-    });
-}
 </script>
 
 <template>
