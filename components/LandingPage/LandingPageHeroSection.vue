@@ -67,7 +67,7 @@ const animationButtonWhilePress = { scale: 0.95 };
                         :animate="animationTitleRightAnimate"
                         class="text-5xl font-bold"
                     >
-                        I am Chris
+                        I am <span class="text-accent">Chris</span>
                     </motion.h1>
                 </div>
                 <motion.p :initial="animationInitial" :animate="animationAnimate" class="pt-8">
