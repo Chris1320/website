@@ -9,6 +9,7 @@ export interface Project {
     name: string;
     dateStart: string;
     dateEnd?: string;
+    visible: boolean;
     status: "wip" | "stable" | "archived";
     description: string;
     links: { name: string; url: string }[];
