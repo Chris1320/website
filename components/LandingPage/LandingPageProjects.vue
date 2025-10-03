@@ -14,7 +14,7 @@ console.log(`There are ${projects.value?.length || 0} projects.`);
         </div>
         <div v-else-if="error"><AppError title="An error occured loading projects" :error="error.message" /></div>
         <div v-for="project in projects" v-else :key="project.id">
-            <ProjectsProjectQuickGlance :project="project" />
+            <ProjectsProjectQuickGlance v-if="project.visible" :project="project" />
         </div>
     </div>
 </template>
