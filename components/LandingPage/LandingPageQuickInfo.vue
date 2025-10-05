@@ -105,92 +105,86 @@ function handleExplodeSkill(_skill: string | null) {
 </script>
 
 <template>
-    <div class="min-h-dvh w-full">
-        <div class="text-center min-h-dvh items-center flex flex-col justify-center px-4">
-            <motion.h3
+    <div class="text-center items-center flex flex-col justify-center px-4 my-10">
+        <motion.h3 :initial="{ opacity: 0, y: -20 }" :while-in-view="{ opacity: 1, y: 0 }" class="text-2xl font-medium">
+            I have extensive experience in...
+        </motion.h3>
+        <AnimatePresence>
+            <motion.h2
+                v-if="showToolName"
                 :initial="{ opacity: 0, y: -20 }"
                 :while-in-view="{ opacity: 1, y: 0 }"
-                class="text-2xl font-medium"
+                :animate="{ opacity: 1, y: 0 }"
+                :exit="{ opacity: 0, y: -20 }"
+                class="text-3xl font-bold"
+                style="min-height: 2.5rem"
             >
-                I have extensive experience in...
-            </motion.h3>
-            <AnimatePresence>
-                <motion.h2
-                    v-if="showToolName"
-                    :initial="{ opacity: 0, y: -20 }"
-                    :while-in-view="{ opacity: 1, y: 0 }"
-                    :animate="{ opacity: 1, y: 0 }"
-                    :exit="{ opacity: 0, y: -20 }"
-                    class="text-3xl font-bold"
-                    style="min-height: 2.5rem"
+                {{ selectedSkillName }}
+            </motion.h2>
+            <!-- Placeholder to prevent layout shift -->
+            <div v-else style="min-height: 2.5rem" />
+        </AnimatePresence>
+        <div class="mt-5 flex flex-row justify-center gap-1 flex-wrap pt-5 pb-10">
+            <!-- NOTE: The contents here are currently hardcoded. -->
+            <motion.div :initial="{ opacity: 0, x: -20, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                <motion.div
+                    :animate="skill1Animation"
+                    @click="handleExplodeSkill('py')"
+                    @hover-start="handleExplodeSkill('py')"
+                    @hover-end="handleExplodeSkill(null)"
                 >
-                    {{ selectedSkillName }}
-                </motion.h2>
-                <!-- Placeholder to prevent layout shift -->
-                <div v-else style="min-height: 2.5rem" />
-            </AnimatePresence>
-            <div class="mt-5 flex flex-row justify-center gap-1 flex-wrap pt-5 pb-10">
-                <!-- NOTE: The contents here are currently hardcoded. -->
-                <motion.div :initial="{ opacity: 0, x: -20, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                    <motion.div
-                        :animate="skill1Animation"
-                        @click="handleExplodeSkill('py')"
-                        @hover-start="handleExplodeSkill('py')"
-                        @hover-end="handleExplodeSkill(null)"
-                    >
-                        <Icon name="skill-icons:python-dark" size="48" />
-                    </motion.div>
+                    <Icon name="skill-icons:python-dark" size="48" />
                 </motion.div>
-                <motion.div :initial="{ opacity: 0, x: -20, y: -10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                    <motion.div
-                        :animate="skill2Animation"
-                        @click="handleExplodeSkill('cs')"
-                        @hover-start="handleExplodeSkill('cs')"
-                        @hover-end="handleExplodeSkill(null)"
-                    >
-                        <Icon name="skill-icons:cs" size="48" />
-                    </motion.div>
-                </motion.div>
-                <motion.div :initial="{ opacity: 0, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                    <motion.div
-                        :animate="skill3Animation"
-                        @click="handleExplodeSkill('ts')"
-                        @hover-start="handleExplodeSkill('ts')"
-                        @hover-end="handleExplodeSkill(null)"
-                    >
-                        <Icon name="skill-icons:typescript" size="48" />
-                    </motion.div>
-                </motion.div>
-                <motion.div :initial="{ opacity: 0, x: 20, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                    <motion.div
-                        :animate="skill4Animation"
-                        @click="handleExplodeSkill('vue')"
-                        @hover-start="handleExplodeSkill('vue')"
-                        @hover-end="handleExplodeSkill(null)"
-                    >
-                        <Icon name="skill-icons:vuejs-dark" size="48" />
-                    </motion.div>
-                </motion.div>
-                <motion.div :initial="{ opacity: 0, x: 20, y: -10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                    <motion.div
-                        :animate="skill5Animation"
-                        @click="handleExplodeSkill('react')"
-                        @hover-start="handleExplodeSkill('react')"
-                        @hover-end="handleExplodeSkill(null)"
-                    >
-                        <Icon name="skill-icons:react-dark" size="48" />
-                    </motion.div>
-                </motion.div>
-            </div>
-            <NuxtLink to="/about#skills">
-                <motion.button
-                    :initial="{ opacity: 0, y: -20 }"
-                    :while-in-view="{ opacity: 1, y: 0 }"
-                    :while-hover="{ scale: 1.25, rotate: 5 }"
-                    class="btn btn-outline btn-md btn-accent"
-                    >See my toolkit!</motion.button
+            </motion.div>
+            <motion.div :initial="{ opacity: 0, x: -20, y: -10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                <motion.div
+                    :animate="skill2Animation"
+                    @click="handleExplodeSkill('cs')"
+                    @hover-start="handleExplodeSkill('cs')"
+                    @hover-end="handleExplodeSkill(null)"
                 >
-            </NuxtLink>
+                    <Icon name="skill-icons:cs" size="48" />
+                </motion.div>
+            </motion.div>
+            <motion.div :initial="{ opacity: 0, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                <motion.div
+                    :animate="skill3Animation"
+                    @click="handleExplodeSkill('ts')"
+                    @hover-start="handleExplodeSkill('ts')"
+                    @hover-end="handleExplodeSkill(null)"
+                >
+                    <Icon name="skill-icons:typescript" size="48" />
+                </motion.div>
+            </motion.div>
+            <motion.div :initial="{ opacity: 0, x: 20, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                <motion.div
+                    :animate="skill4Animation"
+                    @click="handleExplodeSkill('vue')"
+                    @hover-start="handleExplodeSkill('vue')"
+                    @hover-end="handleExplodeSkill(null)"
+                >
+                    <Icon name="skill-icons:vuejs-dark" size="48" />
+                </motion.div>
+            </motion.div>
+            <motion.div :initial="{ opacity: 0, x: 20, y: -10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                <motion.div
+                    :animate="skill5Animation"
+                    @click="handleExplodeSkill('react')"
+                    @hover-start="handleExplodeSkill('react')"
+                    @hover-end="handleExplodeSkill(null)"
+                >
+                    <Icon name="skill-icons:react-dark" size="48" />
+                </motion.div>
+            </motion.div>
         </div>
+        <NuxtLink to="/about#skills">
+            <motion.button
+                :initial="{ opacity: 0, y: -20 }"
+                :while-in-view="{ opacity: 1, y: 0 }"
+                :while-hover="{ scale: 1.25, rotate: 5 }"
+                class="btn btn-outline btn-md btn-accent"
+                >See my toolkit!</motion.button
+            >
+        </NuxtLink>
     </div>
 </template>
