@@ -37,7 +37,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div>
+    <div id="skills">
         <div v-if="pending" class="mb-6 flex flex-row justify-center items-center">
             <span class="loading loading-circle loading-md" />
             <p class="pl-5 text-md">Loading toolkit...</p>
