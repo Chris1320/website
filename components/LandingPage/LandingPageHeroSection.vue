@@ -101,8 +101,8 @@ const animationButtonWhilePress = { scale: 0.95 };
                             </motion.div>
                         </NuxtLink>
                     </div>
-                    <div class="tooltip tooltip-bottom" data-tip="Projects">
-                        <NuxtLink to="/projects" class="m-0">
+                    <div class="tooltip tooltip-bottom" data-tip="Email">
+                        <NuxtLink to="mailto:chris.tayao@chrisfromnowhere.me" class="m-0">
                             <motion.div
                                 :initial="animationInitial"
                                 :animate="animationAnimate"
@@ -110,7 +110,7 @@ const animationButtonWhilePress = { scale: 0.95 };
                                 :while-press="animationButtonWhilePress"
                                 class="flex flex-col justify-center items-center"
                             >
-                                <Icon name="material-symbols:deployed-code" size="75" />
+                                <Icon name="material-symbols:mail" size="75" />
                             </motion.div>
                         </NuxtLink>
                     </div>
