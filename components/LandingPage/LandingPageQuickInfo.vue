@@ -1,39 +1,41 @@
 <script lang="ts" setup>
 import { motion } from "motion-v";
 
-const showToolName = ref(false);
 const skill = ref<string | null>(null);
 const selectedSkillName = ref<string | null>(null);
+const skillNameAnimation = ref({ opacity: 1, y: -20 });
 const skill1Animation = ref({});
 const skill2Animation = ref({});
 const skill3Animation = ref({});
 const skill4Animation = ref({});
 const skill5Animation = ref({});
 
-// const iconsLeft = [
-//     "skill-icons:vuejs-dark",
-//     "skill-icons:fastapi",
-//     "skill-icons:lua-dark",
-//     "skill-icons:nextjs-dark",
-//     "skill-icons:nuxtjs-dark",
-//     "skill-icons:docker",
-//     "skill-icons:bash-dark",
-//     "skill-icons:bun-dark",
-//     "skill-icons:flask-dark",
-//     "skill-icons:typescript",
-// ];
-// const iconsRight = [
-//     "skill-icons:html",
-//     "skill-icons:postgresql-dark",
-//     "skill-icons:c",
-//     "skill-icons:react-dark",
-//     "skill-icons:javascript",
-//     "skill-icons:kotlin-dark",
-//     "skill-icons:tailwindcss-dark",
-//     "skill-icons:css",
-//     "skill-icons:mysql-dark",
-//     "skill-icons:golang",
-// ];
+/*
+const iconsLeft = [
+    "skill-icons:vuejs-dark",
+    "skill-icons:fastapi",
+    "skill-icons:lua-dark",
+    "skill-icons:nextjs-dark",
+    "skill-icons:nuxtjs-dark",
+    "skill-icons:docker",
+    "skill-icons:bash-dark",
+    "skill-icons:bun-dark",
+    "skill-icons:flask-dark",
+    "skill-icons:typescript",
+];
+const iconsRight = [
+    "skill-icons:html",
+    "skill-icons:postgresql-dark",
+    "skill-icons:c",
+    "skill-icons:react-dark",
+    "skill-icons:javascript",
+    "skill-icons:kotlin-dark",
+    "skill-icons:tailwindcss-dark",
+    "skill-icons:css",
+    "skill-icons:mysql-dark",
+    "skill-icons:golang",
+];
+*/
 
 function handleExplodeSkill(_skill: string | null) {
     // Toggle off if the same skill is clicked again
@@ -48,7 +50,7 @@ function handleExplodeSkill(_skill: string | null) {
             skill3Animation.value = { scale: 0.75, rotate: 5, y: 0, x: 18 };
             skill4Animation.value = { scale: 0.75, rotate: -10, y: -10, x: 0 };
             skill5Animation.value = { scale: 0.75, rotate: 0, y: -10, x: -20 };
-            showToolName.value = true;
+            skillNameAnimation.value = { opacity: 1, y: 0 };
             break;
 
         case "cs":
@@ -58,17 +60,17 @@ function handleExplodeSkill(_skill: string | null) {
             skill3Animation.value = { scale: 0.75, rotate: 15, y: -15, x: 40 };
             skill4Animation.value = { scale: 0.75, rotate: 5, y: 0, x: 18 };
             skill5Animation.value = { scale: 0.75, rotate: -10, y: -10, x: 0 };
-            showToolName.value = true;
+            skillNameAnimation.value = { opacity: 1, y: 0 };
             break;
 
         case "ts":
             selectedSkillName.value = "TypeScript";
-            skill1Animation.value = { scale: 0.75, rotate: -5, y: 0, x: -18 };
+            skill1Animation.value = { scale: 0.75, rotate: -5, y: 0, x: -12 };
             skill2Animation.value = { scale: 0.75, rotate: -15, y: 15, x: -30 };
             skill3Animation.value = { scale: 1.5 };
             skill4Animation.value = { scale: 0.75, rotate: 15, y: -15, x: 30 };
-            skill5Animation.value = { scale: 0.75, rotate: 5, y: 0, x: 18 };
-            showToolName.value = true;
+            skill5Animation.value = { scale: 0.75, rotate: 5, y: 0, x: 12 };
+            skillNameAnimation.value = { opacity: 1, y: 0 };
             break;
 
         case "vue":
@@ -78,7 +80,7 @@ function handleExplodeSkill(_skill: string | null) {
             skill3Animation.value = { scale: 0.75, rotate: -15, y: 15, x: -40 };
             skill4Animation.value = { scale: 1.5, rotate: -10, y: -10, x: 0 };
             skill5Animation.value = { scale: 0.75, rotate: 15, y: -15, x: 30 };
-            showToolName.value = true;
+            skillNameAnimation.value = { opacity: 1, y: 0 };
             break;
 
         case "react":
@@ -88,17 +90,16 @@ function handleExplodeSkill(_skill: string | null) {
             skill3Animation.value = { scale: 0.75, rotate: -5, y: 0, x: -18 };
             skill4Animation.value = { scale: 0.75, rotate: -15, y: 10, x: -40 };
             skill5Animation.value = { scale: 1.5, rotate: -10, y: -10, x: -25 };
-            showToolName.value = true;
+            skillNameAnimation.value = { opacity: 1, y: 0 };
             break;
 
         default:
-            selectedSkillName.value = null;
             skill1Animation.value = { scale: 1 };
             skill2Animation.value = { scale: 1 };
             skill3Animation.value = { scale: 1 };
             skill4Animation.value = { scale: 1 };
             skill5Animation.value = { scale: 1 };
-            showToolName.value = true;
+            skillNameAnimation.value = { opacity: 0, y: 20 };
             break;
     }
 }
@@ -111,18 +112,14 @@ function handleExplodeSkill(_skill: string | null) {
         </motion.h3>
         <AnimatePresence>
             <motion.h2
-                v-if="showToolName"
                 :initial="{ opacity: 0, y: -20 }"
-                :while-in-view="{ opacity: 1, y: 0 }"
-                :animate="{ opacity: 1, y: 0 }"
+                :animate="skillNameAnimation"
                 :exit="{ opacity: 0, y: -20 }"
                 class="text-3xl font-bold"
                 style="min-height: 2.5rem"
             >
                 {{ selectedSkillName }}
             </motion.h2>
-            <!-- Placeholder to prevent layout shift -->
-            <div v-else style="min-height: 2.5rem" />
         </AnimatePresence>
         <div class="mt-5 flex flex-row justify-center gap-1 flex-wrap pt-5 pb-10">
             <!-- NOTE: The contents here are currently hardcoded. -->
