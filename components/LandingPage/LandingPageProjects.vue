@@ -13,8 +13,6 @@ console.log(`There are ${projects.value?.length || 0} projects.`);
             <p class="pl-5 text-md">Loading projects...</p>
         </div>
         <div v-else-if="error"><AppError title="An error occured loading projects" :error="error.message" /></div>
-        <div v-for="project in projects" v-else :key="project.id">
-            <ProjectsProjectQuickGlance v-if="project.visible" :project="project" />
-        </div>
+            <ProjectsProjectGridView  :projects="projects" />
     </div>
 </template>
