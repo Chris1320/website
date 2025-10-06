@@ -25,7 +25,9 @@ const props = defineProps<{
             <tbody>
                 <tr v-for="project in projects" :key="project.id">
                     <td v-if="project.visible">
-                        {{ project.name }}
+                        <NuxtLink :to="`/project/${project.id}`" class="hover:underline">
+                            {{ project.name }}
+                        </NuxtLink>
                     </td>
                     <td v-if="project.visible">
                         {{

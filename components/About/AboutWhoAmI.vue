@@ -25,7 +25,7 @@ const yearsOfExperience = currentTime.getFullYear() - yearStarted.getFullYear();
             started with simpler projects, and fell into the rabbit hole of cybersecurity.
         </p>
         <p class="mb-4 text-xl">
-            I learned a lot of concepts and principles in software development, networking, and compute security. I
+            I learned a lot of concepts and principles in software development, networking, and computer security. I
             dived a little bit in penetration testing and ethical hacking, trying to "invade" test computers and playing
             <a href="https://en.wikipedia.org/wiki/Capture_the_flag_(cybersecurity)" target="_blank" class="link-hover">
                 Capture the Flag
