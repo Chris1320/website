@@ -11,10 +11,9 @@ const props = defineProps<{
         <div v-for="project in projects" :key="project.id">
             <div v-if="project.visible">
                 <div v-if="project.mockups.data.images.length > 0">
-                <ProjectsMockupContent
-                    :images="project.mockups.data.images"
-                    />
+                    <ProjectsMockupContent :images="project.mockups.data.images" />
+                </div>
             </div>
         </div>
     </div>
-</div></template>
+</template>
