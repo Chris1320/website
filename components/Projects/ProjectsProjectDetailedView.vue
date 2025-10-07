@@ -82,7 +82,7 @@ const animationMockupWhileInView = { opacity: 1, x: 0, transition: { duration: 0
                     Unknown
                 </motion.div>
             </div>
-            <div>
+            <div class="mb-2">
                 <motion.p
                     v-if="props.project.technologies?.length === 0"
                     :initial="animationInitial"
@@ -96,14 +96,12 @@ const animationMockupWhileInView = { opacity: 1, x: 0, transition: { duration: 0
                     :key="tech.name"
                     :initial="animationInitial"
                     :while-in-view="animationWhileInView"
-                    class="inline-flex items-center mr-2"
+                    class="inline-flex items-center mr-5"
                 >
-                    <div class="tooltip" :data-tip="tech.name">
-                        <Icon :name="tech.icon" class="w-4 h-4 mr-1" />
-                    </div>
+                    <Icon :name="tech.icon" class="w-4 h-4 mr-1" size="32" />
+                    <p>{{ tech.name }}</p>
                 </motion.span>
             </div>
-
             <motion.p :initial="animationInitial" :while-in-view="animationWhileInView" class="py-6">
                 {{ props.project.description }}
             </motion.p>
