@@ -24,6 +24,14 @@ export default defineNuxtConfig({
                 placement: { mode: "smart" },
                 workers_dev: false,
                 preview_urls: false,
+                observability: {
+                    logs: {
+                        enabled: true,
+                        head_sampling_rate: 1,
+                        invocation_logs: true,
+                        persist: true,
+                    },
+                },
             },
             deployConfig: true,
             nodeCompat: true,
