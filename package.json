@@ -10,10 +10,7 @@
         "postinstall": "nuxt prepare",
         "deploy": "nuxt build && wrangler deploy",
         "deploy:nobuild": "wrangler deploy",
-        "lint": "eslint --ext .js,.ts,.vue .",
-        "test": "vitest --run --coverage --typecheck",
-        "test:ci": "vitest --run --coverage --typecheck --outputFile test-results.xml --reporter junit",
-        "test:watch": "vitest --run --coverage --typecheck --watch"
+        "lint": "eslint --ext .js,.ts,.vue ."
     },
     "dependencies": {
         "@nuxt/eslint": "1.9.0",
