@@ -165,7 +165,10 @@
         "visible": true,
         "status": "wip",
         "description": "Minimize the overconsumption of the internet. This project is one of the finalists for the EDUtech Asia Planet Protectors - 2025 Sustainability Challenge.",
-        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/ReconnectED" }],
+        "links": [
+            { "name": "Repository", "url": "https://github.com/Chris1320/ReconnectED" },
+            { "name": "Website", "url": "https://reconnected.tech/" }
+        ],
         "technologies": [
             {
                 "name": "Android",
