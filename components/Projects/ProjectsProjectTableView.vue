@@ -2,7 +2,7 @@
 import type { Project } from "~/utils/models/project";
 
 const MAX_DESC_LEN = 75;
-const props = defineProps<{
+defineProps<{
     tableViewMode: boolean;
     projects?: Project[];
 }>();
