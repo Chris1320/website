@@ -7,7 +7,13 @@
         "dev": "nuxt dev",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
-        "postinstall": "nuxt prepare"
+        "postinstall": "nuxt prepare",
+        "deploy": "nuxt build && wrangler deploy",
+        "deploy:nobuild": "wrangler deploy",
+        "lint": "eslint --ext .js,.ts,.vue .",
+        "test": "vitest --run --coverage --typecheck",
+        "test:ci": "vitest --run --coverage --typecheck --outputFile test-results.xml --reporter junit",
+        "test:watch": "vitest --run --coverage --typecheck --watch"
     },
     "dependencies": {
         "@nuxt/eslint": "1.9.0",
@@ -25,8 +31,13 @@
     },
     "devDependencies": {
         "@iconify-json/devicon": "^1.2.45",
+        "@iconify-json/devicon-plain": "^1.2.41",
+        "@iconify-json/file-icons": "^1.2.2",
+        "@iconify-json/hugeicons": "^1.2.17",
+        "@iconify-json/lineicons": "^1.2.6",
         "@iconify-json/material-symbols": "^1.2.44",
         "@iconify-json/mdi": "^1.2.3",
+        "@iconify-json/simple-icons": "^1.2.56",
         "@iconify-json/skill-icons": "^1.2.3",
         "daisyui": "^5.3.10"
     }
