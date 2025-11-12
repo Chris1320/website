@@ -2,11 +2,11 @@
     {
         "id": 1,
         "name": "ReconnectED",
-        "dateStart": "2025-03-26",
+        "dateStart": "2025-01-26",
         "dateEnd": "2025-11-06",
         "visible": true,
         "status": "stable",
-        "description": "Minimize the overconsumption of the internet. This project is one of the finalists for the EduTech Asia Planet Protectors - 2025 Sustainability Challenge. It placed as the 1st Runner-Up in the competition with a \"Best in Social Media Campaign\" Peoples' Choice Award.",
+        "description": "Minimize the overconsumption of the internet. This project is one of the finalists for the EDUtech Asia 2025 - Planet Protectors Sustainability Challenge, which took place in Sands Expo & Convention Centre, Singapore. It placed as the 1st Runner-Up in the competition with a “Best in Social Media Campaign” Peoples' Choice Award.",
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/ReconnectED" },
             { "name": "Website", "url": "https://reconnected.tech/" }
@@ -34,8 +34,28 @@
             "data": {
                 "images": [
                     {
-                        "description": "Dashboard",
-                        "url": "https://safe-files.chrisfromnowhere.me/uFfUk8CovpQkulF4.png"
+                        "description": "ReconnectED Android App - Dashboard 1",
+                        "url": "https://safe-files.chrisfromnowhere.me/OJSjx6BAxZ65SOY3.png"
+                    },
+                    {
+                        "description": "ReconnectED Android App - Dashboard 2",
+                        "url": "https://safe-files.chrisfromnowhere.me/xThcNZbnDifRPik5.png"
+                    },
+                    {
+                        "description": "ReconnectED Android App - Screen Time Tracker",
+                        "url": "https://safe-files.chrisfromnowhere.me/aQcGYFHkymvn4noR.png"
+                    },
+                    {
+                        "description": "ReconnectED Android App - Screen Time Limiter",
+                        "url": "https://safe-files.chrisfromnowhere.me/lCqBgGsXBpbkVg8u.png"
+                    },
+                    {
+                        "description": "ReconnectED Android App - Calendar",
+                        "url": "https://safe-files.chrisfromnowhere.me/Ynv3JsU5etanaoG2.png"
+                    },
+                    {
+                        "description": "ReconnectED Android App - AI Assistant",
+                        "url": "https://safe-files.chrisfromnowhere.me/Fmh6JUUAKezbFUdu.png"
                     }
                 ]
             }
