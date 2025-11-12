@@ -64,7 +64,7 @@
     {
         "id": 2,
         "name": "BENTO (Baliwag Education Network for Tracking Canteen Operations)",
-        "dateStart": "2024-09-06",
+        "dateStart": "2024-08-06",
         "dateEnd": "2025-09-19",
         "visible": true,
         "status": "stable",
