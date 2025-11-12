@@ -102,8 +102,19 @@ const animationMockupWhileInView = { opacity: 1, x: 0, transition: { duration: 0
                     <p>{{ tech.name }}</p>
                 </motion.span>
             </div>
+            <div v-if="props.project.responsibilities?.length" class="mt-8 mx-4 mb-4">
+                <motion.ul
+                    :initial="animationInitial"
+                    :while-in-view="animationWhileInView"
+                    class="list-disc list-inside"
+                >
+                    <li v-for="(responsibility, index) in props.project.responsibilities" :key="index">
+                        {{ responsibility }}
+                    </li>
+                </motion.ul>
+            </div>
             <motion.p :initial="animationInitial" :while-in-view="animationWhileInView" class="py-6">
-                {{ props.project.shortDescription }}
+                {{ props.project.longDescription ? props.project.longDescription : props.project.shortDescription }}
             </motion.p>
             <div class="mt-4 flex flex-col md:flex-row justify-between">
                 <div>

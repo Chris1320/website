@@ -13,6 +13,7 @@ export interface Project {
     status: "wip" | "stable" | "archived";
     shortDescription: string;
     longDescription?: string;
+    responsibilities?: string[];
     links: { name: string; url: string }[];
     technologies: { name: string; icon: string }[];
     mockups: {

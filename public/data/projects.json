@@ -7,6 +7,12 @@
         "visible": true,
         "status": "stable",
         "shortDescription": "Minimize the overconsumption of the internet. This project is one of the finalists for the EDUtech Asia 2025 - Planet Protectors Sustainability Challenge, which took place in Sands Expo & Convention Centre, Singapore. It placed as the 1st Runner-Up in the competition with a “Best in Social Media Campaign” Peoples' Choice Award. It contains two components: a physical eco-planner and an AI-enabled Android companion app that helps users manage their screen time and encourages them to engage in offline activities.",
+        "responsibilities": [
+            "Developed the backend of the ReconnectED Android application using Kotlin and Jetpack Compose.",
+            "Integrated Firebase services including Authentication and Firestore for user management and data storage.",
+            "Implemented AI features using Google Gemini to provide personalized recommendations for reducing screen time.",
+            "Created a web application using Nuxt.js to allow users in viewing their companion app statistics online."
+        ],
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/ReconnectED" },
             { "name": "Website", "url": "https://reconnected.tech/" }
@@ -27,6 +33,14 @@
             {
                 "name": "Firebase",
                 "icon": "lineicons:firebase"
+            },
+            {
+                "name": "VueJS",
+                "icon": "lineicons:vuejs"
+            },
+            {
+                "name": "Nuxt.js",
+                "icon": "lineicons:nuxt"
             }
         ],
         "mockups": {
@@ -69,6 +83,14 @@
         "visible": true,
         "status": "stable",
         "shortDescription": "BENTO is a School Canteen Automated Reporting System for the Department of Education (DepEd) Schools Division Office (SDO) of the City of Baliwag in the Philippines. It is designed to streamline and enhance the efficiency of canteen finance reporting and monitoring processes within the schools.",
+        "responsibilities": [
+            "Led a team of 3 in the development of BENTO, a web-based canteen finance tracking system, streamlining workflows of 30 public schools under the Baliwag Department of Education (DepEd) Schools Division Office (SDO).",
+            "Developed a Next.js app (TypeScript/React) using Mantine UI, Tailwind CSS, and Motion.",
+            "Engineered a REST API with FastAPI (Python) as the backend, integrating AI insights and chatbot via Google Gemini.",
+            "Maintained PostgreSQL and MySQL database management systems for storing site data.",
+            "Implemented CI/CD pipelines (via GitHub Actions) to automate testing and deployment, reducing deployment errors.",
+            "Enforced Git branching strategies and GitHub code reviews, ensuring stable versions."
+        ],
         "links": [
             { "name": "Repository", "url": "https://github.com/BENTO-Project-SCARS/BENTO" },
             { "name": "Wiki", "url": "https://github.com/BENTO-Project-SCARS/BENTO/wiki" }
