@@ -11,7 +11,8 @@ export interface Project {
     dateEnd?: string;
     visible: boolean;
     status: "wip" | "stable" | "archived";
-    description: string;
+    shortDescription: string;
+    longDescription?: string;
     links: { name: string; url: string }[];
     technologies: { name: string; icon: string }[];
     mockups: {

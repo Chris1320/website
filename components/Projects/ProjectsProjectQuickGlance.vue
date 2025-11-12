@@ -74,7 +74,7 @@ const animationMockupWhileInView = { opacity: 1, x: 0, transition: { duration: 0
                 </motion.div>
             </div>
             <motion.p :initial="animationInitial" :while-in-view="animationWhileInView" class="py-6">
-                {{ props.project.description }}
+                {{ props.project.shortDescription }}
             </motion.p>
             <div class="mt-4 flex flex-col md:flex-row justify-between">
                 <div>
@@ -238,7 +238,7 @@ const animationMockupWhileInView = { opacity: 1, x: 0, transition: { duration: 0
             </div>
 
             <motion.p :initial="animationInitial" :while-in-view="animationWhileInView" class="py-6">
-                {{ props.project.description }}
+                {{ props.project.shortDescription }}
             </motion.p>
             <div class="mt-4 flex flex-col md:flex-row justify-between">
                 <div>

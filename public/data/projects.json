@@ -6,7 +6,7 @@
         "dateEnd": "2025-11-06",
         "visible": true,
         "status": "stable",
-        "description": "Minimize the overconsumption of the internet. This project is one of the finalists for the EDUtech Asia 2025 - Planet Protectors Sustainability Challenge, which took place in Sands Expo & Convention Centre, Singapore. It placed as the 1st Runner-Up in the competition with a “Best in Social Media Campaign” Peoples' Choice Award. It contains two components: a physical eco-planner and an AI-enabled Android companion app that helps users manage their screen time and encourages them to engage in offline activities.",
+        "shortDescription": "Minimize the overconsumption of the internet. This project is one of the finalists for the EDUtech Asia 2025 - Planet Protectors Sustainability Challenge, which took place in Sands Expo & Convention Centre, Singapore. It placed as the 1st Runner-Up in the competition with a “Best in Social Media Campaign” Peoples' Choice Award. It contains two components: a physical eco-planner and an AI-enabled Android companion app that helps users manage their screen time and encourages them to engage in offline activities.",
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/ReconnectED" },
             { "name": "Website", "url": "https://reconnected.tech/" }
@@ -68,7 +68,7 @@
         "dateEnd": "2025-09-19",
         "visible": true,
         "status": "stable",
-        "description": "BENTO is a School Canteen Automated Reporting System for the Department of Education (DepEd) Schools Division Office (SDO) of the City of Baliwag in the Philippines. It is designed to streamline and enhance the efficiency of canteen finance reporting and monitoring processes within the schools.",
+        "shortDescription": "BENTO is a School Canteen Automated Reporting System for the Department of Education (DepEd) Schools Division Office (SDO) of the City of Baliwag in the Philippines. It is designed to streamline and enhance the efficiency of canteen finance reporting and monitoring processes within the schools.",
         "links": [
             { "name": "Repository", "url": "https://github.com/BENTO-Project-SCARS/BENTO" },
             { "name": "Wiki", "url": "https://github.com/BENTO-Project-SCARS/BENTO/wiki" }
@@ -164,7 +164,7 @@
         "dateEnd": "2024-11-14",
         "visible": true,
         "status": "stable",
-        "description": "Amplify is a note-taking application inspired by Obsidian and AnyType designed specifically for students. It integrates seamlessly with existing Google Workspace/Classroom features while offering an AI-powered enhancement layer powered by OpenAI.",
+        "shortDescription": "Amplify is a note-taking application inspired by Obsidian and AnyType designed specifically for students. It integrates seamlessly with existing Google Workspace/Classroom features while offering an AI-powered enhancement layer powered by OpenAI.",
         "links": [{ "name": "Repository", "url": "https://github.com/CaffeineFueledProgrammers/Amplify" }],
         "technologies": [
             {
@@ -228,7 +228,7 @@
         "dateEnd": null,
         "visible": true,
         "status": "stable",
-        "description": "This project contains guides on how I set up software I use on my machines.",
+        "shortDescription": "This project contains guides on how I set up software I use on my machines.",
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/SetupGuides" },
             { "name": "Website", "url": "https://chris1320.github.io/SetupGuides/" }
@@ -263,7 +263,7 @@
         "dateEnd": null,
         "visible": true,
         "status": "stable",
-        "description": "A python script I made for downloading videos from the Unus Annus Archive.",
+        "shortDescription": "A python script I made for downloading videos from the Unus Annus Archive.",
         "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/TUAA_Downloader" }],
         "technologies": [
             {
@@ -290,7 +290,7 @@
         "dateEnd": "2024-11-08",
         "visible": true,
         "status": "archived",
-        "description": "The Baliuag University Student Information System is a software application designed to make the management of student records for our school's IT department much easier and digitized. This system provides administrators with the ability to easily add, search, update, and delete student information, providing efficient and organized data management.",
+        "shortDescription": "The Baliuag University Student Information System is a software application designed to make the management of student records for our school's IT department much easier and digitized. This system provides administrators with the ability to easily add, search, update, and delete student information, providing efficient and organized data management.",
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/BU_Student_Information_System/" },
             {
@@ -355,7 +355,7 @@
         "dateEnd": "2023-05-28",
         "visible": true,
         "status": "archived",
-        "description": "This project is written in Java using the Swing GUI Framework. This project is initialized and accomplished as our final project in Computer Programming 2 (COMP3).",
+        "shortDescription": "This project is written in Java using the Swing GUI Framework. This project is initialized and accomplished as our final project in Computer Programming 2 (COMP3).",
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/InventorySystem-Java" },
             { "name": "Wiki", "url": "https://github.com/Chris1320/InventorySystem-Java/wiki" }
@@ -409,7 +409,7 @@
         "dateEnd": "2023-06-20",
         "visible": true,
         "status": "archived",
-        "description": "A CLI program to calculate IP addresses, subnet masks, and networks, converted into a web app.",
+        "shortDescription": "A CLI program to calculate IP addresses, subnet masks, and networks, converted into a web app.",
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/IPCalculatorWeb" },
             { "name": "Website", "url": "https://ipcalculatorweb.pythonanywhere.com/" }
@@ -468,7 +468,7 @@
         "dateEnd": null,
         "visible": false,
         "status": "wip",
-        "description": "Copy It! — Another clipboard manager for Wayland.",
+        "shortDescription": "Copy It! — Another clipboard manager for Wayland.",
         "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/copyt" }],
         "technologies": [
             {
@@ -494,7 +494,7 @@
         "dateEnd": null,
         "visible": false,
         "status": "wip",
-        "description": "A web application for journaling, habit tracking, and organizing your social interactions. Your journal, only yours.",
+        "shortDescription": "A web application for journaling, habit tracking, and organizing your social interactions. Your journal, only yours.",
         "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/Genesis" }],
         "technologies": [
             {

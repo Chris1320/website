@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Project } from "~/utils/models/project";
 
-const MAX_DESC_LEN = 75;
+const MAX_DESC_LEN = 150;
 defineProps<{
     tableViewMode: boolean;
     projects?: Project[];
@@ -31,9 +31,9 @@ defineProps<{
                     </td>
                     <td v-if="project.visible">
                         {{
-                            project.description.length > MAX_DESC_LEN
-                                ? project.description.slice(0, MAX_DESC_LEN) + "..."
-                                : project.description
+                            project.shortDescription.length > MAX_DESC_LEN
+                                ? project.shortDescription.slice(0, MAX_DESC_LEN) + "..."
+                                : project.shortDescription
                         }}
                     </td>
                     <td v-if="project.visible" class="align-middle text-center">
