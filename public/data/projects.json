@@ -6,12 +6,12 @@
         "dateEnd": "2025-11-06",
         "visible": true,
         "status": "stable",
-        "shortDescription": "Minimize the overconsumption of the internet. This project is one of the finalists for the EDUtech Asia 2025 - Planet Protectors Sustainability Challenge, which took place in Sands Expo & Convention Centre, Singapore. It placed as the 1st Runner-Up in the competition with a “Best in Social Media Campaign” Peoples' Choice Award. It contains two components: a physical eco-planner and an AI-enabled Android companion app that helps users manage their screen time and encourages them to engage in offline activities.",
+        "shortDescription": "Minimize the overconsumption of the internet. This project is one of the finalists for the EDUtech Asia 2025 - Planet Protectors Sustainability Challenge, which took place in Sands Expo & Convention Centre, Singapore. It placed as the 1st Runner-Up in the competition with a “Best Social Media Campaign” Peoples' Choice Award. It contains two components: a physical eco-planner and an AI-enabled Android companion app that helps users manage their screen time and encourages them to engage in offline activities.",
         "responsibilities": [
-            "Developed the backend of the ReconnectED Android application using Kotlin and Jetpack Compose.",
-            "Integrated Firebase services including Authentication and Firestore for user management and data storage.",
-            "Implemented AI features using Google Gemini to provide personalized recommendations for reducing screen time.",
-            "Created a web application using Nuxt.js to allow users in viewing their companion app statistics online."
+            "Secured 1st Runner-Up and “Best Social Media Campaign” award among 200+ international teams at the global EDUtech Asia 2025 - Planet Protectors Sustainability Challenge in Singapore.",
+            "Engineered a full-stack Android application with Kotlin (Jetpack Compose), integrating Firebase Authentication and Firestore for secure user management and data.",
+            "Built screen time tracking and limiting, Google Calendar integration, and an AI-powered assistant (Google Gemini API) to provide personalized support and reminders.",
+            "Developed an interactive web dashboard using Nuxt.js (VueJS) for real-time visualization of screen time data."
         ],
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/ReconnectED" },
