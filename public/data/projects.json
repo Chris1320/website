@@ -93,7 +93,8 @@
         ],
         "links": [
             { "name": "Repository", "url": "https://github.com/BENTO-Project-SCARS/BENTO" },
-            { "name": "Wiki", "url": "https://github.com/BENTO-Project-SCARS/BENTO/wiki" }
+            { "name": "Wiki", "url": "https://github.com/BENTO-Project-SCARS/BENTO/wiki" },
+            { "name": "Demo Website", "url": "https://bento-sdo.page" }
         ],
         "technologies": [
             {
