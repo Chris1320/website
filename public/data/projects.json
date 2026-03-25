@@ -489,7 +489,7 @@
         "name": "copyt",
         "dateStart": "2023-12-28",
         "dateEnd": null,
-        "visible": false,
+        "visible": true,
         "status": "wip",
         "shortDescription": "Copy It! — Another clipboard manager for Wayland.",
         "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/copyt" }],
