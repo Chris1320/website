@@ -145,37 +145,80 @@
                 "images": [
                     {
                         "description": "Login Page",
-                        "url": "https://safe-files.chrisfromnowhere.me/YUqLTH5xQLyqPmWw.png"
+                        "url": "https://assets.chrisfromnowhere.me/projects/44305b384f09bd8763b717ed80667a7196d27b4ca62740d44ccc2e9ae720ced0.avif"
                     },
                     {
-                        "description": "Dashboard Overview",
-                        "url": "https://safe-files.chrisfromnowhere.me/Jwc8bkpyV13w5zls.png"
+                        "description": "Dashboard: Overview",
+                        "url": "https://assets.chrisfromnowhere.me/projects/b9c9746333b4798c689f82bb5169a3e61dc253dae7916c675aaca2bedcdd1086.avif"
+                    },
+                    {
+                        "description": "Dashboard: AI Financial Assistant",
+                        "url": "https://assets.chrisfromnowhere.me/projects/464bdee78f371285c1137ac4c987ca19ec5849f97950805a71480d9391c43f0b.avif"
                     },
                     {
                         "description": "School Statistics Page",
-                        "url": "https://safe-files.chrisfromnowhere.me/i8SQ074Mvx9O69kl.png"
+                        "url": "https://assets.chrisfromnowhere.me/projects/4dff666e711fa47d70952a049468853683eff65a42f3bcdb7be9edf2f715e43b.avif"
                     },
                     {
-                        "description": "Report Summary Modal",
-                        "url": "https://safe-files.chrisfromnowhere.me/MhjQnXrJ6u45sf8t.png"
+                        "description": "Report Summary Modal: Summary View",
+                        "url": "https://assets.chrisfromnowhere.me/projects/9e70e6d01807a013ca310acb3129accf3abc821a8e36acc786328c31d4c625bf.avif"
                     }
                 ]
             }
         },
         "resources": {
             "images": [
-                { "description": "Login Page", "url": "https://safe-files.chrisfromnowhere.me/YUqLTH5xQLyqPmWw.png" },
                 {
-                    "description": "Dashboard Overview",
-                    "url": "https://safe-files.chrisfromnowhere.me/Jwc8bkpyV13w5zls.png"
+                    "description": "Login Page",
+                    "url": "https://assets.chrisfromnowhere.me/projects/44305b384f09bd8763b717ed80667a7196d27b4ca62740d44ccc2e9ae720ced0.avif"
+                },
+                {
+                    "description": "Login Page: Multi-Factor Authentication",
+                    "url": "https://assets.chrisfromnowhere.me/projects/060145fce08878841d12587bdd30fbb118a9dc8bb9c42d83b957bcd5d9ae36a7.avif"
+                },
+                {
+                    "description": "Dashboard: Overview",
+                    "url": "https://assets.chrisfromnowhere.me/projects/b9c9746333b4798c689f82bb5169a3e61dc253dae7916c675aaca2bedcdd1086.avif"
+                },
+                {
+                    "description": "Dashboard: AI Financial Assistant",
+                    "url": "https://assets.chrisfromnowhere.me/projects/464bdee78f371285c1137ac4c987ca19ec5849f97950805a71480d9391c43f0b.avif"
                 },
                 {
                     "description": "School Statistics Page",
-                    "url": "https://safe-files.chrisfromnowhere.me/i8SQ074Mvx9O69kl.png"
+                    "url": "https://assets.chrisfromnowhere.me/projects/4dff666e711fa47d70952a049468853683eff65a42f3bcdb7be9edf2f715e43b.avif"
                 },
                 {
-                    "description": "Report Summary Modal",
-                    "url": "https://safe-files.chrisfromnowhere.me/MhjQnXrJ6u45sf8t.png"
+                    "description": "School Reports: Daily Sales & Purchases Report",
+                    "url": "https://assets.chrisfromnowhere.me/projects/8f7bc4ef365f2972f25d78c7fcb825609bd81e700d50142c6ba8c855af75255a.avif"
+                },
+                {
+                    "description": "School Reports: Liquidation Report (Operating Expenses) - Entries",
+                    "url": "https://assets.chrisfromnowhere.me/projects/9acae763349b258aa6cbb05dfc98158c16fc796ee9e1b592019753b643b21787.avif"
+                },
+                {
+                    "description": "School Reports: Liquidation Report (Operating Expenses) - Approval",
+                    "url": "https://assets.chrisfromnowhere.me/projects/cc6343e626505180cf346a40d6afc33ceb771e84c68e17a2813cb9b43cd73a56.avif"
+                },
+                {
+                    "description": "School Reports: Payroll Report - Entries",
+                    "url": "https://assets.chrisfromnowhere.me/projects/40a74a9e2d185c212387cf18b9953759cd9c544e94cf7459df0a226b1cebae1e.avif"
+                },
+                {
+                    "description": "School Reports: Payroll Report - Summary & Approval",
+                    "url": "https://assets.chrisfromnowhere.me/projects/e987a947704b44abcfdb354af45551a07523faae10b644a7167396dae57ed38d.avif"
+                }
+                {
+                    "description": "Report Summary Modal: Summary View",
+                    "url": "https://assets.chrisfromnowhere.me/projects/9e70e6d01807a013ca310acb3129accf3abc821a8e36acc786328c31d4c625bf.avif"
+                },
+                {
+                    "description": "Report Summary Modal: Sub-Reports List",
+                    "url": "https://assets.chrisfromnowhere.me/projects/848fcb4d12031650fdd9dee8257cbd8c6f9165e6e1b65fce1aaa63580d01dc0f.avif"
+                },
+                {
+                    "description": "Report Summary Modal: PDF Export",
+                    "url": "https://assets.chrisfromnowhere.me/projects/0df9e52df010bab5314122973e707b5d953a5ba252f4d2d1895df87e92ed3cf6.avif"
                 }
             ]
         }
