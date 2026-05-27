@@ -1,6 +1,42 @@
 [
     {
         "id": 1,
+        "name": "PSAutomater",
+        "dateStart": "2022-04-23",
+        "dateEnd": null,
+        "visible": true,
+        "status": "wip",
+        "shortDescription": "A Photoshop Editing Automation Tool for bulk editing.",
+        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/PSAutomater/" }],
+        "technologies": [
+            {
+                "name": "Python",
+                "icon": "lineicons:python"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "TagStudio Creative Flow AutoTag",
+        "dateStart": "2026-04-24",
+        "dateEnd": null,
+        "visible": true,
+        "status": "wip",
+        "shortDescription": "Use Google Gemini to automatically tag assets in my TagStudio \"Creative Flow\" library.",
+        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/TagStudio-CreativeFlow-AutoTag" }],
+        "technologies": [
+            {
+                "name": "Python",
+                "icon": "lineicons:python"
+            },
+            {
+                "name": "SQLite",
+                "icon": "file-icons:sqlite"
+            }
+        ]
+    },
+    {
+        "id": 3,
         "name": "ReconnectED",
         "dateStart": "2025-01-26",
         "dateEnd": "2025-11-06",
@@ -76,7 +112,7 @@
         }
     },
     {
-        "id": 2,
+        "id": 4,
         "name": "BENTO (Baliwag Education Network for Tracking Canteen Operations)",
         "dateStart": "2024-08-06",
         "dateEnd": "2025-09-19",
@@ -224,7 +260,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 5,
         "name": "Amplify",
         "dateStart": "2024-05-24",
         "dateEnd": "2024-11-14",
@@ -288,7 +324,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 6,
         "name": "SetupGuides",
         "dateStart": "2024-04-06",
         "dateEnd": null,
@@ -323,7 +359,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 7,
         "name": "The Unus Annus Archive Downloader (TUAA Downloader)",
         "dateStart": "2021-09-08",
         "dateEnd": null,
@@ -350,7 +386,7 @@
         }
     },
     {
-        "id": 6,
+        "id": 8,
         "name": "Baliuag University Student Information System",
         "dateStart": "2024-09-28",
         "dateEnd": "2024-11-08",
@@ -415,7 +451,7 @@
         }
     },
     {
-        "id": 7,
+        "id": 9,
         "name": "InventorySystem-Java",
         "dateStart": "2023-03-14",
         "dateEnd": "2023-05-28",
@@ -469,7 +505,7 @@
         }
     },
     {
-        "id": 8,
+        "id": 10,
         "name": "IPCalculatorWeb",
         "dateStart": "2023-06-02",
         "dateEnd": "2023-06-20",
@@ -528,7 +564,7 @@
         }
     },
     {
-        "id": 9,
+        "id": 11,
         "name": "copyt",
         "dateStart": "2023-12-28",
         "dateEnd": null,
@@ -554,7 +590,7 @@
         }
     },
     {
-        "id": 10,
+        "id": 12,
         "name": "Genesis",
         "dateStart": "2025-06-24",
         "dateEnd": null,
