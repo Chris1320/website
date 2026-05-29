@@ -33,7 +33,22 @@
                 "name": "SQLite",
                 "icon": "file-icons:sqlite"
             }
-        ]
+        ],
+        "mockups": {
+            "type": "desktop",
+            "data": {
+                "images": [
+                    {
+                        "description": "TagStudio showing tags applied by AutoTag",
+                        "url": "https://github.com/user-attachments/assets/5e9e0a49-e4ce-44b3-97d3-6b95551b8d9d"
+                    },
+                    {
+                        "description": "AutoTag CLI showing tagging process",
+                        "url": "https://github.com/user-attachments/assets/95ea5f68-fc5d-4bfb-8922-29552b709b13"
+                    }
+                ]
+            }
+        }
     },
     {
         "id": 3,
