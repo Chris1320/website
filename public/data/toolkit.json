@@ -14,11 +14,6 @@
                 "description": "C# (C-Sharp) is a modern, object-oriented programming language developed by Microsoft. It is widely used for building Windows applications, web services, and games using the .NET framework. C# offers strong type safety, rich libraries, and support for asynchronous programming, making it a popular choice for enterprise-level applications."
             },
             {
-                "name": "Go",
-                "icon": "skill-icons:golang",
-                "description": "Go (Golang) is a statically typed, compiled programming language developed by Google. It is designed for simplicity, efficiency, and scalability, making it ideal for building high-performance applications, web servers, and distributed systems. Go's concurrency model and strong standard library contribute to its popularity in modern software development."
-            },
-            {
                 "name": "Bun",
                 "icon": "skill-icons:bun-dark",
                 "description": "Bun is a modern JavaScript runtime like Node or Deno. It is built from the ground up to focus on three main things: speed, native compatibility, and a great developer experience. Bun includes a bundler, transpiler, package manager, and more, all designed to work seamlessly together."
