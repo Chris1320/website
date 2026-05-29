@@ -71,8 +71,8 @@ const animationButtonWhilePress = { scale: 0.95 };
                     </motion.h1>
                 </div>
                 <motion.p :initial="animationInitial" :animate="animationAnimate" class="pt-8">
-                    I am currently a BS Computer Science student, aiming to be a full-stack developer. I like doing
-                    random things that are related to computers and technology.
+                    I am a full-stack software developer, trying to automate a lot of boring stuff. I like doing random
+                    things that are related to computers and technology.
                 </motion.p>
                 <div class="flex flex-row justify-center items-center gap-10 py-4">
                     <div class="tooltip tooltip-bottom" data-tip="LinkedIn">

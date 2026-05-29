@@ -3,9 +3,9 @@
         <h2 class="text-2xl font-semibold mb-2">Who am I?</h2>
         <ul class="list-disc">
             <li class="text-xl">Christopher Andrei Tayao</li>
-            <li class="text-xl">Full-Stack Developer</li>
+            <li class="text-xl">Full-Stack Software Developer</li>
             <li class="text-xl">
-                Student at
+                Graduated from
                 <NuxtLink href="https://baliuagu.edu.ph/" target="_blank" class="link-hover"
                     >Baliuag University</NuxtLink
                 >

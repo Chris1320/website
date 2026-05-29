@@ -5,7 +5,7 @@ import { motion } from "motion-v";
 <template>
     <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
         <aside>
-            <p>&copy; 2025 Chris1320</p>
+            <p>&copy; 2025-2026 Chris1320</p>
             <p>
                 Made with
                 <motion.span
