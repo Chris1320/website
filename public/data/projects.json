@@ -13,7 +13,18 @@
                 "name": "Python",
                 "icon": "lineicons:python"
             }
-        ]
+        ],
+        "mockups": {
+            "type": "desktop",
+            "data": {
+                "images": [
+                    {
+                        "description": "The main UI of PSAutomater.",
+                        "url": "https://assets.chrisfromnowhere.me/projects/379b37b6a459d35716b53d9aa4f53f18014294aaabe0ed9c4bac4c6aa2d49227.avif"
+                    }
+                ]
+            }
+        }
     },
     {
         "id": 2,
@@ -21,7 +32,7 @@
         "dateStart": "2026-04-24",
         "dateEnd": null,
         "visible": true,
-        "status": "wip",
+        "status": "stable",
         "shortDescription": "Use Google Gemini to automatically tag assets in my TagStudio \"Creative Flow\" library.",
         "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/TagStudio-CreativeFlow-AutoTag" }],
         "technologies": [
@@ -100,27 +111,27 @@
                 "images": [
                     {
                         "description": "ReconnectED Android App - Dashboard 1",
-                        "url": "https://safe-files.chrisfromnowhere.me/OJSjx6BAxZ65SOY3.jpg"
+                        "url": "https://assets.chrisfromnowhere.me/projects/4e4be244d9a91a0c325339721f735feb575c450ea54ceccda48a8eaa57c5af13.avif"
                     },
                     {
                         "description": "ReconnectED Android App - Dashboard 2",
-                        "url": "https://safe-files.chrisfromnowhere.me/xThcNZbnDifRPik5.jpg"
+                        "url": "https://assets.chrisfromnowhere.me/projects/86eec5b00281269546df9f38c0f01973add996f4ac4fd536811ab2690275e536.avif"
                     },
                     {
                         "description": "ReconnectED Android App - Screen Time Tracker",
-                        "url": "https://safe-files.chrisfromnowhere.me/aQcGYFHkymvn4noR.jpg"
+                        "url": "https://assets.chrisfromnowhere.me/projects/05a70bc95cdfdd13cd97d7bee7c0de0432b1a9c85a4ba7bd5693d3c8def0038a.avif"
                     },
                     {
                         "description": "ReconnectED Android App - Screen Time Limiter",
-                        "url": "https://safe-files.chrisfromnowhere.me/lCqBgGsXBpbkVg8u.jpg"
+                        "url": "https://assets.chrisfromnowhere.me/projects/d3efd3a72dd7351e6b461b5d0ab0bc53a3f7ea6730614b82b7a620414930d4b2.avif"
                     },
                     {
                         "description": "ReconnectED Android App - Calendar",
-                        "url": "https://safe-files.chrisfromnowhere.me/Ynv3JsU5etanaoG2.jpg"
+                        "url": "https://assets.chrisfromnowhere.me/projects/acb52cbf561350c5490ad10b550d596e3ad7ae1d374fa53fea57bb5948cccb47.avif"
                     },
                     {
                         "description": "ReconnectED Android App - AI Assistant",
-                        "url": "https://safe-files.chrisfromnowhere.me/Fmh6JUUAKezbFUdu.jpg"
+                        "url": "https://assets.chrisfromnowhere.me/projects/ed06c521b2b06389bcc9cc47ac05e7aeacdb3b2beb7b85e59a90ecd6a8f658de.avif"
                     }
                 ]
             }
