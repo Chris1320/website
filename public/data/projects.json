@@ -1,68 +1,6 @@
 [
     {
         "id": 1,
-        "name": "PSAutomater",
-        "dateStart": "2022-04-23",
-        "dateEnd": null,
-        "visible": true,
-        "status": "wip",
-        "shortDescription": "A Photoshop Editing Automation Tool for bulk editing.",
-        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/PSAutomater/" }],
-        "technologies": [
-            {
-                "name": "Python",
-                "icon": "lineicons:python"
-            }
-        ],
-        "mockups": {
-            "type": "desktop",
-            "data": {
-                "images": [
-                    {
-                        "description": "The main UI of PSAutomater.",
-                        "url": "https://assets.chrisfromnowhere.me/projects/379b37b6a459d35716b53d9aa4f53f18014294aaabe0ed9c4bac4c6aa2d49227.avif"
-                    }
-                ]
-            }
-        }
-    },
-    {
-        "id": 2,
-        "name": "TagStudio Creative Flow AutoTag",
-        "dateStart": "2026-04-24",
-        "dateEnd": null,
-        "visible": true,
-        "status": "stable",
-        "shortDescription": "Use Google Gemini to automatically tag assets in my TagStudio \"Creative Flow\" library.",
-        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/TagStudio-CreativeFlow-AutoTag" }],
-        "technologies": [
-            {
-                "name": "Python",
-                "icon": "lineicons:python"
-            },
-            {
-                "name": "SQLite",
-                "icon": "file-icons:sqlite"
-            }
-        ],
-        "mockups": {
-            "type": "desktop",
-            "data": {
-                "images": [
-                    {
-                        "description": "TagStudio showing tags applied by AutoTag",
-                        "url": "https://github.com/user-attachments/assets/5e9e0a49-e4ce-44b3-97d3-6b95551b8d9d"
-                    },
-                    {
-                        "description": "AutoTag CLI showing tagging process",
-                        "url": "https://github.com/user-attachments/assets/95ea5f68-fc5d-4bfb-8922-29552b709b13"
-                    }
-                ]
-            }
-        }
-    },
-    {
-        "id": 3,
         "name": "ReconnectED",
         "dateStart": "2025-01-26",
         "dateEnd": "2025-11-06",
@@ -138,7 +76,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 2,
         "name": "BENTO (Baliwag Education Network for Tracking Canteen Operations)",
         "dateStart": "2024-08-06",
         "dateEnd": "2025-09-19",
@@ -283,6 +221,68 @@
                     "url": "https://assets.chrisfromnowhere.me/projects/0df9e52df010bab5314122973e707b5d953a5ba252f4d2d1895df87e92ed3cf6.avif"
                 }
             ]
+        }
+    },
+    {
+        "id": 3,
+        "name": "PSAutomater",
+        "dateStart": "2022-04-23",
+        "dateEnd": null,
+        "visible": true,
+        "status": "wip",
+        "shortDescription": "A Photoshop Editing Automation Tool for bulk editing.",
+        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/PSAutomater/" }],
+        "technologies": [
+            {
+                "name": "Python",
+                "icon": "lineicons:python"
+            }
+        ],
+        "mockups": {
+            "type": "desktop",
+            "data": {
+                "images": [
+                    {
+                        "description": "The main UI of PSAutomater.",
+                        "url": "https://assets.chrisfromnowhere.me/projects/379b37b6a459d35716b53d9aa4f53f18014294aaabe0ed9c4bac4c6aa2d49227.avif"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": 4,
+        "name": "TagStudio Creative Flow AutoTag",
+        "dateStart": "2026-04-24",
+        "dateEnd": null,
+        "visible": true,
+        "status": "stable",
+        "shortDescription": "Use Google Gemini to automatically tag assets in my TagStudio \"Creative Flow\" library.",
+        "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/TagStudio-CreativeFlow-AutoTag" }],
+        "technologies": [
+            {
+                "name": "Python",
+                "icon": "lineicons:python"
+            },
+            {
+                "name": "SQLite",
+                "icon": "file-icons:sqlite"
+            }
+        ],
+        "mockups": {
+            "type": "desktop",
+            "data": {
+                "images": [
+                    {
+                        "description": "TagStudio showing tags applied by AutoTag",
+                        "url": "https://github.com/user-attachments/assets/5e9e0a49-e4ce-44b3-97d3-6b95551b8d9d"
+                    },
+                    {
+                        "description": "AutoTag CLI showing tagging process",
+                        "url": "https://github.com/user-attachments/assets/95ea5f68-fc5d-4bfb-8922-29552b709b13"
+                    }
+                ]
+            }
         }
     },
     {
