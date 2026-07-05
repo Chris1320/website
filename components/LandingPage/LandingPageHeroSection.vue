@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { motion, easeInOut } from "motion-v";
 
+function openContactModal() {
+    const dialog = document.getElementById("contact-modal") as HTMLDialogElement | null;
+    if (dialog) dialog.showModal();
+}
+
 const animationTitleLeftInitial = { x: -25, opacity: 0 };
 const animationTitleLeftAnimate = {
     x: 0,
@@ -116,18 +121,28 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 };
                     </div>
                 </div>
                 <motion.div :initial="animationInitial" :animate="animationAnimate" class="pt-4">
-                    <NuxtLink to="/contact" class="m-0">
+                    <div class="m-0">
                         <motion.button
                             :initial="{ opacity: 0, y: -20 }"
                             :while-in-view="{ opacity: 1, y: 0 }"
                             :while-hover="{ scale: 1.25, rotate: -5 }"
                             :while-press="animationButtonWhilePress"
                             class="btn btn-accent btn-lg"
+                            @click="openContactModal"
                         >
                             Contact Me
                         </motion.button>
-                    </NuxtLink>
+                    </div>
                 </motion.div>
+
+                <dialog id="contact-modal" class="modal">
+                    <div class="modal-box">
+                        <form method="dialog">
+                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        </form>
+                        <div class="modal-action"><AboutContactMe /></div>
+                    </div>
+                </dialog>
             </div>
         </div>
     </div>
