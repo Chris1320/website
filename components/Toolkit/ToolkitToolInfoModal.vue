@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-    <dialog id="view_toolkit_info_modal" class="modal" @close="clearHoveredTool()">
+    <dialog id="view-toolkit-info-modal" class="modal" @close="clearHoveredTool()">
         <div class="modal-box modal-color-override">
             <div class="flex flex-col items-center pb-5">
                 <Icon :name="hoveredTool?.icon || defaultIcon" size="128" class="my-4 text-center" />

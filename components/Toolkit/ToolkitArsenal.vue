@@ -16,7 +16,7 @@ function setHoveredTool(tool: Tool, category: string) {
 
 function showHoveredToolInfo() {
     console.log("Showing info for hovered tool.");
-    const dialog = document.getElementById("view_toolkit_info_modal") as HTMLDialogElement;
+    const dialog = document.getElementById("view-toolkit-info-modal") as HTMLDialogElement;
     if (dialog && hoveredTool && hoveredToolCategory) {
         console.log(`Showing info for tool: ${hoveredTool.value?.name} in category: ${hoveredToolCategory.value}`);
         dialog.showModal();
