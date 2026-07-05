@@ -29,7 +29,7 @@ async function handleSubmit() {
         const res = await ky.post(endpoint, { json: payload });
 
         if (res && res.status === 200) {
-            successMessage.value = "Message sent. Thank you!";
+            successMessage.value = "Message sent. I'll be in touch soon. Thank you!";
 
             setTimeout(() => {
                 form.reset();
