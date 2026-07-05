@@ -49,9 +49,9 @@ async function handleSubmit() {
 </script>
 
 <template>
-    <div class="card bg-base-100 shadow-lg max-w-lg mx-auto">
+    <div class="card bg-base-100 max-w-lg mx-auto">
         <div class="card-body gap-4">
-            <h2 class="card-title">Contact Me</h2>
+            <h2 class="card-title text-3xl font-bold">Contact Me</h2>
             <div class="space-y-3">
                 <div v-if="successMessage" class="alert alert-success shadow-lg">
                     <div>
