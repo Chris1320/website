@@ -31,7 +31,7 @@ const animationAnimate = {
     transition: { duration: 0.5, ease: easeInOut },
 };
 const animationButtonWhileHover = { scale: 1.1 };
-const animationButtonWhilePress = { scale: 0.95 };
+const animationButtonWhilePress = { scale: 0.95, rotate: -3 };
 </script>
 
 <template>
@@ -115,6 +115,19 @@ const animationButtonWhilePress = { scale: 0.95 };
                         </NuxtLink>
                     </div>
                 </div>
+                <motion.div :initial="animationInitial" :animate="animationAnimate" class="pt-4">
+                    <NuxtLink to="/contact" class="m-0">
+                        <motion.button
+                            :initial="{ opacity: 0, y: -20 }"
+                            :while-in-view="{ opacity: 1, y: 0 }"
+                            :while-hover="{ scale: 1.25, rotate: -5 }"
+                            :while-press="animationButtonWhilePress"
+                            class="btn btn-accent btn-lg"
+                        >
+                            Contact Me
+                        </motion.button>
+                    </NuxtLink>
+                </motion.div>
             </div>
         </div>
     </div>

@@ -9,6 +9,7 @@ const skill2Animation = ref({});
 const skill3Animation = ref({});
 const skill4Animation = ref({});
 const skill5Animation = ref({});
+const animationButtonWhilePress = { scale: 0.95, rotate: 3 };
 
 /*
 const iconsLeft = [
@@ -179,6 +180,7 @@ function handleExplodeSkill(_skill: string | null) {
                 :initial="{ opacity: 0, y: -20 }"
                 :while-in-view="{ opacity: 1, y: 0 }"
                 :while-hover="{ scale: 1.25, rotate: 5 }"
+                :while-press="animationButtonWhilePress"
                 class="btn btn-outline btn-md btn-accent"
                 >See my toolkit!</motion.button
             >
