@@ -5,7 +5,7 @@ export interface ProjectResources {
 }
 
 export interface Project {
-    id: number;
+    id: string;
     name: string;
     dateStart: string;
     dateEnd?: string;
