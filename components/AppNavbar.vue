@@ -21,19 +21,25 @@ const navbarAnimate = computed(() =>
 );
 
 const navLinks = [
-    { label: "Welcome", targetId: "welcome", href: "#welcome" },
-    { label: "Experience & Education", targetId: "experience", href: "#experience" },
-    { label: "Projects", targetId: "projects", href: "#projects" },
-    { label: "About", targetId: "about", href: "#about" },
+    { label: "Welcome", targetId: "welcome", href: "/#welcome" },
+    { label: "Experience & Education", targetId: "experience", href: "/#experience" },
+    { label: "Projects", targetId: "projects", href: "/#projects" },
+    { label: "About", targetId: "about", href: "/#about" },
 ];
 
 function closeMobileMenu() {
     isMobileMenuOpen.value = false;
 }
 
-function scrollToSection(targetId: string) {
-    activeSection.value = targetId;
+async function scrollToSection(targetId: string) {
     closeMobileMenu();
+
+    if (route.path !== "/") {
+        await navigateTo({ path: "/", hash: `#${targetId}` });
+        return;
+    }
+
+    activeSection.value = targetId;
     const element = document.getElementById(targetId);
     if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -41,6 +47,17 @@ function scrollToSection(targetId: string) {
 }
 
 onMounted(() => {
+    if (route.hash) {
+        const targetId = route.hash.replace("#", "");
+        const element = document.getElementById(targetId);
+        if (element) {
+            setTimeout(() => {
+                element.scrollIntoView({ behavior: "smooth" });
+                activeSection.value = targetId;
+            }, 150);
+        }
+    }
+
     const handleScroll = () => {
         isScrolled.value = window.scrollY > 40;
 
@@ -71,7 +88,7 @@ onMounted(() => {
         >
             <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 <a
-                    href="#welcome"
+                    href="/#welcome"
                     class="text-sm sm:text-base font-bold tracking-tight text-base-content hover:text-primary transition-colors flex items-center gap-1.5"
                     @click.prevent="scrollToSection('welcome')"
                 >
