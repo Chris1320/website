@@ -3,10 +3,11 @@ import { motion } from "motion-v";
 
 const { theme, toggleTheme } = useTheme();
 const isMobileMenuOpen = ref(false);
-const activeSection = ref("welcome");
+const route = useRoute();
+const isLandingPage = computed(() => route.path === "/");
+const activeSection = ref<string | null>(isLandingPage.value ? "welcome" : null);
 const isScrolled = ref(false);
 
-const route = useRoute();
 const shouldAnimate = computed(() => Boolean(route.meta.animateNavbar));
 
 const navbarInitial = computed(() => (shouldAnimate.value ? { y: -30, opacity: 0 } : false));
@@ -40,39 +41,66 @@ async function scrollToSection(targetId: string) {
     }
 
     activeSection.value = targetId;
-    const element = document.getElementById(targetId);
-    if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+    if (import.meta.client && typeof document !== "undefined") {
+        const element = document.getElementById(targetId);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
     }
 }
 
+function updateActiveSection() {
+    if (!import.meta.client || typeof document === "undefined") {
+        return;
+    }
+
+    if (route.path !== "/") {
+        activeSection.value = null;
+        return;
+    }
+
+    const sections = navLinks.map((link) => document.getElementById(link.targetId)).filter(Boolean) as HTMLElement[];
+    const scrollPosition = window.scrollY + 140;
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+            activeSection.value = section.id;
+            break;
+        }
+    }
+}
+
+watch(
+    () => route.path,
+    (newPath) => {
+        if (newPath !== "/") {
+            activeSection.value = null;
+        } else {
+            updateActiveSection();
+        }
+    },
+);
+
 onMounted(() => {
-    if (route.hash) {
-        const targetId = route.hash.replace("#", "");
-        const element = document.getElementById(targetId);
-        if (element) {
-            setTimeout(() => {
-                element.scrollIntoView({ behavior: "smooth" });
-                activeSection.value = targetId;
-            }, 150);
+    if (route.path === "/") {
+        if (route.hash) {
+            const targetId = route.hash.replace("#", "");
+            const element = document.getElementById(targetId);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: "smooth" });
+                    activeSection.value = targetId;
+                }, 150);
+            }
+        } else {
+            updateActiveSection();
         }
     }
 
     const handleScroll = () => {
         isScrolled.value = window.scrollY > 40;
-
-        const sections = navLinks
-            .map((link) => document.getElementById(link.targetId))
-            .filter(Boolean) as HTMLElement[];
-        const scrollPosition = window.scrollY + 140;
-
-        for (let i = sections.length - 1; i >= 0; i--) {
-            const section = sections[i];
-            if (section && section.offsetTop <= scrollPosition) {
-                activeSection.value = section.id;
-                break;
-            }
-        }
+        updateActiveSection();
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -84,16 +112,30 @@ onMounted(() => {
         <motion.header
             :initial="navbarInitial"
             :animate="navbarAnimate"
-            class="w-full font-mono relative bg-transparent"
+            class="w-full font-mono relative bg-transparent z-40"
         >
             <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 <a
-                    href="/#welcome"
+                    href="/"
                     class="text-sm sm:text-base font-bold tracking-tight text-base-content hover:text-primary transition-colors flex items-center gap-1.5"
                     @click.prevent="scrollToSection('welcome')"
                 >
                     <span>Christopher Andrei Tayao.</span>
                 </a>
+                <nav
+                    v-if="!isLandingPage"
+                    class="hidden md:flex items-center space-x-6 lg:space-x-8 text-xs lg:text-sm"
+                >
+                    <a
+                        v-for="link in navLinks"
+                        :key="link.targetId"
+                        :href="link.href"
+                        class="whitespace-nowrap transition-colors duration-200 text-base-content/70 hover:text-primary font-medium"
+                        @click.prevent="scrollToSection(link.targetId)"
+                    >
+                        {{ link.label }}
+                    </a>
+                </nav>
                 <div class="flex items-center space-x-2">
                     <button
                         class="p-2 text-base-content/80 hover:text-primary transition-all tooltip tooltip-bottom"
@@ -126,12 +168,7 @@ onMounted(() => {
                     v-for="link in navLinks"
                     :key="link.targetId"
                     :href="link.href"
-                    class="block py-1.5 text-sm transition-colors"
-                    :class="
-                        activeSection === link.targetId
-                            ? 'text-primary font-semibold'
-                            : 'text-base-content/80 hover:text-primary'
-                    "
+                    class="block py-1.5 text-sm transition-colors text-base-content/80 hover:text-primary"
                     @click.prevent="scrollToSection(link.targetId)"
                 >
                     {{ link.label }}
@@ -139,6 +176,7 @@ onMounted(() => {
             </div>
         </motion.header>
         <motion.nav
+            v-if="isLandingPage"
             :initial="navbarInitial"
             :animate="navbarAnimate"
             class="hidden md:flex fixed left-1/2 -translate-x-1/2 z-50 font-mono antialiased transition-[background-color,border-color,box-shadow,padding,border-radius] duration-300 ease-out items-center"

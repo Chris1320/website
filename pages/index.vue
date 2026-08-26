@@ -1,6 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
     animateNavbar: true,
+    keepNavbarVisible: true,
 });
 </script>
 
