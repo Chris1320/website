@@ -1,4 +1,4 @@
-# Chris1320's Personal Website
+# ChrisFromNowhere's Personal Website
 
 This is the source code of my personal website, built with [Nuxt 3](https://nuxt.com/)
 and [Tailwind CSS](https://tailwindcss.com/). This is deployed on

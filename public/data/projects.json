@@ -338,7 +338,7 @@
         "shortDescription": "This project contains guides on how I set up software I use on my machines.",
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/SetupGuides" },
-            { "name": "Website", "url": "https://chris1320.github.io/SetupGuides/" }
+            { "name": "Website", "url": "https://setupguides.chrisfromnowhere.me/" }
         ],
         "technologies": [
             {
@@ -353,7 +353,7 @@
         "mockups": {
             "type": "web",
             "data": {
-                "url": "https://chris1320.github.io/SetupGuides/",
+                "url": "https://setupguides.chrisfromnowhere.me/",
                 "images": [
                     {
                         "description": "Banner",
