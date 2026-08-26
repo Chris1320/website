@@ -95,7 +95,7 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
                             <Icon name="material-symbols:mail-outline" size="20" />
                             <span>Contact Me</span>
                         </motion.button>
-                        <NuxtLink to="/my/cv" target="_blank" class="w-full max-w-xs">
+                        <NuxtLink to="/my/cv" class="w-full max-w-xs">
                             <motion.button
                                 :while-hover="animationButtonWhileHover"
                                 :while-press="animationButtonWhilePress"

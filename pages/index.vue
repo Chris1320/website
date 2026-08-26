@@ -8,5 +8,6 @@ definePageMeta({
     <div class="min-h-screen">
         <LandingPageHeroSection />
         <LandingPageExperienceEducation />
+        <LandingPageProjects />
     </div>
 </template>
