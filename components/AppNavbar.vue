@@ -23,9 +23,9 @@ const navbarAnimate = computed(() =>
 
 const navLinks = [
     { label: "Welcome", targetId: "welcome", href: "/#welcome" },
-    { label: "Experience & Education", targetId: "experience", href: "/#experience" },
-    { label: "Projects", targetId: "projects", href: "/#projects" },
     { label: "About", targetId: "about", href: "/#about" },
+    { label: "Career", targetId: "experience", href: "/#experience" },
+    { label: "Projects", targetId: "projects", href: "/#projects" },
 ];
 
 function closeMobileMenu() {
