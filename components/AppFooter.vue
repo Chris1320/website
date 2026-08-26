@@ -33,12 +33,11 @@ import { motion } from "motion-v";
         <nav>
             <h6 class="footer-title">Resources</h6>
             <NuxtLink to="/projects" class="link link-hover">Projects</NuxtLink>
-            <NuxtLink to="/blog" class="link link-hover">Blog</NuxtLink>
+            <NuxtLink to="https://677078.xyz" class="link link-hover">Blog</NuxtLink>
             <NuxtLink to="/about" class="link link-hover">About Me</NuxtLink>
         </nav>
         <nav>
             <h6 class="footer-title">External Links</h6>
-            <NuxtLink to="https://677078.xyz" target="_blank" class="link link-hover">CFN</NuxtLink>
             <NuxtLink to="https://github.com/Chris1320" target="_blank" class="link link-hover">GitHub</NuxtLink>
             <NuxtLink to="https://www.linkedin.com/in/christopherandreitayao" target="_blank" class="link link-hover"
                 >LinkedIn
