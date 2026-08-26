@@ -6,53 +6,57 @@ function openContactModal() {
     if (dialog) dialog.showModal();
 }
 
-const animationTitleLeftInitial = { x: -25, opacity: 0 };
+const animationTitleLeftInitial = { y: -80, opacity: 0 } as const;
 const animationTitleLeftAnimate = {
-    x: 0,
+    y: 0,
     opacity: 1,
-    transition: { duration: 0.5, ease: easeInOut },
-};
-const animationTitleRightInitial = { x: 25, opacity: 0 };
+    transition: { type: "spring", stiffness: 120, damping: 14, delay: 0.2 },
+} as const;
+
+const animationTitleRightInitial = { x: 100, opacity: 0 } as const;
 const animationTitleRightAnimate = {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.5, ease: easeInOut },
-};
-const animationHandInitial = { y: -25, opacity: 0 };
+    transition: { type: "spring", stiffness: 140, damping: 15, delay: 0.75 },
+} as const;
+
+const animationHandInitial = { scale: 0, opacity: 0 } as const;
 const animationHandAnimate = {
-    y: 0,
+    scale: 1,
     opacity: 1,
-    transition: { duration: 0.5, ease: easeInOut },
-};
-const animationWaveInitial = { rotate: 0 };
+    transition: { type: "spring", stiffness: 220, damping: 12, delay: 1.3 },
+} as const;
+const animationWaveInitial = { rotate: 0 } as const;
 const animationWaveAnimate = {
     rotate: [0, 20, -20, 20, -20, 0],
-    transition: { duration: 2, ease: easeInOut, repeat: Infinity, repeatDelay: 3 },
+    transition: { duration: 1.5, ease: easeInOut, repeat: Infinity, repeatDelay: 2.5, delay: 1.65 },
 };
-const animationInitial = { y: -25, opacity: 0 };
+const animationInitial = { y: 20, opacity: 0 } as const;
 const animationAnimate = {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.5, ease: easeInOut },
+    transition: { duration: 0.5, ease: easeInOut, delay: 1.5 },
 };
-const animationButtonWhileHover = { scale: 1.1 };
-const animationButtonWhilePress = { scale: 0.95, rotate: -3 };
+const animationButtonWhileHover = { scale: 1.1 } as const;
+const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
 </script>
 
 <template>
     <div class="hero bg-base-200 min-h-screen">
         <div class="hero-content text-center">
-            <div class="max-w-md">
-                <div class="flex flex-row justify-center items-center gap-4">
+            <div class="max-w-2xl">
+                <div class="flex flex-row justify-center items-center gap-3 sm:gap-4 flex-wrap sm:flex-nowrap">
                     <motion.h1
+                        :layout="true"
                         :initial="animationTitleLeftInitial"
                         :animate="animationTitleLeftAnimate"
-                        class="text-5xl font-bold"
+                        class="text-4xl sm:text-5xl font-bold whitespace-nowrap"
                     >
                         Hi!
                     </motion.h1>
                     <motion.div
-                        class="inline-block"
+                        :layout="true"
+                        class="inline-block origin-center"
                         :initial="animationHandInitial"
                         :animate="animationHandAnimate"
                         :drag="true"
@@ -62,24 +66,25 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 };
                         <motion.span
                             :initial="animationWaveInitial"
                             :animate="animationWaveAnimate"
-                            class="text-5xl font-bold inline-block"
+                            class="text-4xl sm:text-5xl font-bold inline-block origin-bottom-right"
                         >
                             👋
                         </motion.span>
                     </motion.div>
                     <motion.h1
+                        :layout="true"
                         :initial="animationTitleRightInitial"
                         :animate="animationTitleRightAnimate"
-                        class="text-5xl font-bold"
+                        class="text-4xl sm:text-5xl font-bold whitespace-nowrap"
                     >
-                        I am <span class="text-accent">Chris</span>
+                        I'm <span class="text-accent">Chris</span>
                     </motion.h1>
                 </div>
                 <motion.p :initial="animationInitial" :animate="animationAnimate" class="pt-8">
                     I am a full-stack software developer, trying to automate a lot of boring stuff. I like doing random
                     things that are related to computers and technology.
                 </motion.p>
-                <div class="flex flex-row justify-center items-center gap-10 py-4">
+                <div class="flex flex-row justify-center items-center gap-5 py-4">
                     <div class="tooltip tooltip-bottom" data-tip="LinkedIn">
                         <NuxtLink to="https://www.linkedin.com/in/christopherandreitayao" target="_blank" class="m-0">
                             <motion.div
@@ -89,7 +94,7 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 };
                                 :while-press="animationButtonWhilePress"
                                 class="flex flex-col justify-center items-center"
                             >
-                                <Icon name="mdi:linkedin" size="75" />
+                                <Icon name="mdi:linkedin" size="50" />
                             </motion.div>
                         </NuxtLink>
                     </div>
@@ -102,7 +107,7 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 };
                                 :while-press="animationButtonWhilePress"
                                 class="flex flex-col justify-center items-center"
                             >
-                                <Icon name="mdi:github-box" size="75" />
+                                <Icon name="mdi:github-box" size="50" />
                             </motion.div>
                         </NuxtLink>
                     </div>
@@ -115,7 +120,7 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 };
                                 :while-press="animationButtonWhilePress"
                                 class="flex flex-col justify-center items-center"
                             >
-                                <Icon name="material-symbols:mail" size="75" />
+                                <Icon name="material-symbols:mail" size="50" />
                             </motion.div>
                         </NuxtLink>
                     </div>
