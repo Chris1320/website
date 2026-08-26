@@ -141,27 +141,33 @@ onMounted(() => {
         <motion.nav
             :initial="navbarInitial"
             :animate="navbarAnimate"
-            class="hidden md:flex fixed left-1/2 -translate-x-1/2 z-50 font-mono antialiased transition-[background-color,border-color,box-shadow,padding,border-radius] duration-300 ease-out"
+            class="hidden md:flex fixed left-1/2 -translate-x-1/2 z-50 font-mono antialiased transition-[background-color,border-color,box-shadow,padding,border-radius] duration-300 ease-out items-center"
             :class="[
                 isScrolled
                     ? 'top-4 px-6 py-2.5 rounded-full bg-base-200/90 backdrop-blur-xl border border-base-300/80 shadow-2xl space-x-6 lg:space-x-8 text-xs lg:text-sm'
-                    : 'top-4 px-0 py-0 bg-transparent border-transparent shadow-none space-x-6 lg:space-x-8 text-xs lg:text-sm',
+                    : 'top-3.5 px-0 py-0 bg-transparent border-transparent shadow-none space-x-6 lg:space-x-8 text-xs lg:text-sm',
             ]"
         >
-            <a
-                v-for="link in navLinks"
-                :key="link.targetId"
-                :href="link.href"
-                class="whitespace-nowrap transition-colors underline-offset-8"
-                :class="
-                    activeSection === link.targetId
-                        ? 'text-primary font-semibold underline'
-                        : 'text-base-content/80 hover:text-primary'
-                "
-                @click.prevent="scrollToSection(link.targetId)"
-            >
-                {{ link.label }}
-            </a>
+            <div v-for="link in navLinks" :key="link.targetId" class="relative py-1">
+                <a
+                    :href="link.href"
+                    class="whitespace-nowrap transition-colors duration-200 block"
+                    :class="
+                        activeSection === link.targetId
+                            ? 'text-primary font-bold'
+                            : 'text-base-content/70 hover:text-base-content'
+                    "
+                    @click.prevent="scrollToSection(link.targetId)"
+                >
+                    {{ link.label }}
+                </a>
+                <motion.div
+                    v-if="activeSection === link.targetId"
+                    layout-id="active-nav-underline"
+                    class="absolute -bottom-0.5 left-0 right-0 h-0.5 bg-primary"
+                    :transition="{ type: 'spring', stiffness: 380, damping: 30 }"
+                />
+            </div>
         </motion.nav>
     </div>
 </template>
