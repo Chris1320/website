@@ -104,7 +104,7 @@ function formatDateRange(from: string, to?: string | null) {
                                 class="inline-flex items-center mr-2 mb-2"
                             >
                                 <div class="tooltip" :data-tip="tech.name">
-                                    <motion.div :while-hover="{ scale: 1.5 }">
+                                    <motion.div :while-hover="{ scale: 1.25 }">
                                         <Icon :name="tech.icon" class="w-5 h-5 mr-1" />
                                     </motion.div>
                                 </div>
