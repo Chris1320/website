@@ -20,9 +20,11 @@ async function handleSubmit() {
     }
 
     const formData = new FormData(form);
-    const payload: Record<string, any> = {};
+    const payload: Record<string, string> = {};
     formData.forEach((value, key) => {
-        payload[key] = value;
+        if (typeof value === "string") {
+            payload[key] = value;
+        }
     });
 
     try {
@@ -40,8 +42,8 @@ async function handleSubmit() {
         } else {
             errorMessage.value = res.statusText;
         }
-    } catch (err: any) {
-        errorMessage.value = err?.message || "Request failed.";
+    } catch (err: unknown) {
+        errorMessage.value = err instanceof Error ? err.message : "Request failed.";
     } finally {
         isSubmitting.value = false;
     }
@@ -92,12 +94,7 @@ async function handleSubmit() {
 
                 <div class="form-control">
                     <label for="message" class="label w-full"><span class="label-text text-left">Message*</span></label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        required
-                        class="textarea textarea-bordered w-full h-32"
-                    ></textarea>
+                    <textarea id="message" name="message" required class="textarea textarea-bordered w-full h-32" />
                 </div>
 
                 <div class="form-control mt-2">
