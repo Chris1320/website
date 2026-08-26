@@ -25,7 +25,7 @@ useHead({
         class="min-h-screen bg-base-100 text-base-content font-mono selection:bg-primary selection:text-primary-content transition-colors duration-200"
     >
         <NuxtRouteAnnouncer />
-        <AppMenu />
+        <AppNavbar />
         <main>
             <slot />
         </main>

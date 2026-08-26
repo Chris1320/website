@@ -42,7 +42,7 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
 </script>
 
 <template>
-    <div class="hero bg-base-200 min-h-screen">
+    <section id="welcome" class="hero bg-base-200 min-h-screen">
         <div class="hero-content text-center">
             <div class="max-w-2xl">
                 <div class="flex flex-row justify-center items-center gap-3 sm:gap-4 flex-wrap sm:flex-nowrap">
@@ -150,5 +150,5 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
                 </dialog>
             </div>
         </div>
-    </div>
+    </section>
 </template>

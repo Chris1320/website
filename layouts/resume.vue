@@ -14,7 +14,7 @@ useHead({
     <!-- <div class="bg-[#EDECE6] text-[#1C1D1D] min-h-screen min-w-screen p-0 m-0"> -->
     <div class="min-h-screen min-w-screen p-0 m-0">
         <NuxtRouteAnnouncer />
-        <AppMenu />
+        <AppNavbar />
         <slot />
     </div>
 </template>
