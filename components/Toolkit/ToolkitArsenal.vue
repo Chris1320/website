@@ -1,32 +1,28 @@
 <script lang="ts" setup>
+import type { Tool, ToolkitCategory } from "~/utils/models/toolkit";
+
 import { motion } from "motion-v";
+import rawToolkit from "~/public/data/toolkit.json";
 
 const isMounted = ref(false);
 const defaultIcon = "mdi:toolbox";
 const hoveredTool = ref<Tool | null>(null);
 const hoveredToolCategory = ref<string | null>(null);
-const { data: toolkit, pending, error } = await useFetch<ToolkitCategory[]>("/data/toolkit.json", { server: false });
-console.log(`There are ${toolkit.value?.length || 0} toolkit categories loaded.`);
+const toolkit = rawToolkit as ToolkitCategory[];
 
 function setHoveredTool(tool: Tool, category: string) {
-    console.log(`Hovering over tool: ${tool.name} in category: ${category}`);
     hoveredTool.value = tool;
     hoveredToolCategory.value = category;
 }
 
 function showHoveredToolInfo() {
-    console.log("Showing info for hovered tool.");
     const dialog = document.getElementById("view-toolkit-info-modal") as HTMLDialogElement;
     if (dialog && hoveredTool && hoveredToolCategory) {
-        console.log(`Showing info for tool: ${hoveredTool.value?.name} in category: ${hoveredToolCategory.value}`);
         dialog.showModal();
-    } else {
-        console.log("No tool is currently selected to show info for.");
     }
 }
 
 function clearHoveredTool() {
-    console.log("No longer hovering over any tool.");
     hoveredTool.value = null;
     hoveredToolCategory.value = null;
 }
@@ -38,14 +34,7 @@ onMounted(() => {
 
 <template>
     <div id="skills">
-        <div v-if="pending" class="mb-6 flex flex-row justify-center items-center">
-            <span class="loading loading-circle loading-md" />
-            <p class="pl-5 text-md">Loading toolkit...</p>
-        </div>
-        <div v-else-if="error">
-            <AppError title="An error occured loading the toolkit" :error="error.message" />
-        </div>
-        <div v-else>
+        <div>
             <p class="mb-4 text-xl">Here are some of the tools and technologies I use:</p>
             <!-- For desktop -->
             <div class="hidden lg:block">
