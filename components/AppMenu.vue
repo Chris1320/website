@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
+const { theme, toggleTheme } = useTheme();
 const isMenuCollapsed = ref(true);
 const toggleMenu = () => {
     isMenuCollapsed.value = !isMenuCollapsed.value;
@@ -40,6 +41,22 @@ const toggleMenu = () => {
                 <NuxtLink class="tooltip tooltip-right" data-tip="About Me" to="/about" @click="toggleMenu()">
                     <Icon name="mdi:account-circle-outline" size="20" />
                 </NuxtLink>
+            </li>
+            <li>
+                <button
+                    class="tooltip tooltip-right"
+                    :data-tip="theme === 'dark' ? 'Switch to Light' : 'Switch to Dark'"
+                    @click="toggleTheme()"
+                >
+                    <Icon
+                        :name="
+                            theme === 'dark'
+                                ? 'material-symbols:light-mode-outline'
+                                : 'material-symbols:dark-mode-outline'
+                        "
+                        size="20"
+                    />
+                </button>
             </li>
         </Motion>
     </ul>

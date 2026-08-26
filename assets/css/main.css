@@ -1,2 +1,53 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme {
+    --font-mono: "JetBrains Mono", monospace;
+    --color-mint: #228663;
+    --color-mint-light: #a8e6cf;
+    --color-sapphire: #1e66f5;
+    --color-sapphire-light: #74c7ec;
+}
+
+:root,
+[data-theme="light"] {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --color-base-100: #eff1f5;
+    --color-base-200: #e6e9ef;
+    --color-base-300: #dce0e8;
+    --color-base-content: #4c4f69;
+    --color-primary: #228663;
+    --color-primary-content: #ffffff;
+    --color-secondary: #1e66f5;
+    --color-secondary-content: #ffffff;
+    --color-accent: #2d9f75;
+    --color-accent-content: #ffffff;
+    --color-neutral: #dce0e8;
+    --color-neutral-content: #4c4f69;
+}
+
+[data-theme="dark"] {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --color-base-100: #1e1e2e;
+    --color-base-200: #181825;
+    --color-base-300: #313244;
+    --color-base-content: #cdd6f4;
+    --color-primary: #a8e6cf;
+    --color-primary-content: #11111b;
+    --color-secondary: #74c7ec;
+    --color-secondary-content: #11111b;
+    --color-accent: #64c8a5;
+    --color-accent-content: #11111b;
+    --color-neutral: #11111b;
+    --color-neutral-content: #cdd6f4;
+}
+
+html,
+body {
+    background-color: var(--color-base-100);
+    color: var(--color-base-content);
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}

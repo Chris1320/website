@@ -7,8 +7,12 @@ export default defineNuxtConfig({
         enabled: true,
         timeline: { enabled: true },
     },
+    telemetry: false,
     css: ["~/assets/css/main.css"],
     modules: ["@nuxt/eslint", "@nuxt/test-utils", "@nuxt/icon", "motion-v/nuxt", "@nuxt/fonts"],
+    fonts: {
+        families: [{ name: "JetBrains Mono", provider: "google" }],
+    },
     vite: { plugins: [tailwindcss()] },
     nitro: {
         preset: "cloudflare_module",
