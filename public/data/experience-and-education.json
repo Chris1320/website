@@ -1,0 +1,36 @@
+{
+    "experience": [
+        {
+            "company": "Crowdsource Innovative Solutions Inc.",
+            "location": "Makati City, PH",
+            "position": "Information Technology Intern",
+            "from": "2025-12-01",
+            "to": "2026-02-28",
+            "highlights": [
+                "Developed and deployed a payroll management system in n8n, PostgreSQL, and JavaScript, replacing manual Excel workflows for 2 companies and automating journal entry synchronization to QuickBooks.",
+                "Engineered AI document extraction pipelines using Google Gemini API and JavaScript to parse PDF rent rolls and bank statements into structured JSON for Google Sheets.",
+                "Built automated 3-way financial reconciliation workflows matching General Ledger and Check Register records across PDF/Excel formats, merging data into Appfolio working files."
+            ],
+            "url": "https://crowdsourcesolutions.ph/",
+            "logo": "https://assets.chrisfromnowhere.me/experience/ddd4fdee-ca48-43ec-94a0-d643cf6d3e6e.png"
+        }
+    ],
+    "education": [
+        {
+            "school": "Baliuag University",
+            "location": "Baliwag, Bulacan, PH",
+            "degree": "BS Computer Science",
+            "major": "Software Development",
+            "from": "2022-08-22",
+            "to": "2026-09-19",
+            "highlights": [
+                "Thesis: BENTO; Peer-reviewed and published in Central Lens Journal (IRCITE 2026, Vol. 05, Issue 01)",
+                "Dean’s Lister with 1.26 GWA (2024-2025), Dean’s Lister with 1.33 GWA (2023-2024)",
+                "Class Vice-President, College of Information Technology Education (CITE) Alumni Network (2026)",
+                "Relevant Coursework: Software Engineering, Data Structures and Algorithms, Operating Systems, Cybersecurity"
+            ],
+            "url": "https://baliuagu.edu.ph/",
+            "logo": "https://assets.chrisfromnowhere.me/education/0cf7381f-4a84-47b4-9ae8-8229bb8678c9.png"
+        }
+    ]
+}
