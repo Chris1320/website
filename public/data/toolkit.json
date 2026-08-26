@@ -40,6 +40,11 @@
                 "description": "TypeScript is a statically typed superset of JavaScript that adds optional type annotations and other features to the language. It is designed to improve code quality and maintainability, making it easier to catch errors during development. TypeScript is widely used in large-scale web applications and frameworks like Angular and React."
             },
             {
+                "name": "Astro",
+                "icon": "skill-icons:astro-dark",
+                "description": "Astro is a modern front-end framework for building fast, optimized websites. It allows developers to create components using popular frameworks like React, Vue, and Svelte, while also providing a unique approach to rendering content. Astro focuses on delivering minimal JavaScript to the browser, resulting in improved performance and faster page load times."
+            },
+            {
                 "name": "Nuxt.js",
                 "icon": "skill-icons:nuxtjs-dark",
                 "description": "Nuxt.js is a powerful framework built on top of Vue.js that simplifies the development of server-side rendered (SSR) and static web applications. It provides a structured architecture, automatic routing, and a rich ecosystem of modules and plugins, making it easier for developers to create performant and SEO-friendly web applications."
