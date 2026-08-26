@@ -38,6 +38,7 @@ import { motion } from "motion-v";
         </nav>
         <nav>
             <h6 class="footer-title">External Links</h6>
+            <NuxtLink to="https://677078.xyz" target="_blank" class="link link-hover">67 70 78 (CFN)</NuxtLink>
             <NuxtLink to="https://github.com/Chris1320" target="_blank" class="link link-hover">GitHub</NuxtLink>
             <NuxtLink to="https://www.linkedin.com/in/christopherandreitayao" target="_blank" class="link link-hover"
                 >LinkedIn
