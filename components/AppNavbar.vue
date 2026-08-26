@@ -1,8 +1,24 @@
 <script setup lang="ts">
+import { motion } from "motion-v";
+
 const { theme, toggleTheme } = useTheme();
 const isMobileMenuOpen = ref(false);
 const activeSection = ref("welcome");
 const isScrolled = ref(false);
+
+const route = useRoute();
+const shouldAnimate = computed(() => Boolean(route.meta.animateNavbar));
+
+const navbarInitial = computed(() => (shouldAnimate.value ? { y: -30, opacity: 0 } : false));
+const navbarAnimate = computed(() =>
+    shouldAnimate.value
+        ? {
+              y: 0,
+              opacity: 1,
+              transition: { type: "spring" as const, stiffness: 140, damping: 16, delay: 1.65 },
+          }
+        : { y: 0, opacity: 1 },
+);
 
 const navLinks = [
     { label: "Welcome", targetId: "welcome", href: "#welcome" },
@@ -46,10 +62,13 @@ onMounted(() => {
     onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 });
 </script>
-
 <template>
     <div>
-        <header class="w-full font-mono transition-colors duration-200 border-b border-base-300/30">
+        <motion.header
+            :initial="navbarInitial"
+            :animate="navbarAnimate"
+            class="w-full font-mono relative bg-transparent"
+        >
             <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                 <a
                     href="#welcome"
@@ -58,7 +77,6 @@ onMounted(() => {
                 >
                     <span>Christopher Andrei Tayao.</span>
                 </a>
-                <div class="hidden md:block w-24" />
                 <div class="flex items-center space-x-2">
                     <button
                         class="p-2 text-base-content/80 hover:text-primary transition-all tooltip tooltip-bottom"
@@ -102,31 +120,31 @@ onMounted(() => {
                     {{ link.label }}
                 </a>
             </div>
-        </header>
-        <div
-            class="hidden md:flex fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-out font-mono"
+        </motion.header>
+        <motion.nav
+            :initial="navbarInitial"
+            :animate="navbarAnimate"
+            class="hidden md:flex fixed left-1/2 -translate-x-1/2 z-50 font-mono antialiased transition-[background-color,border-color,box-shadow,padding,border-radius] duration-300 ease-out"
             :class="[
                 isScrolled
-                    ? 'top-4 px-6 py-2.5 rounded-full bg-base-200/90 backdrop-blur-xl border border-base-300/80 shadow-2xl'
-                    : 'top-3.5 px-0 py-0 bg-transparent border-transparent shadow-none',
+                    ? 'top-4 px-6 py-2.5 rounded-full bg-base-200/90 backdrop-blur-xl border border-base-300/80 shadow-2xl space-x-6 lg:space-x-8 text-xs lg:text-sm'
+                    : 'top-4 px-0 py-0 bg-transparent border-transparent shadow-none space-x-6 lg:space-x-8 text-xs lg:text-sm',
             ]"
         >
-            <nav class="flex items-center space-x-6 lg:space-x-8 text-xs lg:text-sm">
-                <a
-                    v-for="link in navLinks"
-                    :key="link.targetId"
-                    :href="link.href"
-                    class="whitespace-nowrap transition-colors underline-offset-8"
-                    :class="
-                        activeSection === link.targetId
-                            ? 'text-primary font-semibold underline'
-                            : 'text-base-content/80 hover:text-primary'
-                    "
-                    @click.prevent="scrollToSection(link.targetId)"
-                >
-                    {{ link.label }}
-                </a>
-            </nav>
-        </div>
+            <a
+                v-for="link in navLinks"
+                :key="link.targetId"
+                :href="link.href"
+                class="whitespace-nowrap transition-colors underline-offset-8"
+                :class="
+                    activeSection === link.targetId
+                        ? 'text-primary font-semibold underline'
+                        : 'text-base-content/80 hover:text-primary'
+                "
+                @click.prevent="scrollToSection(link.targetId)"
+            >
+                {{ link.label }}
+            </a>
+        </motion.nav>
     </div>
 </template>

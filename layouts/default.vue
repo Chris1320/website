@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const { theme, initTheme } = useTheme();
 
+if (import.meta.client) {
+    initTheme();
+}
+
 onMounted(() => {
     initTheme();
 });
@@ -22,7 +26,7 @@ useHead({
 <template>
     <div
         :data-theme="theme"
-        class="min-h-screen bg-base-100 text-base-content font-mono selection:bg-primary selection:text-primary-content transition-colors duration-200"
+        class="min-h-screen bg-base-100 text-base-content font-mono selection:bg-primary selection:text-primary-content"
     >
         <NuxtRouteAnnouncer />
         <AppNavbar />

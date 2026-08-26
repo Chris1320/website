@@ -1,32 +1,38 @@
 export type ThemeMode = "light" | "dark";
 
 export const useTheme = () => {
-    const theme = useState<ThemeMode>("app-theme", () => "light");
+    const themeCookie = useCookie<ThemeMode>("theme", {
+        default: () => "light",
+        sameSite: "lax",
+    });
 
-    const setTheme = (newTheme: ThemeMode) => {
+    const theme = useState<ThemeMode>("app-theme", () => themeCookie.value || "light");
+
+    const setTheme = (newTheme: ThemeMode, withTransition = true) => {
         theme.value = newTheme;
+        themeCookie.value = newTheme;
+
         if (import.meta.client) {
-            document.documentElement.setAttribute("data-theme", newTheme);
-            localStorage.setItem("theme", newTheme);
-            const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-            if (themeColorMeta) {
-                themeColorMeta.setAttribute("content", newTheme === "dark" ? "#1e1e2e" : "#eff1f5");
+            if (withTransition) {
+                document.documentElement.classList.add("theme-transition");
+            } else {
+                document.documentElement.classList.remove("theme-transition");
             }
+            document.documentElement.setAttribute("data-theme", newTheme);
         }
     };
 
     const toggleTheme = () => {
-        setTheme(theme.value === "light" ? "dark" : "light");
+        setTheme(theme.value === "light" ? "dark" : "light", true);
     };
 
     const initTheme = () => {
         if (import.meta.client) {
-            const saved = localStorage.getItem("theme") as ThemeMode | null;
-            if (saved === "light" || saved === "dark") {
-                setTheme(saved);
-            } else {
+            if (!themeCookie.value) {
                 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-                setTheme(prefersDark ? "dark" : "light");
+                setTheme(prefersDark ? "dark" : "light", false);
+            } else {
+                setTheme(themeCookie.value, false);
             }
         }
     };
