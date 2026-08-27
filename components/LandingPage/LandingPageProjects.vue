@@ -21,7 +21,13 @@ function formatDateRange(from: string, to?: string | null) {
 </script>
 
 <template>
-    <section id="projects" class="w-full max-w-5xl mx-auto px-6 py-24 font-mono">
+    <motion.section
+        id="projects"
+        class="w-full max-w-5xl mx-auto px-6 py-24 font-mono"
+        :initial="{ opacity: 0, y: 40 }"
+        :while-in-view="{ opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }"
+        :viewport="{ once: true, margin: '-60px' }"
+    >
         <div class="text-center mb-16">
             <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-base-content mb-3">
                 My <span class="text-primary">Projects</span>
@@ -129,5 +135,5 @@ function formatDateRange(from: string, to?: string | null) {
                 </div>
             </motion.article>
         </div>
-    </section>
+    </motion.section>
 </template>

@@ -74,7 +74,13 @@ const educationList = computed(() => {
 </script>
 
 <template>
-    <section id="career" class="w-full max-w-4xl mx-auto px-6 py-20 font-mono">
+    <motion.section
+        id="career"
+        class="w-full max-w-4xl mx-auto px-6 py-20 font-mono"
+        :initial="{ opacity: 0, y: 40 }"
+        :while-in-view="{ opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }"
+        :viewport="{ once: true, margin: '-60px' }"
+    >
         <div
             class="grid grid-cols-2 p-1.5 rounded-xl bg-base-200/80 border border-base-300/60 mb-6 text-sm font-semibold"
         >
@@ -200,5 +206,5 @@ const educationList = computed(() => {
                 </motion.div>
             </AnimatePresence>
         </div>
-    </section>
+    </motion.section>
 </template>
