@@ -107,8 +107,9 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
                     </div>
                     <div class="md:col-span-7 flex flex-col justify-center space-y-4">
                         <p class="text-justify text-sm sm:text-base leading-relaxed text-base-content/90 font-mono">
-                            I am a full-stack software developer, trying to automate a lot of boring stuff. I like doing
-                            random things that are related to computers and technology.
+                            I am a full-stack <span class="text-accent underline">software engineer</span> who loves
+                            solving interesting and complex problems. I like doing random things that are related to
+                            computers and technology. Let's talk!
                         </p>
                         <div class="flex flex-row justify-center md:justify-start items-center gap-4 pt-1">
                             <div class="tooltip tooltip-bottom" data-tip="LinkedIn">
