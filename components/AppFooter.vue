@@ -15,7 +15,7 @@ import { motion } from "motion-v";
                     class="inline-block"
                     >💖</motion.span
                 >
-                and powered by Nuxt
+                and powered by <NuxtLink to="https://nuxt.com" target="_blank" class="link link-hover">Nuxt</NuxtLink>
             </p>
         </aside>
         <nav>
