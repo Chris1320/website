@@ -118,7 +118,6 @@ onMounted(() => {
                 <a
                     href="/"
                     class="text-sm sm:text-base font-bold tracking-tight text-base-content hover:text-primary transition-colors flex items-center gap-1.5"
-                    @click.prevent="scrollToSection('welcome')"
                 >
                     <span>Christopher Andrei Tayao.</span>
                 </a>
