@@ -34,7 +34,7 @@ import { motion } from "motion-v";
             <h6 class="footer-title">Resources</h6>
             <NuxtLink to="/projects" class="link link-hover">Projects</NuxtLink>
             <NuxtLink to="https://677078.xyz" class="link link-hover">Blog</NuxtLink>
-            <NuxtLink to="/about" class="link link-hover">About Me</NuxtLink>
+            <NuxtLink to="/#about" class="link link-hover">About Me</NuxtLink>
         </nav>
         <nav>
             <h6 class="footer-title">External Links</h6>
