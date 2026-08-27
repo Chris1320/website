@@ -246,7 +246,7 @@ function handleExplodeSkill(_skill: string | null) {
                             <span
                                 v-for="tool in cat.tools"
                                 :key="tool.name"
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-base-200 border border-base-300/80 text-xs text-base-content/90 font-mono hover:border-primary/50 transition-colors"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-base-200 border border-base-300/80 text-xs text-base-content/90 font-mono hover:border-primary/50 transition-colors cursor-pointer select-none"
                             >
                                 <Icon :name="getToolIcon(tool)" size="16" />
                                 <span>{{ tool.name }}</span>
