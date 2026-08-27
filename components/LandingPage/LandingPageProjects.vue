@@ -41,9 +41,25 @@ function formatDateRange(from: string, to?: string | null) {
                 :initial="{ opacity: 0, y: 30 }"
                 :while-in-view="{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.1 } }"
                 :viewport="{ once: true, margin: '-50px' }"
-                class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center"
+                class="flex flex-col lg:flex-row gap-4 md:gap-8 lg:gap-12 items-center"
                 :class="index % 2 === 1 ? 'lg:flex-row-reverse' : ''"
             >
+                <!-- Show image showcase above description on mobile -->
+                <div class="md:hidden flex-1 w-full max-w-lg lg:max-w-none">
+                    <ProjectsMockupDesktop
+                        v-if="project.mockups && project.mockups.type === 'desktop'"
+                        :data="project.mockups.data"
+                    />
+                    <ProjectsMockupBrowser
+                        v-else-if="project.mockups && project.mockups.type === 'web' && 'url' in project.mockups.data"
+                        :data="project.mockups.data"
+                    />
+                    <ProjectsMockupMobile
+                        v-else-if="project.mockups && project.mockups.type === 'mobile'"
+                        :data="project.mockups.data"
+                    />
+                    <div v-else class="p-8 text-center text-xs text-base-content/50">No preview available</div>
+                </div>
                 <div class="flex-1 space-y-4 w-full">
                     <NuxtLink
                         :to="`/project/${project.id}`"
@@ -116,7 +132,7 @@ function formatDateRange(from: string, to?: string | null) {
                         </div>
                     </div>
                 </div>
-                <div class="flex-1 w-full max-w-lg lg:max-w-none">
+                <div class="hidden md:flex flex-1 w-full max-w-lg lg:max-w-none">
                     <ProjectsMockupDesktop
                         v-if="project.mockups && project.mockups.type === 'desktop'"
                         :data="project.mockups.data"
