@@ -15,7 +15,7 @@ import { motion } from "motion-v";
                     class="inline-block"
                     >💖</motion.span
                 >
-                not with AI using Nuxt and Tailwind CSS
+                and powered by Nuxt
             </p>
         </aside>
         <nav>

@@ -43,7 +43,7 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
 <template>
     <section id="welcome" class="hero bg-transparent min-h-screen">
         <div class="hero-content text-center w-full">
-            <div class="max-w-3xl w-full">
+            <div class="max-w-4xl w-full">
                 <div class="flex flex-row justify-center items-center gap-3 sm:gap-4 flex-wrap sm:flex-nowrap">
                     <motion.h1
                         :layout="true"
@@ -107,9 +107,9 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
                     </div>
                     <div class="md:col-span-7 flex flex-col justify-center space-y-4">
                         <p class="text-justify text-sm sm:text-base leading-relaxed text-base-content/90 font-mono">
-                            I am a full-stack <span class="text-accent underline">software engineer</span> who loves
-                            solving interesting and complex problems. I like doing random things that are related to
-                            computers and technology. Let's talk!
+                            I am a full-stack <span class="text-accent underline">software engineer</span> building
+                            automated data pipelines, modern web applications, and reliable backend systems. I like
+                            solving interesting and complex problems. Let's talk!
                         </p>
                         <div class="flex flex-row justify-center md:justify-start items-center gap-4 pt-1">
                             <div class="tooltip tooltip-bottom" data-tip="LinkedIn">
