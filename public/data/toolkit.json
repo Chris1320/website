@@ -10,17 +10,24 @@
                 }
             },
             {
-                "name": "C#",
+                "name": "Go",
                 "icon": {
-                    "light": "skill-icons:cs",
-                    "dark": "skill-icons:cs"
+                    "light": "skill-icons:golang",
+                    "dark": "skill-icons:golang"
                 }
             },
             {
-                "name": "Bun",
+                "name": "Lua",
                 "icon": {
-                    "light": "skill-icons:bun-light",
-                    "dark": "skill-icons:bun-dark"
+                    "light": "skill-icons:lua-light",
+                    "dark": "skill-icons:lua-dark"
+                }
+            },
+            {
+                "name": "Bash",
+                "icon": {
+                    "light": "skill-icons:bash-light",
+                    "dark": "skill-icons:bash-dark"
                 }
             },
             {
@@ -28,6 +35,20 @@
                 "icon": {
                     "light": "skill-icons:java-light",
                     "dark": "skill-icons:java-dark"
+                }
+            },
+            {
+                "name": "C",
+                "icon": {
+                    "light": "skill-icons:c",
+                    "dark": "skill-icons:c"
+                }
+            },
+            {
+                "name": "C#",
+                "icon": {
+                    "light": "skill-icons:cs",
+                    "dark": "skill-icons:cs"
                 }
             },
             {
@@ -42,6 +63,20 @@
                 "icon": {
                     "light": "skill-icons:flask-light",
                     "dark": "skill-icons:flask-dark"
+                }
+            },
+            {
+                "name": "uv",
+                "icon": {
+                    "light": "devicon:uv",
+                    "dark": "catppuccin:uv"
+                }
+            },
+            {
+                "name": "Bun",
+                "icon": {
+                    "light": "skill-icons:bun-light",
+                    "dark": "skill-icons:bun-dark"
                 }
             },
             {
@@ -99,13 +134,6 @@
                 }
             },
             {
-                "name": "React",
-                "icon": {
-                    "light": "skill-icons:react-light",
-                    "dark": "skill-icons:react-dark"
-                }
-            },
-            {
                 "name": "Nuxt.js",
                 "icon": {
                     "light": "skill-icons:nuxtjs-light",
@@ -127,43 +155,36 @@
                 }
             },
             {
+                "name": "React",
+                "icon": {
+                    "light": "skill-icons:react-light",
+                    "dark": "skill-icons:react-dark"
+                }
+            },
+            {
                 "name": "Tailwind CSS",
                 "icon": {
                     "light": "skill-icons:tailwindcss-light",
                     "dark": "skill-icons:tailwindcss-dark"
                 }
+            },
+            {
+                "name": "Qt",
+                "icon": {
+                    "light": "skill-icons:qt-light",
+                    "dark": "skill-icons:qt-dark"
+                }
             }
         ]
     },
     {
-        "name": "DevOps",
+        "name": "DevOps Technologies",
         "tools": [
             {
-                "name": "Amazon Web Services (AWS)",
+                "name": "Linux",
                 "icon": {
-                    "light": "skill-icons:aws-light",
-                    "dark": "skill-icons:aws-dark"
-                }
-            },
-            {
-                "name": "Cloudflare",
-                "icon": {
-                    "light": "skill-icons:cloudflare-light",
-                    "dark": "skill-icons:cloudflare-dark"
-                }
-            },
-            {
-                "name": "Docker",
-                "icon": {
-                    "light": "skill-icons:docker",
-                    "dark": "skill-icons:docker"
-                }
-            },
-            {
-                "name": "Firebase",
-                "icon": {
-                    "light": "devicon:firebase",
-                    "dark": "devicon:firebase"
+                    "light": "skill-icons:linux-light",
+                    "dark": "skill-icons:linux-dark"
                 }
             },
             {
@@ -174,10 +195,52 @@
                 }
             },
             {
+                "name": "Docker",
+                "icon": {
+                    "light": "skill-icons:docker",
+                    "dark": "skill-icons:docker"
+                }
+            },
+            {
+                "name": "Cloudflare",
+                "icon": {
+                    "light": "skill-icons:cloudflare-light",
+                    "dark": "skill-icons:cloudflare-dark"
+                }
+            },
+            {
                 "name": "Google Cloud Platform (GCP)",
                 "icon": {
                     "light": "skill-icons:gcp-light",
                     "dark": "skill-icons:gcp-dark"
+                }
+            },
+            {
+                "name": "Firebase",
+                "icon": {
+                    "light": "devicon:firebase",
+                    "dark": "devicon:firebase"
+                }
+            },
+            {
+                "name": "Amazon Web Services (AWS)",
+                "icon": {
+                    "light": "skill-icons:aws-light",
+                    "dark": "skill-icons:aws-dark"
+                }
+            },
+            {
+                "name": "Pytest",
+                "icon": {
+                    "light": "devicon:pytest",
+                    "dark": "devicon:pytest"
+                }
+            },
+            {
+                "name": "Playwright",
+                "icon": {
+                    "light": "devicon:playwright",
+                    "dark": "catppuccin:playwright"
                 }
             }
         ]
@@ -186,19 +249,25 @@
         "name": "Media Editing",
         "tools": [
             {
-                "name": "Adobe After Effects",
-                "icon": "skill-icons:aftereffects",
-                "description": "Adobe After Effects is a powerful digital visual effects, motion graphics, and compositing software used in the post-production process of filmmaking, video production, and television production. It allows users to create stunning animations, special effects, and cinematic visual effects for various media projects."
+                "name": "Adobe Photoshop",
+                "icon": {
+                    "light": "skill-icons:photoshop",
+                    "dark": "skill-icons:photoshop"
+                }
             },
             {
                 "name": "Adobe Premiere Pro",
-                "icon": "skill-icons:premiere",
-                "description": "Adobe Premiere Pro is a professional video editing software used by filmmakers, video editors, and content creators to edit and produce high-quality videos. It offers a wide range of features, including multi-camera editing, color correction, audio editing, and support for various video formats, making it a versatile tool for video production."
+                "icon": {
+                    "light": "skill-icons:premiere",
+                    "dark": "skill-icons:premiere"
+                }
             },
             {
-                "name": "Adobe Photoshop",
-                "icon": "skill-icons:photoshop",
-                "description": "Adobe Photoshop is a widely used graphic design and photo editing software that provides powerful tools for creating and manipulating images. It is popular among photographers, designers, and artists for tasks such as photo retouching, digital painting, graphic design, and web design. Photoshop's extensive features and capabilities make it a standard in the creative industry."
+                "name": "After Effects",
+                "icon": {
+                    "light": "skill-icons:aftereffects",
+                    "dark": "skill-icons:aftereffects"
+                }
             }
         ]
     }
