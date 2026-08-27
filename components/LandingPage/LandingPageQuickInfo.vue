@@ -15,16 +15,15 @@ const skill2Animation = ref({});
 const skill3Animation = ref({});
 const skill4Animation = ref({});
 const skill5Animation = ref({});
+const skillExplodedAtleastOnce = ref(false);
 
 function getToolIcon(tool: Tool): string {
-    if (typeof tool.icon === "object" && tool.icon !== null) {
-        return theme.value === "dark" ? tool.icon.dark : tool.icon.light;
-    }
-    return tool.icon;
+    return theme.value === "dark" ? tool.icon.dark : tool.icon.light;
 }
 
 function handleExplodeSkill(_skill: string | null) {
     skill.value = _skill === skill.value ? null : _skill;
+    skillExplodedAtleastOnce.value = true;
 
     switch (skill.value) {
         case "py":
@@ -38,7 +37,7 @@ function handleExplodeSkill(_skill: string | null) {
             break;
 
         case "cs":
-            selectedSkillName.value = "C#";
+            selectedSkillName.value = "Go";
             skill1Animation.value = { scale: 0.75, rotate: -10, y: -10, x: 0 };
             skill2Animation.value = { scale: 1.5, rotate: 10, y: -10, x: 25 };
             skill3Animation.value = { scale: 0.75, rotate: 15, y: -15, x: 40 };
@@ -88,7 +87,6 @@ function handleExplodeSkill(_skill: string | null) {
     }
 }
 </script>
-
 <template>
     <div class="text-center items-center flex flex-col justify-center px-4 my-10 font-mono">
         <motion.h3
@@ -109,61 +107,115 @@ function handleExplodeSkill(_skill: string | null) {
                 {{ selectedSkillName }}
             </motion.h2>
         </AnimatePresence>
-        <div class="mt-5 flex flex-row justify-center gap-1 flex-wrap pt-2 pb-8">
-            <motion.div :initial="{ opacity: 0, x: -20, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                <motion.div
-                    :animate="skill1Animation"
-                    class="cursor-pointer"
-                    @click="handleExplodeSkill('py')"
-                    @hover-start="handleExplodeSkill('py')"
-                    @hover-end="handleExplodeSkill(null)"
-                >
-                    <Icon name="skill-icons:python-dark" size="44" />
+        <div class="relative inline-flex items-center justify-center">
+            <div class="mt-5 flex flex-row justify-center gap-1 flex-wrap pt-2 pb-8">
+                <motion.div :initial="{ opacity: 0, x: -20, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                    <motion.div
+                        :animate="skill1Animation"
+                        class="cursor-pointer"
+                        @click="handleExplodeSkill('py')"
+                        @hover-start="handleExplodeSkill('py')"
+                        @hover-end="handleExplodeSkill(null)"
+                    >
+                        <Icon
+                            :name="
+                                getToolIcon({
+                                    name: 'python',
+                                    icon: { light: 'skill-icons:python-dark', dark: 'catppuccin:python' },
+                                })
+                            "
+                            size="44"
+                        />
+                    </motion.div>
                 </motion.div>
-            </motion.div>
-            <motion.div :initial="{ opacity: 0, x: -20, y: -10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                <motion.div
-                    :animate="skill2Animation"
-                    class="cursor-pointer"
-                    @click="handleExplodeSkill('cs')"
-                    @hover-start="handleExplodeSkill('cs')"
-                    @hover-end="handleExplodeSkill(null)"
-                >
-                    <Icon name="skill-icons:cs" size="44" />
+                <motion.div :initial="{ opacity: 0, x: -20, y: -10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                    <motion.div
+                        :animate="skill2Animation"
+                        class="cursor-pointer"
+                        @click="handleExplodeSkill('cs')"
+                        @hover-start="handleExplodeSkill('cs')"
+                        @hover-end="handleExplodeSkill(null)"
+                    >
+                        <Icon
+                            :name="
+                                getToolIcon({
+                                    name: 'go',
+                                    icon: { light: 'skill-icons:golang', dark: 'catppuccin:go' },
+                                })
+                            "
+                            size="44"
+                        />
+                    </motion.div>
                 </motion.div>
-            </motion.div>
-            <motion.div :initial="{ opacity: 0, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                <motion.div
-                    :animate="skill3Animation"
-                    class="cursor-pointer"
-                    @click="handleExplodeSkill('ts')"
-                    @hover-start="handleExplodeSkill('ts')"
-                    @hover-end="handleExplodeSkill(null)"
-                >
-                    <Icon name="skill-icons:typescript" size="44" />
+                <motion.div :initial="{ opacity: 0, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                    <motion.div
+                        :animate="skill3Animation"
+                        class="cursor-pointer"
+                        @click="handleExplodeSkill('ts')"
+                        @hover-start="handleExplodeSkill('ts')"
+                        @hover-end="handleExplodeSkill(null)"
+                    >
+                        <Icon
+                            :name="
+                                getToolIcon({
+                                    name: 'typescript',
+                                    icon: { light: 'skill-icons:typescript', dark: 'catppuccin:typescript' },
+                                })
+                            "
+                            size="44"
+                        />
+                    </motion.div>
                 </motion.div>
-            </motion.div>
-            <motion.div :initial="{ opacity: 0, x: 20, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                <motion.div
-                    :animate="skill4Animation"
-                    class="cursor-pointer"
-                    @click="handleExplodeSkill('vue')"
-                    @hover-start="handleExplodeSkill('vue')"
-                    @hover-end="handleExplodeSkill(null)"
-                >
-                    <Icon name="skill-icons:vuejs-dark" size="44" />
+                <motion.div :initial="{ opacity: 0, x: 20, y: 10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                    <motion.div
+                        :animate="skill4Animation"
+                        class="cursor-pointer"
+                        @click="handleExplodeSkill('vue')"
+                        @hover-start="handleExplodeSkill('vue')"
+                        @hover-end="handleExplodeSkill(null)"
+                    >
+                        <Icon
+                            :name="
+                                getToolIcon({
+                                    name: 'vue',
+                                    icon: { light: 'skill-icons:vuejs-dark', dark: 'catppuccin:vue' },
+                                })
+                            "
+                            size="44"
+                        />
+                    </motion.div>
                 </motion.div>
-            </motion.div>
-            <motion.div :initial="{ opacity: 0, x: 20, y: -10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
-                <motion.div
-                    :animate="skill5Animation"
-                    class="cursor-pointer"
-                    @click="handleExplodeSkill('react')"
-                    @hover-start="handleExplodeSkill('react')"
-                    @hover-end="handleExplodeSkill(null)"
-                >
-                    <Icon name="skill-icons:react-dark" size="44" />
+                <motion.div :initial="{ opacity: 0, x: 20, y: -10 }" :while-in-view="{ opacity: 1, x: 0, y: 0 }">
+                    <motion.div
+                        :animate="skill5Animation"
+                        class="cursor-pointer"
+                        @click="handleExplodeSkill('react')"
+                        @hover-start="handleExplodeSkill('react')"
+                        @hover-end="handleExplodeSkill(null)"
+                    >
+                        <Icon
+                            :name="
+                                getToolIcon({
+                                    name: 'react',
+                                    icon: { light: 'skill-icons:react-dark', dark: 'catppuccin:typescript-react' },
+                                })
+                            "
+                            size="44"
+                        />
+                    </motion.div>
                 </motion.div>
+            </div>
+            <motion.div
+                class="absolute left-full top-2 ml-3 hidden sm:flex flex-col items-start text-base-content/50 select-none pointer-events-none whitespace-nowrap"
+                :initial="{ opacity: 0, y: -10 }"
+                :animate="{
+                    opacity: !skillExplodedAtleastOnce ? 1 : 0,
+                    y: !skillExplodedAtleastOnce ? 0 : -10,
+                    transition: { duration: 0.25, ease: 'easeInOut' },
+                }"
+            >
+                <p class="text-xs rotate-12">Hover or click!</p>
+                <Icon name="at-icons:arrow-turn-down-left" size="18" />
             </motion.div>
         </div>
         <motion.div
