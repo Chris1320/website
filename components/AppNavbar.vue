@@ -89,7 +89,7 @@ onMounted(() => {
             const element = document.getElementById(targetId);
             if (element) {
                 setTimeout(() => {
-                    element.scrollIntoView({ behavior: "smooth" });
+                    element.scrollIntoView({ behavior: "smooth", block: "start" });
                     activeSection.value = targetId;
                 }, 150);
             }
