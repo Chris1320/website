@@ -97,7 +97,7 @@ const educationList = computed(() => {
                 :class="
                     activeTab === 'experience'
                         ? 'bg-base-100 text-base-content shadow-sm border border-base-300/50 font-bold'
-                        : 'text-base-content/60 hover:text-base-content'
+                        : 'border border-transparent text-base-content/60 hover:text-base-content'
                 "
                 @click="activeTab = 'experience'"
             >
@@ -108,7 +108,7 @@ const educationList = computed(() => {
                 :class="
                     activeTab === 'education'
                         ? 'bg-base-100 text-base-content shadow-sm border border-base-300/50 font-bold'
-                        : 'text-base-content/60 hover:text-base-content'
+                        : 'border border-transparent text-base-content/60 hover:text-base-content'
                 "
                 @click="activeTab = 'education'"
             >
