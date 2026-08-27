@@ -40,7 +40,6 @@ const animationAnimate = {
 const animationButtonWhileHover = { scale: 1.1 } as const;
 const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
 </script>
-
 <template>
     <section id="welcome" class="hero bg-transparent min-h-screen">
         <div class="hero-content text-center w-full">
