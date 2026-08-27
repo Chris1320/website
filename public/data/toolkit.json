@@ -249,14 +249,14 @@
         "name": "Media Editing",
         "tools": [
             {
-                "name": "Adobe Photoshop",
+                "name": "Photoshop",
                 "icon": {
                     "light": "skill-icons:photoshop",
                     "dark": "skill-icons:photoshop"
                 }
             },
             {
-                "name": "Adobe Premiere Pro",
+                "name": "Premiere Pro",
                 "icon": {
                     "light": "skill-icons:premiere",
                     "dark": "skill-icons:premiere"
