@@ -24,7 +24,7 @@ const navbarAnimate = computed(() =>
 const navLinks = [
     { label: "Welcome", targetId: "welcome", href: "/#welcome" },
     { label: "About", targetId: "about", href: "/#about" },
-    { label: "Career", targetId: "experience", href: "/#experience" },
+    { label: "Career", targetId: "career", href: "/#career" },
     { label: "Projects", targetId: "projects", href: "/#projects" },
 ];
 

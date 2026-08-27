@@ -74,7 +74,7 @@ const educationList = computed(() => {
 </script>
 
 <template>
-    <section id="experience" class="w-full max-w-4xl mx-auto px-6 py-20 font-mono">
+    <section id="career" class="w-full max-w-4xl mx-auto px-6 py-20 font-mono">
         <div
             class="grid grid-cols-2 p-1.5 rounded-xl bg-base-200/80 border border-base-300/60 mb-6 text-sm font-semibold"
         >

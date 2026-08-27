@@ -101,7 +101,7 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
                                 class="btn btn-outline btn-accent btn-md sm:btn-lg w-full shadow-sm font-mono"
                             >
                                 <Icon name="material-symbols:download" size="20" />
-                                <span>Download My CV</span>
+                                <span>View My CV</span>
                             </motion.button>
                         </NuxtLink>
                     </div>
