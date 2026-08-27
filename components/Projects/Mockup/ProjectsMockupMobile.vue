@@ -13,7 +13,7 @@ const props = defineProps<{
                 <div class="mockup-phone">
                     <div class="mockup-phone-camera" />
                     <div class="mockup-phone-display">
-                        <div class="w-100 h-auto">
+                        <div class="artboard phone-1 bg-base-100 relative overflow-hidden">
                             <ProjectsMockupContent :images="props.data.images" />
                         </div>
                     </div>
