@@ -1,11 +1,14 @@
+export interface ToolIcon {
+    light: string;
+    dark: string;
+}
+
 export interface Tool {
     name: string;
-    icon: string; // icon name
-    description: string;
+    icon: ToolIcon;
 }
 
 export interface ToolkitCategory {
     name: string;
-    description: string;
     tools: Tool[];
 }

@@ -1,116 +1,189 @@
 [
     {
         "name": "Backend Technologies",
-        "description": "These are the programming languages and frameworks I use to build the server-side of applications.",
         "tools": [
             {
                 "name": "Python",
-                "icon": "skill-icons:python-dark",
-                "description": "Python is a versatile and powerful programming language known for its simplicity and readability. It is widely used in web development, data analysis, artificial intelligence, scientific computing, and automation. Python's extensive libraries and frameworks, such as Django and Flask, make it a popular choice for building robust applications quickly and efficiently."
+                "icon": {
+                    "light": "skill-icons:python-light",
+                    "dark": "skill-icons:python-dark"
+                }
             },
             {
                 "name": "C#",
-                "icon": "skill-icons:cs",
-                "description": "C# (C-Sharp) is a modern, object-oriented programming language developed by Microsoft. It is widely used for building Windows applications, web services, and games using the .NET framework. C# offers strong type safety, rich libraries, and support for asynchronous programming, making it a popular choice for enterprise-level applications."
+                "icon": {
+                    "light": "skill-icons:cs",
+                    "dark": "skill-icons:cs"
+                }
             },
             {
                 "name": "Bun",
-                "icon": "skill-icons:bun-dark",
-                "description": "Bun is a modern JavaScript runtime like Node or Deno. It is built from the ground up to focus on three main things: speed, native compatibility, and a great developer experience. Bun includes a bundler, transpiler, package manager, and more, all designed to work seamlessly together."
+                "icon": {
+                    "light": "skill-icons:bun-light",
+                    "dark": "skill-icons:bun-dark"
+                }
+            },
+            {
+                "name": "Java",
+                "icon": {
+                    "light": "skill-icons:java-light",
+                    "dark": "skill-icons:java-dark"
+                }
             },
             {
                 "name": "FastAPI",
-                "icon": "skill-icons:fastapi",
-                "description": "FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints. It is designed to be easy to use and learn, while also being highly performant, making it a popular choice for developing RESTful APIs and web applications."
+                "icon": {
+                    "light": "skill-icons:fastapi",
+                    "dark": "skill-icons:fastapi"
+                }
             },
             {
                 "name": "Flask",
-                "icon": "skill-icons:flask-dark",
-                "description": "Flask is a lightweight and flexible web framework for Python that allows developers to build web applications quickly and easily. It is designed to be simple and unopinionated, providing the core tools needed for web development while allowing developers to choose their own libraries and tools for additional functionality."
+                "icon": {
+                    "light": "skill-icons:flask-light",
+                    "dark": "skill-icons:flask-dark"
+                }
+            },
+            {
+                "name": "PostgreSQL",
+                "icon": {
+                    "light": "skill-icons:postgresql-light",
+                    "dark": "skill-icons:postgresql-dark"
+                }
+            },
+            {
+                "name": "MySQL",
+                "icon": {
+                    "light": "skill-icons:mysql-light",
+                    "dark": "skill-icons:mysql-dark"
+                }
             }
         ]
     },
     {
         "name": "Frontend Technologies",
-        "description": "These are the technologies I use to create the visual and interactive parts of websites and web applications.",
         "tools": [
             {
                 "name": "TypeScript",
-                "icon": "skill-icons:typescript",
-                "description": "TypeScript is a statically typed superset of JavaScript that adds optional type annotations and other features to the language. It is designed to improve code quality and maintainability, making it easier to catch errors during development. TypeScript is widely used in large-scale web applications and frameworks like Angular and React."
+                "icon": {
+                    "light": "skill-icons:typescript",
+                    "dark": "skill-icons:typescript"
+                }
+            },
+            {
+                "name": "JavaScript",
+                "icon": {
+                    "light": "skill-icons:javascript",
+                    "dark": "skill-icons:javascript"
+                }
+            },
+            {
+                "name": "HTML",
+                "icon": {
+                    "light": "skill-icons:html",
+                    "dark": "skill-icons:html"
+                }
+            },
+            {
+                "name": "CSS",
+                "icon": {
+                    "light": "skill-icons:css",
+                    "dark": "skill-icons:css"
+                }
             },
             {
                 "name": "Astro",
-                "icon": "skill-icons:astro-dark",
-                "description": "Astro is a modern front-end framework for building fast, optimized websites. It allows developers to create components using popular frameworks like React, Vue, and Svelte, while also providing a unique approach to rendering content. Astro focuses on delivering minimal JavaScript to the browser, resulting in improved performance and faster page load times."
+                "icon": {
+                    "light": "skill-icons:astro",
+                    "dark": "skill-icons:astro"
+                }
+            },
+            {
+                "name": "React",
+                "icon": {
+                    "light": "skill-icons:react-light",
+                    "dark": "skill-icons:react-dark"
+                }
             },
             {
                 "name": "Nuxt.js",
-                "icon": "skill-icons:nuxtjs-dark",
-                "description": "Nuxt.js is a powerful framework built on top of Vue.js that simplifies the development of server-side rendered (SSR) and static web applications. It provides a structured architecture, automatic routing, and a rich ecosystem of modules and plugins, making it easier for developers to create performant and SEO-friendly web applications."
+                "icon": {
+                    "light": "skill-icons:nuxtjs-light",
+                    "dark": "skill-icons:nuxtjs-dark"
+                }
             },
             {
                 "name": "Next.js",
-                "icon": "skill-icons:nextjs-dark",
-                "description": "Next.js is a popular React framework that enables server-side rendering (SSR) and static site generation (SSG) for building fast and scalable web applications. It provides features such as automatic code splitting, optimized performance, and a simple API for routing and data fetching, making it a preferred choice for modern web development."
+                "icon": {
+                    "light": "skill-icons:nextjs-light",
+                    "dark": "skill-icons:nextjs-dark"
+                }
+            },
+            {
+                "name": "Vue",
+                "icon": {
+                    "light": "skill-icons:vuejs-light",
+                    "dark": "skill-icons:vuejs-dark"
+                }
             },
             {
                 "name": "Tailwind CSS",
-                "icon": "skill-icons:tailwindcss-dark",
-                "description": "Tailwind CSS is a utility-first CSS framework that provides a set of pre-defined classes for building custom user interfaces quickly and efficiently. It allows developers to style their applications directly in the HTML markup, promoting a more streamlined and maintainable approach to styling. Tailwind CSS is highly customizable and supports responsive design out of the box."
+                "icon": {
+                    "light": "skill-icons:tailwindcss-light",
+                    "dark": "skill-icons:tailwindcss-dark"
+                }
             }
         ]
     },
     {
-        "name": "Database Technologies",
-        "description": "These are the database management systems I use to store, organize, and manage data for various applications.",
+        "name": "DevOps",
         "tools": [
             {
-                "name": "MySQL",
-                "icon": "skill-icons:mysql-dark",
-                "description": "MySQL is a widely used open-source relational database management system (RDBMS) known for its reliability, performance, and ease of use. It supports structured query language (SQL) for managing and manipulating data, making it a popular choice for web applications, data warehousing, and e-commerce platforms."
+                "name": "Amazon Web Services (AWS)",
+                "icon": {
+                    "light": "skill-icons:aws-light",
+                    "dark": "skill-icons:aws-dark"
+                }
             },
-            {
-                "name": "PostgreSQL",
-                "icon": "skill-icons:postgresql-dark",
-                "description": "PostgreSQL is a powerful, open-source object-relational database system that emphasizes extensibility and standards compliance. It supports advanced data types, full-text search, and complex queries, making it suitable for a wide range of applications, from small projects to large-scale enterprise systems."
-            },
-            {
-                "name": "SQLite",
-                "icon": "skill-icons:sqlite",
-                "description": "SQLite is a lightweight, self-contained relational database engine that is widely used in embedded systems and mobile applications. It is serverless and requires minimal configuration, making it easy to set up and use. SQLite is ideal for applications that need a simple, efficient database solution without the overhead of a full-fledged database server."
-            }
-        ]
-    },
-    {
-        "name": "DevOps/Cloud Technologies",
-        "description": "I use these services and platforms to make development, deployment, and management of applications more efficient and scalable.",
-        "tools": [
             {
                 "name": "Cloudflare",
-                "icon": "skill-icons:cloudflare-dark",
-                "description": "Cloudflare is a global network and security company that provides content delivery network (CDN) services, DDoS protection, and web application firewall (WAF) solutions. It helps improve website performance, security, and reliability by distributing content closer to users and protecting against cyber threats."
+                "icon": {
+                    "light": "skill-icons:cloudflare-light",
+                    "dark": "skill-icons:cloudflare-dark"
+                }
+            },
+            {
+                "name": "Docker",
+                "icon": {
+                    "light": "skill-icons:docker",
+                    "dark": "skill-icons:docker"
+                }
+            },
+            {
+                "name": "Firebase",
+                "icon": {
+                    "light": "devicon:firebase",
+                    "dark": "devicon:firebase"
+                }
+            },
+            {
+                "name": "Git",
+                "icon": {
+                    "light": "skill-icons:git",
+                    "dark": "skill-icons:git"
+                }
             },
             {
                 "name": "Google Cloud Platform (GCP)",
-                "icon": "skill-icons:gcp-dark",
-                "description": "Google Cloud Platform (GCP) is a suite of cloud computing services offered by Google that provides infrastructure, platform, and software solutions for businesses. GCP offers a wide range of services, including computing power, storage, machine learning, and data analytics, enabling organizations to build and scale applications in the cloud with ease."
-            },
-            {
-                "name": "GitHub",
-                "icon": "skill-icons:github-dark",
-                "description": "GitHub is a web-based platform that provides hosting for Git repositories and offers collaboration features for software development projects. It allows developers to share code, track issues, and manage project workflows using tools such as pull requests and code reviews. GitHub is widely used in the open-source community and by organizations for version control and project management."
-            },
-            {
-                "name": "Podman",
-                "icon": "devicon:podman",
-                "description": "Podman is an open-source container management tool that allows users to create, manage, and run containers and container images. It is designed to be a drop-in replacement for Docker, providing similar functionality while emphasizing security and rootless operation. Podman is widely used for developing and deploying containerized applications in various environments."
+                "icon": {
+                    "light": "skill-icons:gcp-light",
+                    "dark": "skill-icons:gcp-dark"
+                }
             }
         ]
     },
     {
         "name": "Media Editing",
-        "description": "These tools are what I use to create and edit visual and audio content for various projects.",
         "tools": [
             {
                 "name": "Adobe After Effects",
