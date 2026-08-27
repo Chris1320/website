@@ -81,6 +81,14 @@ const educationList = computed(() => {
         :while-in-view="{ opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }"
         :viewport="{ once: true, margin: '-60px' }"
     >
+        <div class="text-center mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-base-content mb-3">
+                My <span class="text-primary">Career</span>
+            </h2>
+            <p class="text-xs sm:text-sm text-base-content/70 max-w-lg mx-auto">
+                My professional experience and educational background.
+            </p>
+        </div>
         <div
             class="grid grid-cols-2 p-1.5 rounded-xl bg-base-200/80 border border-base-300/60 mb-6 text-sm font-semibold"
         >

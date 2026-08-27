@@ -32,9 +32,7 @@ function formatDateRange(from: string, to?: string | null) {
             <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-base-content mb-3">
                 My <span class="text-primary">Projects</span>
             </h2>
-            <p class="text-xs sm:text-sm text-base-content/70 max-w-lg mx-auto">
-                Here are some of the software systems I've built.
-            </p>
+            <p class="text-xs sm:text-sm text-base-content/70 max-w-lg mx-auto">Some of the things I've built.</p>
         </div>
         <div class="space-y-20 sm:space-y-28">
             <motion.article
