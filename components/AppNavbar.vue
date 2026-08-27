@@ -44,7 +44,7 @@ async function scrollToSection(targetId: string) {
     if (import.meta.client && typeof document !== "undefined") {
         const element = document.getElementById(targetId);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }
 }
@@ -118,6 +118,7 @@ onMounted(() => {
                 <a
                     href="/"
                     class="text-sm sm:text-base font-bold tracking-tight text-base-content hover:text-primary transition-colors flex items-center gap-1.5"
+                    @click.prevent="scrollToSection('welcome')"
                 >
                     <span>Christopher Andrei Tayao.</span>
                 </a>
