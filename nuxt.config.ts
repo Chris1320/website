@@ -33,7 +33,6 @@ export default defineNuxtConfig({
                         enabled: true,
                         head_sampling_rate: 1,
                         invocation_logs: true,
-                        persist: true,
                     },
                 },
             },
@@ -43,6 +42,24 @@ export default defineNuxtConfig({
     },
     app: {
         pageTransition: { name: "page", mode: "out-in" },
+        head: {
+            htmlAttrs: { lang: "en" },
+            title: "ChrisFromNowhere",
+            meta: [
+                { name: "description", content: "My Personal Website | ChrisFromNowhere" },
+                { property: "og:type", content: "website" },
+                { property: "og:site_name", content: "ChrisFromNowhere" },
+                { property: "og:title", content: "ChrisFromNowhere" },
+                { property: "og:description", content: "My Personal Website | ChrisFromNowhere" },
+                { property: "og:image", content: "https://assets.chrisfromnowhere.me/banner.webp" },
+                { property: "og:url", content: "https://chrisfromnowhere.me" },
+                { property: "twitter:card", content: "summary_large_image" },
+                { property: "twitter:title", content: "ChrisFromNowhere" },
+                { property: "twitter:description", content: "My Personal Website | ChrisFromNowhere" },
+                { property: "twitter:image", content: "https://assets.chrisfromnowhere.me/banner.webp" },
+            ],
+            link: [{ rel: "canonical", href: "https://chrisfromnowhere.me" }],
+        },
     },
     components: true,
 });
