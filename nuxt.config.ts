@@ -16,6 +16,10 @@ export default defineNuxtConfig({
     vite: { plugins: [tailwindcss()] },
     nitro: {
         preset: "cloudflare_module",
+        prerender: {
+            crawlLinks: true,
+            routes: ["/", "/projects", "/my/cv"],
+        },
         cloudflare: {
             wrangler: {
                 name: "personal-website",
@@ -62,4 +66,8 @@ export default defineNuxtConfig({
         },
     },
     components: true,
+    routeRules: {
+        "/**": { swr: 3600, cache: { maxAge: 3600 } },
+        "/api/health": { cache: false },
+    },
 });
