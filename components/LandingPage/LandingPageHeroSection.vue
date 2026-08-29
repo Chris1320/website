@@ -142,6 +142,20 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
                                     </motion.div>
                                 </NuxtLink>
                             </div>
+                            <div class="tooltip tooltip-bottom" data-tip="Blog">
+                                <NuxtLink
+                                    to="https://677078.xyz"
+                                    class="m-0 text-base-content/80 hover:text-primary transition-colors"
+                                >
+                                    <motion.div
+                                        :while-hover="animationButtonWhileHover"
+                                        :while-press="animationButtonWhilePress"
+                                        class="flex flex-col justify-center items-center"
+                                    >
+                                        <Icon name="mdi:blog" size="36" />
+                                    </motion.div>
+                                </NuxtLink>
+                            </div>
                             <div class="tooltip tooltip-bottom" data-tip="Email">
                                 <NuxtLink
                                     to="mailto:chris.tayao@chrisfromnowhere.me"
@@ -152,7 +166,7 @@ const animationButtonWhilePress = { scale: 0.95, rotate: -3 } as const;
                                         :while-press="animationButtonWhilePress"
                                         class="flex flex-col justify-center items-center"
                                     >
-                                        <Icon name="material-symbols:mail" size="36" />
+                                        <Icon name="mdi:email" size="36" />
                                     </motion.div>
                                 </NuxtLink>
                             </div>
