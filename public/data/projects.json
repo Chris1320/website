@@ -226,7 +226,7 @@
         "id": "creativeflowcrm",
         "name": "Creative Flow CRM",
         "dateStart": "2026-08-24",
-        "dateEnd": "2026-09-15",
+        "dateEnd": null,
         "visible": true,
         "status": "stable",
         "shortDescription": "A simple project-based CRM for managing clients and projects for freelancing. Built and deployed around the Cloudflare ecosystem, utilizing D1 database and R2 object store.",
@@ -314,6 +314,86 @@
                 {
                     "description": "Client Portal (Project Approval Dialog)",
                     "url": "https://assets.chrisfromnowhere.me/projects/87aee86a4eb32673b8ea415a7d81f67f1d0905573c32328b217461409f07562c.avif"
+                }
+            ]
+        }
+    },
+    {
+        "id": "cfn677078",
+        "name": "CFN | 67 70 78",
+        "dateStart": "2026-08-26",
+        "dateEnd": null,
+        "visible": true,
+        "status": "stable",
+        "shortDescription": "My personal blogging platform written in Astro, Vue.js, and Tailwind CSS. Hosted on Cloudflare, using Cloudflare D1 database and R2 object store.",
+        "links": [{ "name": "Website", "url": "https://677078.xyz/" }],
+        "technologies": [
+            {
+                "name": "Astro",
+                "icon": "simple-icons:astro"
+            },
+            {
+                "name": "Vue.js",
+                "icon": "lineicons:vuejs"
+            },
+            {
+                "name": "Tailwind CSS",
+                "icon": "lineicons:tailwindcss"
+            },
+            {
+                "name": "Cloudflare",
+                "icon": "simple-icons:cloudflare"
+            }
+        ],
+        "mockups": {
+            "type": "web",
+            "data": {
+                "url": "https://677078.xyz/",
+                "images": [
+                    {
+                        "description": "Home Page",
+                        "url": "https://assets.chrisfromnowhere.me/projects/85cf7c495b5f101b278d592607b2c6f48d68cd46260c13db4e270d47a6341f7b.avif"
+                    },
+                    {
+                        "description": "Admin Console - Posts List",
+                        "url": "https://assets.chrisfromnowhere.me/projects/38bd0aa184ffb5d3b7741eceaa71989291f803892fc33004049de90f1652ec9e.avif"
+                    },
+                    {
+                        "description": "Admin Console - Post Editor",
+                        "url": "https://assets.chrisfromnowhere.me/projects/29b7cd8537f2ee5d523d20ec0e648539a8ecd56ef75745ed6842cc2f3dd31ff5.avif"
+                    },
+                    {
+                        "description": "Admin Console - Media Library",
+                        "url": "https://assets.chrisfromnowhere.me/projects/c0d2a07120c35845f10c776da24b8294234a22561b5a14366220696e6675127f.avif"
+                    }
+                ]
+            }
+        },
+        "resources": {
+            "images": [
+                {
+                    "description": "Home Page",
+                    "url": "https://assets.chrisfromnowhere.me/projects/85cf7c495b5f101b278d592607b2c6f48d68cd46260c13db4e270d47a6341f7b.avif"
+                },
+                {
+                    "description": "Posts List",
+                    "url": "https://assets.chrisfromnowhere.me/projects/0a41701384b2318ddd25c11d117e825b38660ba1cf298bd61a8bbb6fc8c36370.avif"
+                },
+                {
+                    "description": "Post Viewer",
+                    "url": "https://assets.chrisfromnowhere.me/projects/cbaa3d88c8bd9d40c1c7664efc7b8c4dc82270fd4c13ae426a5a10e8767c2a98.avif"
+                },
+                {
+                    "description": "Admin Console - Posts List",
+                    "url": "https://assets.chrisfromnowhere.me/projects/38bd0aa184ffb5d3b7741eceaa71989291f803892fc33004049de90f1652ec9e.avif"
+                },
+                {
+                    "description": "Admin Console - Post Editor",
+                    "url": "https://assets.chrisfromnowhere.me/projects/29b7cd8537f2ee5d523d20ec0e648539a8ecd56ef75745ed6842cc2f3dd31ff5.avif"
+                },
+                {
+                    "description": "Admin Console - Media Library",
+                    "url": "https://assets.chrisfromnowhere.me/projects/c0d2a07120c35845f10c776da24b8294234a22561b5a14366220696e6675127f.avif"
                 }
             ]
         }
