@@ -11,7 +11,7 @@
             "Secured 1st Runner-Up and “Best Social Media Campaign” award among 200+ international teams at the global EDUtech Asia 2025 - Planet Protectors Sustainability Challenge in Singapore.",
             "Engineered a full-stack Android application with Kotlin (Jetpack Compose), integrating Firebase Authentication and Firestore for secure user management and data.",
             "Built screen time tracking and limiting, Google Calendar integration, and an AI-powered assistant (Google Gemini API) to provide personalized support and reminders.",
-            "Developed an interactive web dashboard using Nuxt.js (VueJS) for real-time visualization of screen time data."
+            "Developed an interactive web dashboard using Nuxt.js (Vue.js) for real-time visualization of screen time data."
         ],
         "links": [
             { "name": "Repository", "url": "https://github.com/Chris1320/ReconnectED" },
@@ -35,7 +35,7 @@
                 "icon": "lineicons:firebase"
             },
             {
-                "name": "VueJS",
+                "name": "Vue.js",
                 "icon": "lineicons:vuejs"
             },
             {
@@ -223,6 +223,102 @@
         }
     },
     {
+        "id": "creativeflowcrm",
+        "name": "Creative Flow CRM",
+        "dateStart": "2026-08-24",
+        "dateEnd": "2026-09-15",
+        "visible": true,
+        "status": "stable",
+        "shortDescription": "A simple project-based CRM for managing clients and projects for freelancing. Built and deployed around the Cloudflare ecosystem, utilizing D1 database and R2 object store.",
+        "links": [{ "name": "Website", "url": "https://creativeflow.chrisfromnowhere.me/" }],
+        "technologies": [
+            {
+                "name": "TanStack Start",
+                "icon": "simple-icons:tanstack"
+            },
+            {
+                "name": "React.js",
+                "icon": "lineicons:react"
+            },
+            {
+                "name": "Radix UI",
+                "icon": "simple-icons:radixui"
+            },
+            {
+                "name": "Tailwind CSS",
+                "icon": "lineicons:tailwindcss"
+            },
+            {
+                "name": "TypeScript",
+                "icon": "lineicons:typescript"
+            },
+            {
+                "name": "Cloudflare",
+                "icon": "simple-icons:cloudflare"
+            }
+        ],
+        "mockups": {
+            "type": "web",
+            "data": {
+                "url": "https://creativeflow.chrisfromnowhere.me/",
+                "images": [
+                    {
+                        "description": "Landing Page",
+                        "url": "https://assets.chrisfromnowhere.me/projects/51a72bd7c69df3aafab16564b8f2860bc559a72e775e3b32d0b6e8f76226cf95.avif"
+                    },
+                    {
+                        "description": "Admin Dashboard",
+                        "url": "https://assets.chrisfromnowhere.me/projects/3a5086764340bfb43e765c043c5e21308d5f76dc5031f56da50bcb84a3831468.avif"
+                    },
+                    {
+                        "description": "Clients List",
+                        "url": "https://assets.chrisfromnowhere.me/projects/fedbe75062daccd0a072e0158876200bda211257b3ddbae394a77463f59e65c5.avif"
+                    },
+                    {
+                        "description": "Projects List",
+                        "url": "https://assets.chrisfromnowhere.me/projects/699b1c9e0bd4420cbd00767a9e5475a24c909dbe3967b8d411a51d15f6518d8c.avif"
+                    }
+                ]
+            }
+        },
+        "resources": {
+            "images": [
+                {
+                    "description": "Landing Page",
+                    "url": "https://assets.chrisfromnowhere.me/projects/51a72bd7c69df3aafab16564b8f2860bc559a72e775e3b32d0b6e8f76226cf95.avif"
+                },
+                {
+                    "description": "Admin Dashboard",
+                    "url": "https://assets.chrisfromnowhere.me/projects/3a5086764340bfb43e765c043c5e21308d5f76dc5031f56da50bcb84a3831468.avif"
+                },
+                {
+                    "description": "Clients List",
+                    "url": "https://assets.chrisfromnowhere.me/projects/fedbe75062daccd0a072e0158876200bda211257b3ddbae394a77463f59e65c5.avif"
+                },
+                {
+                    "description": "Projects List",
+                    "url": "https://assets.chrisfromnowhere.me/projects/699b1c9e0bd4420cbd00767a9e5475a24c909dbe3967b8d411a51d15f6518d8c.avif"
+                },
+                {
+                    "description": "Project Details",
+                    "url": "https://assets.chrisfromnowhere.me/projects/f0bcf50259399f9d134ad6febb6df6c27eb9dd0a0fd43c3ab044d2fc48aaaa21.avif"
+                },
+                {
+                    "description": "Client Portal (Project For Review)",
+                    "url": "https://assets.chrisfromnowhere.me/projects/1fe67c5303e31360a430727d6a00637f304e271e4d6b376907b8b0f9a285e2c6.avif"
+                },
+                {
+                    "description": "Client Portal (Project In Progress)",
+                    "url": "https://assets.chrisfromnowhere.me/projects/95b712a63fa45ade7dd6ef1d5febdedc795a5e4396f39dcb45e89a9582bd6a23.avif"
+                },
+                {
+                    "description": "Client Portal (Project Approval Dialog)",
+                    "url": "https://assets.chrisfromnowhere.me/projects/87aee86a4eb32673b8ea415a7d81f67f1d0905573c32328b217461409f07562c.avif"
+                }
+            ]
+        }
+    },
+    {
         "id": "psautomater",
         "name": "PSAutomater",
         "dateStart": "2022-04-23",
@@ -299,7 +395,7 @@
                 "icon": "lineicons:javascript"
             },
             {
-                "name": "VueJS",
+                "name": "Vue.js",
                 "icon": "lineicons:vuejs"
             },
             {
@@ -581,7 +677,7 @@
         "links": [{ "name": "Repository", "url": "https://github.com/Chris1320/Genesis" }],
         "technologies": [
             {
-                "name": "VueJS",
+                "name": "Vue.js",
                 "icon": "lineicons:vuejs"
             },
             {
