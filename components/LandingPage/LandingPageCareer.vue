@@ -143,12 +143,12 @@ const educationList = computed(() => {
                         <div class="flex-1 min-w-0 pt-0.5">
                             <NuxtLink :to="item.url" target="_blank" class="hover:underline">
                                 <h3 class="text-base sm:text-lg font-bold text-base-content tracking-tight">
-                                    {{ item.company }}
+                                    {{ item.position }}
                                 </h3>
                             </NuxtLink>
                             <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mt-0.5">
                                 <span class="text-sm text-base-content/90 font-medium">
-                                    {{ item.position }}
+                                    {{ item.company }}
                                 </span>
                                 <span class="text-xs sm:text-sm text-base-content/60 shrink-0 font-mono">
                                     {{ formatDateRange(item.from, item.to) }}
