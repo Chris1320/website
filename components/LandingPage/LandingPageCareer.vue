@@ -7,25 +7,25 @@ type TabType = "experience" | "education";
 
 interface ExperienceItem {
     company: string;
-    location?: string;
+    location: string | null;
     position: string;
     from: string;
-    to: string;
+    to: string | null;
     highlights: string[];
-    url: string;
-    logo?: string;
+    url: string | null;
+    logo: string | null;
 }
 
 interface EducationItem {
     school: string;
-    location?: string;
+    location: string | null;
     degree: string;
-    major?: string;
+    major: string | null;
     from: string;
-    to: string;
+    to: string | null;
     highlights: string[];
-    url: string;
-    logo?: string;
+    url: string | null;
+    logo: string | null;
 }
 
 const activeTab = ref<TabType>("experience");
@@ -35,14 +35,14 @@ function handleImageError(id: string) {
     imageErrors.value[id] = true;
 }
 
-function formatDate(dateStr: string) {
+function formatDate(dateStr: string | null) {
     if (!dateStr || dateStr.toLowerCase() === "present") return "Present";
     const date = new Date(dateStr);
     if (isNaN(date.getTime())) return dateStr;
     return date.toLocaleDateString("en-US", { month: "short", year: "numeric" });
 }
 
-function formatDateRange(from: string, to: string) {
+function formatDateRange(from: string, to: string | null) {
     return `${formatDate(from)} - ${formatDate(to)}`;
 }
 
@@ -141,13 +141,16 @@ const educationList = computed(() => {
                             <Icon v-else name="material-symbols:work-outline" class="text-primary text-xl" />
                         </div>
                         <div class="flex-1 min-w-0 pt-0.5">
-                            <NuxtLink :to="item.url" target="_blank" class="hover:underline">
-                                <h3 class="text-base sm:text-lg font-bold text-base-content tracking-tight">
-                                    {{ item.position }}
-                                </h3>
-                            </NuxtLink>
+                            <h3 class="text-base sm:text-lg font-bold text-base-content tracking-tight">
+                                {{ item.position }}
+                            </h3>
                             <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mt-0.5">
-                                <span class="text-sm text-base-content/90 font-medium">
+                                <NuxtLink v-if="item.url" :to="item.url" target="_blank" class="hover:underline">
+                                    <span class="text-sm text-base-content/90 font-medium">
+                                        {{ item.company }}
+                                    </span>
+                                </NuxtLink>
+                                <span v-if="!item.url" class="text-sm text-base-content/90 font-medium">
                                     {{ item.company }}
                                 </span>
                                 <span class="text-xs sm:text-sm text-base-content/60 shrink-0 font-mono">
