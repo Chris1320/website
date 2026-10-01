@@ -38,6 +38,14 @@ export default defineNuxtConfig({
                         head_sampling_rate: 1,
                         invocation_logs: true,
                     },
+                    traces: {
+                        enabled: false,
+                        persist: true,
+                        head_sampling_rate: 1,
+                    },
+                    issue_detection: {
+                        enabled: true,
+                    },
                 },
             },
             deployConfig: true,
