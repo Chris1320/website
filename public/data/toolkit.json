@@ -10,13 +10,6 @@
                 }
             },
             {
-                "name": "Go",
-                "icon": {
-                    "light": "skill-icons:golang",
-                    "dark": "skill-icons:golang"
-                }
-            },
-            {
                 "name": "Lua",
                 "icon": {
                     "light": "skill-icons:lua-light",

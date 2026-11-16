@@ -36,8 +36,8 @@ function handleExplodeSkill(_skill: string | null) {
             skillNameAnimation.value = { opacity: 1, y: 0 };
             break;
 
-        case "cs":
-            selectedSkillName.value = "Go";
+        case "jv":
+            selectedSkillName.value = "Java";
             skill1Animation.value = { scale: 0.75, rotate: -10, y: -10, x: 0 };
             skill2Animation.value = { scale: 1.5, rotate: 10, y: -10, x: 25 };
             skill3Animation.value = { scale: 0.75, rotate: 15, y: -15, x: 40 };
@@ -132,15 +132,15 @@ function handleExplodeSkill(_skill: string | null) {
                     <motion.div
                         :animate="skill2Animation"
                         class="cursor-pointer"
-                        @click="handleExplodeSkill('cs')"
-                        @hover-start="handleExplodeSkill('cs')"
+                        @click="handleExplodeSkill('jv')"
+                        @hover-start="handleExplodeSkill('jv')"
                         @hover-end="handleExplodeSkill(null)"
                     >
                         <Icon
                             :name="
                                 getToolIcon({
-                                    name: 'go',
-                                    icon: { light: 'skill-icons:golang', dark: 'catppuccin:go' },
+                                    name: 'java',
+                                    icon: { light: 'skill-icons:java-dark', dark: 'catppuccin:java' },
                                 })
                             "
                             size="44"
