@@ -230,13 +230,7 @@
         "visible": true,
         "status": "stable",
         "shortDescription": "A simple project-based CRM for managing clients and projects for freelancing. Built and deployed around the Cloudflare ecosystem, utilizing D1 database and R2 object store.",
-        "links": [
-            { "name": "Website", "url": "https://creativeflow.chrisfromnowhere.me/" },
-            {
-                "name": "Demo",
-                "url": "https://creativeflow.chrisfromnowhere.me/p/DEMO-686608?t=07e1f297e1cc4dfcb5fb80d306cfd9fe"
-            }
-        ],
+        "links": [{ "name": "Website", "url": "https://creativeflow.chrisfromnowhere.me/" }],
         "technologies": [
             {
                 "name": "TanStack Start",
